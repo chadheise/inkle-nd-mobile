@@ -21,6 +21,11 @@
 		DF750A1F14E8267F00D9E0BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0414E8267F00D9E0BA /* CoreData.framework */; };
 		DF750A2714E8267F00D9E0BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF750A2514E8267F00D9E0BA /* InfoPlist.strings */; };
 		DF750A2A14E8267F00D9E0BA /* InkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A2914E8267F00D9E0BA /* InkleTests.m */; };
+		DF750A3414E8291100D9E0BA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3314E8291100D9E0BA /* Storyboard.storyboard */; };
+		DF750A3614E8294600D9E0BA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3514E8294600D9E0BA /* Default.png */; };
+		DF750A3814E8294A00D9E0BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3714E8294A00D9E0BA /* Default@2x.png */; };
+		DF750A3A14E8295100D9E0BA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3914E8295100D9E0BA /* icon.png */; };
+		DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3B14E8295400D9E0BA /* icon_retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		DF750A2614E8267F00D9E0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF750A2814E8267F00D9E0BA /* InkleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkleTests.h; sourceTree = "<group>"; };
 		DF750A2914E8267F00D9E0BA /* InkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkleTests.m; sourceTree = "<group>"; };
+		DF750A3314E8291100D9E0BA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		DF750A3514E8294600D9E0BA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DF750A3714E8294A00D9E0BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DF750A3914E8295100D9E0BA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DF750A3B14E8295400D9E0BA /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,11 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
+				DF750A3914E8295100D9E0BA /* icon.png */,
+				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
+				DF750A3514E8294600D9E0BA /* Default.png */,
+				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
 				DF750A0614E8267F00D9E0BA /* Inkle */,
 				DF750A2214E8267F00D9E0BA /* InkleTests */,
 				DF7509FD14E8267F00D9E0BA /* Frameworks */,
@@ -223,6 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF750A0B14E8267F00D9E0BA /* InfoPlist.strings in Resources */,
+				DF750A3414E8291100D9E0BA /* Storyboard.storyboard in Resources */,
+				DF750A3614E8294600D9E0BA /* Default.png in Resources */,
+				DF750A3814E8294A00D9E0BA /* Default@2x.png in Resources */,
+				DF750A3A14E8295100D9E0BA /* icon.png in Resources */,
+				DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
