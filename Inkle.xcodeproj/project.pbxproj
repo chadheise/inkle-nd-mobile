@@ -39,18 +39,18 @@
 		DF750A0014E8267F00D9E0BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DF750A0414E8267F00D9E0BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		DF750A0814E8267F00D9E0BA /* Inkle-Info.plist */ = {isa = PBXFileReference; path = "Inkle-Info.plist"; sourceTree = "<group>"; };
+		DF750A0814E8267F00D9E0BA /* Inkle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Inkle-Info.plist"; sourceTree = "<group>"; };
 		DF750A0A14E8267F00D9E0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF750A0C14E8267F00D9E0BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DF750A0E14E8267F00D9E0BA /* Inkle-Prefix.pch */ = {isa = PBXFileReference; path = "Inkle-Prefix.pch"; sourceTree = "<group>"; };
-		DF750A0F14E8267F00D9E0BA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF750A0E14E8267F00D9E0BA /* Inkle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Inkle-Prefix.pch"; sourceTree = "<group>"; };
+		DF750A0F14E8267F00D9E0BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF750A1014E8267F00D9E0BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DF750A1314E8267F00D9E0BA /* Inkle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inkle.xcdatamodel; sourceTree = "<group>"; };
 		DF750A1A14E8267F00D9E0BA /* InkleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InkleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF750A1B14E8267F00D9E0BA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DF750A2414E8267F00D9E0BA /* InkleTests-Info.plist */ = {isa = PBXFileReference; path = "InkleTests-Info.plist"; sourceTree = "<group>"; };
+		DF750A2414E8267F00D9E0BA /* InkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InkleTests-Info.plist"; sourceTree = "<group>"; };
 		DF750A2614E8267F00D9E0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DF750A2814E8267F00D9E0BA /* InkleTests.h */ = {isa = PBXFileReference; path = InkleTests.h; sourceTree = "<group>"; };
+		DF750A2814E8267F00D9E0BA /* InkleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InkleTests.h; sourceTree = "<group>"; };
 		DF750A2914E8267F00D9E0BA /* InkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
