@@ -26,6 +26,8 @@
 		DF750A3814E8294A00D9E0BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3714E8294A00D9E0BA /* Default@2x.png */; };
 		DF750A3A14E8295100D9E0BA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3914E8295100D9E0BA /* icon.png */; };
 		DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3B14E8295400D9E0BA /* icon_retina.png */; };
+		DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A3E14E829DA00D9E0BA /* loginViewController.m */; };
+		DF750A4214E82B0700D9E0BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A4114E82B0700D9E0BA /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		DF750A3714E8294A00D9E0BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DF750A3914E8295100D9E0BA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DF750A3B14E8295400D9E0BA /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
+		DF750A3D14E829DA00D9E0BA /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		DF750A3E14E829DA00D9E0BA /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		DF750A4114E82B0700D9E0BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +98,14 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
 				DF750A3914E8295100D9E0BA /* icon.png */,
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DF750A3D14E829DA00D9E0BA /* loginViewController.h */,
+				DF750A3E14E829DA00D9E0BA /* loginViewController.m */,
 				DF750A0614E8267F00D9E0BA /* Inkle */,
 				DF750A2214E8267F00D9E0BA /* InkleTests */,
 				DF7509FD14E8267F00D9E0BA /* Frameworks */,
@@ -165,6 +173,14 @@
 				DF750A2514E8267F00D9E0BA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF750A4014E82AEC00D9E0BA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DF750A4114E82B0700D9E0BA /* logo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +259,7 @@
 				DF750A3814E8294A00D9E0BA /* Default@2x.png in Resources */,
 				DF750A3A14E8295100D9E0BA /* icon.png in Resources */,
 				DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */,
+				DF750A4214E82B0700D9E0BA /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +297,7 @@
 				DF750A0D14E8267F00D9E0BA /* main.m in Sources */,
 				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
+				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
