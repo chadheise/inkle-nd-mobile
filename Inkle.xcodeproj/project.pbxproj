@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
+		DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
+		DF750A0314E8267F00D9E0BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */; };
+		DF750A0514E8267F00D9E0BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0414E8267F00D9E0BA /* CoreData.framework */; };
+		DF750A0B14E8267F00D9E0BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF750A0914E8267F00D9E0BA /* InfoPlist.strings */; };
+		DF750A0D14E8267F00D9E0BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A0C14E8267F00D9E0BA /* main.m */; };
+		DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A1014E8267F00D9E0BA /* AppDelegate.m */; };
+		DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF750A1214E8267F00D9E0BA /* Inkle.xcdatamodeld */; };
+		DF750A1C14E8267F00D9E0BA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A1B14E8267F00D9E0BA /* SenTestingKit.framework */; };
+		DF750A1D14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
+		DF750A1E14E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
+		DF750A1F14E8267F00D9E0BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0414E8267F00D9E0BA /* CoreData.framework */; };
+		DF750A2714E8267F00D9E0BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF750A2514E8267F00D9E0BA /* InfoPlist.strings */; };
+		DF750A2A14E8267F00D9E0BA /* InkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A2914E8267F00D9E0BA /* InkleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF750A2014E8267F00D9E0BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF7509F114E8267E00D9E0BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF7509F914E8267F00D9E0BA;
+			remoteInfo = Inkle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF7509FA14E8267F00D9E0BA /* Inkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7509FE14E8267F00D9E0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DF750A0014E8267F00D9E0BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DF750A0414E8267F00D9E0BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DF750A0814E8267F00D9E0BA /* Inkle-Info.plist */ = {isa = PBXFileReference; path = "Inkle-Info.plist"; sourceTree = "<group>"; };
+		DF750A0A14E8267F00D9E0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF750A0C14E8267F00D9E0BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF750A0E14E8267F00D9E0BA /* Inkle-Prefix.pch */ = {isa = PBXFileReference; path = "Inkle-Prefix.pch"; sourceTree = "<group>"; };
+		DF750A0F14E8267F00D9E0BA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF750A1014E8267F00D9E0BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF750A1314E8267F00D9E0BA /* Inkle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inkle.xcdatamodel; sourceTree = "<group>"; };
+		DF750A1A14E8267F00D9E0BA /* InkleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InkleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF750A1B14E8267F00D9E0BA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DF750A2414E8267F00D9E0BA /* InkleTests-Info.plist */ = {isa = PBXFileReference; path = "InkleTests-Info.plist"; sourceTree = "<group>"; };
+		DF750A2614E8267F00D9E0BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF750A2814E8267F00D9E0BA /* InkleTests.h */ = {isa = PBXFileReference; path = InkleTests.h; sourceTree = "<group>"; };
+		DF750A2914E8267F00D9E0BA /* InkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InkleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF7509F714E8267F00D9E0BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */,
+				DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */,
+				DF750A0314E8267F00D9E0BA /* CoreGraphics.framework in Frameworks */,
+				DF750A0514E8267F00D9E0BA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF750A1614E8267F00D9E0BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF750A1C14E8267F00D9E0BA /* SenTestingKit.framework in Frameworks */,
+				DF750A1D14E8267F00D9E0BA /* UIKit.framework in Frameworks */,
+				DF750A1E14E8267F00D9E0BA /* Foundation.framework in Frameworks */,
+				DF750A1F14E8267F00D9E0BA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF7509EF14E8267E00D9E0BA = {
+			isa = PBXGroup;
+			children = (
+				DF750A0614E8267F00D9E0BA /* Inkle */,
+				DF750A2214E8267F00D9E0BA /* InkleTests */,
+				DF7509FD14E8267F00D9E0BA /* Frameworks */,
+				DF7509FB14E8267F00D9E0BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF7509FB14E8267F00D9E0BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF7509FA14E8267F00D9E0BA /* Inkle.app */,
+				DF750A1A14E8267F00D9E0BA /* InkleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF7509FD14E8267F00D9E0BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF7509FE14E8267F00D9E0BA /* UIKit.framework */,
+				DF750A0014E8267F00D9E0BA /* Foundation.framework */,
+				DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */,
+				DF750A0414E8267F00D9E0BA /* CoreData.framework */,
+				DF750A1B14E8267F00D9E0BA /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF750A0614E8267F00D9E0BA /* Inkle */ = {
+			isa = PBXGroup;
+			children = (
+				DF750A0F14E8267F00D9E0BA /* AppDelegate.h */,
+				DF750A1014E8267F00D9E0BA /* AppDelegate.m */,
+				DF750A1214E8267F00D9E0BA /* Inkle.xcdatamodeld */,
+				DF750A0714E8267F00D9E0BA /* Supporting Files */,
+			);
+			path = Inkle;
+			sourceTree = "<group>";
+		};
+		DF750A0714E8267F00D9E0BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF750A0814E8267F00D9E0BA /* Inkle-Info.plist */,
+				DF750A0914E8267F00D9E0BA /* InfoPlist.strings */,
+				DF750A0C14E8267F00D9E0BA /* main.m */,
+				DF750A0E14E8267F00D9E0BA /* Inkle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF750A2214E8267F00D9E0BA /* InkleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF750A2814E8267F00D9E0BA /* InkleTests.h */,
+				DF750A2914E8267F00D9E0BA /* InkleTests.m */,
+				DF750A2314E8267F00D9E0BA /* Supporting Files */,
+			);
+			path = InkleTests;
+			sourceTree = "<group>";
+		};
+		DF750A2314E8267F00D9E0BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF750A2414E8267F00D9E0BA /* InkleTests-Info.plist */,
+				DF750A2514E8267F00D9E0BA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF7509F914E8267F00D9E0BA /* Inkle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF750A2D14E8267F00D9E0BA /* Build configuration list for PBXNativeTarget "Inkle" */;
+			buildPhases = (
+				DF7509F614E8267F00D9E0BA /* Sources */,
+				DF7509F714E8267F00D9E0BA /* Frameworks */,
+				DF7509F814E8267F00D9E0BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inkle;
+			productName = Inkle;
+			productReference = DF7509FA14E8267F00D9E0BA /* Inkle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF750A1914E8267F00D9E0BA /* InkleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF750A3014E8267F00D9E0BA /* Build configuration list for PBXNativeTarget "InkleTests" */;
+			buildPhases = (
+				DF750A1514E8267F00D9E0BA /* Sources */,
+				DF750A1614E8267F00D9E0BA /* Frameworks */,
+				DF750A1714E8267F00D9E0BA /* Resources */,
+				DF750A1814E8267F00D9E0BA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF750A2114E8267F00D9E0BA /* PBXTargetDependency */,
+			);
+			name = InkleTests;
+			productName = InkleTests;
+			productReference = DF750A1A14E8267F00D9E0BA /* InkleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF7509F114E8267E00D9E0BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DF7509F414E8267E00D9E0BA /* Build configuration list for PBXProject "Inkle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF7509EF14E8267E00D9E0BA;
+			productRefGroup = DF7509FB14E8267F00D9E0BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF7509F914E8267F00D9E0BA /* Inkle */,
+				DF750A1914E8267F00D9E0BA /* InkleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF7509F814E8267F00D9E0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF750A0B14E8267F00D9E0BA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF750A1714E8267F00D9E0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF750A2714E8267F00D9E0BA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF750A1814E8267F00D9E0BA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF7509F614E8267F00D9E0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF750A0D14E8267F00D9E0BA /* main.m in Sources */,
+				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
+				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF750A1514E8267F00D9E0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF750A2A14E8267F00D9E0BA /* InkleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF750A2114E8267F00D9E0BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF7509F914E8267F00D9E0BA /* Inkle */;
+			targetProxy = DF750A2014E8267F00D9E0BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF750A0914E8267F00D9E0BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF750A0A14E8267F00D9E0BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DF750A2514E8267F00D9E0BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF750A2614E8267F00D9E0BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF750A2B14E8267F00D9E0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF750A2C14E8267F00D9E0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF750A2E14E8267F00D9E0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inkle/Inkle-Prefix.pch";
+				INFOPLIST_FILE = "Inkle/Inkle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DF750A2F14E8267F00D9E0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inkle/Inkle-Prefix.pch";
+				INFOPLIST_FILE = "Inkle/Inkle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DF750A3114E8267F00D9E0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Inkle.app/Inkle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inkle/Inkle-Prefix.pch";
+				INFOPLIST_FILE = "InkleTests/InkleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DF750A3214E8267F00D9E0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Inkle.app/Inkle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inkle/Inkle-Prefix.pch";
+				INFOPLIST_FILE = "InkleTests/InkleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF7509F414E8267E00D9E0BA /* Build configuration list for PBXProject "Inkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF750A2B14E8267F00D9E0BA /* Debug */,
+				DF750A2C14E8267F00D9E0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF750A2D14E8267F00D9E0BA /* Build configuration list for PBXNativeTarget "Inkle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF750A2E14E8267F00D9E0BA /* Debug */,
+				DF750A2F14E8267F00D9E0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF750A3014E8267F00D9E0BA /* Build configuration list for PBXNativeTarget "InkleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF750A3114E8267F00D9E0BA /* Debug */,
+				DF750A3214E8267F00D9E0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF750A1214E8267F00D9E0BA /* Inkle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF750A1314E8267F00D9E0BA /* Inkle.xcdatamodel */,
+			);
+			currentVersion = DF750A1314E8267F00D9E0BA /* Inkle.xcdatamodel */;
+			path = Inkle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DF7509F114E8267E00D9E0BA /* Project object */;
+}
