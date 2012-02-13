@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80C68F1514E97216007CBD7B /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C68F1414E97216007CBD7B /* profileViewController.m */; };
+		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
 		DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0809F814E96FCC00CA164A /* homeViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80C68F1314E97216007CBD7B /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
+		80C68F1414E97216007CBD7B /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
+		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
+		80CC5EA814E97AE200127C3C /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
 		DF0809F714E96FCC00CA164A /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		DF0809F814E96FCC00CA164A /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				80CC5EA714E97AE200127C3C /* searchViewController.h */,
+				80CC5EA814E97AE200127C3C /* searchViewController.m */,
+				80C68F1314E97216007CBD7B /* profileViewController.h */,
+				80C68F1414E97216007CBD7B /* profileViewController.m */,
 				DF0809F714E96FCC00CA164A /* homeViewController.h */,
 				DF0809F814E96FCC00CA164A /* homeViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
@@ -308,6 +318,8 @@
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
 				DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */,
+				80C68F1514E97216007CBD7B /* profileViewController.m in Sources */,
+				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
