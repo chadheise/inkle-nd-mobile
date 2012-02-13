@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0809F814E96FCC00CA164A /* homeViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
 		DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0809F714E96FCC00CA164A /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
+		DF0809F814E96FCC00CA164A /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		DF7509FA14E8267F00D9E0BA /* Inkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7509FE14E8267F00D9E0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				DF0809F714E96FCC00CA164A /* homeViewController.h */,
+				DF0809F814E96FCC00CA164A /* homeViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
@@ -302,6 +307,7 @@
 				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
+				DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
