@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface homeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+@property (weak, nonatomic) IBOutlet UIDatePicker *calendar;
+
+- (void) hide:()Calendar;
+
+
 
 @end

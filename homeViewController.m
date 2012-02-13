@@ -9,6 +9,24 @@
 #import "homeViewController.h"
 
 @implementation homeViewController
+@synthesize calendarButton;
+@synthesize calendar;
+
+
+- (void) hide:()Calendar
+{
+    //[self.calendar : 
+}
+
+
+
+
+
+
+
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +64,8 @@
 
 - (void)viewDidUnload
 {
+    [self setCalendarButton:nil];
+    [self setCalendar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
