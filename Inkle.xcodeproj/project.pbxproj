@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		80C68F1514E97216007CBD7B /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C68F1414E97216007CBD7B /* profileViewController.m */; };
 		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
-		DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0809F814E96FCC00CA164A /* homeViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
 		DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
@@ -32,6 +31,8 @@
 		DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3B14E8295400D9E0BA /* icon_retina.png */; };
 		DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A3E14E829DA00D9E0BA /* loginViewController.m */; };
 		DF750A4214E82B0700D9E0BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A4114E82B0700D9E0BA /* logo.png */; };
+		DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCA902014F05CC900E2C634 /* mainMenuViewController.m */; };
+		DFCA902314F05DF500E2C634 /* blotblue.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCA902214F05DF500E2C634 /* blotblue.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,6 @@
 		80C68F1414E97216007CBD7B /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
 		80CC5EA814E97AE200127C3C /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
-		DF0809F714E96FCC00CA164A /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
-		DF0809F814E96FCC00CA164A /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		DF7509FA14E8267F00D9E0BA /* Inkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7509FE14E8267F00D9E0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -78,6 +77,9 @@
 		DF750A3D14E829DA00D9E0BA /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		DF750A3E14E829DA00D9E0BA /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		DF750A4114E82B0700D9E0BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainMenuViewController.h; sourceTree = "<group>"; };
+		DFCA902014F05CC900E2C634 /* mainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainMenuViewController.m; sourceTree = "<group>"; };
+		DFCA902214F05DF500E2C634 /* blotblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blotblue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,6 @@
 				80CC5EA814E97AE200127C3C /* searchViewController.m */,
 				80C68F1314E97216007CBD7B /* profileViewController.h */,
 				80C68F1414E97216007CBD7B /* profileViewController.m */,
-				DF0809F714E96FCC00CA164A /* homeViewController.h */,
-				DF0809F814E96FCC00CA164A /* homeViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
@@ -122,6 +122,8 @@
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */,
+				DFCA902014F05CC900E2C634 /* mainMenuViewController.m */,
 				DF750A3D14E829DA00D9E0BA /* loginViewController.h */,
 				DF750A3E14E829DA00D9E0BA /* loginViewController.m */,
 				DF750A0614E8267F00D9E0BA /* Inkle */,
@@ -196,6 +198,7 @@
 		DF750A4014E82AEC00D9E0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DFCA902214F05DF500E2C634 /* blotblue.png */,
 				DF750A4114E82B0700D9E0BA /* logo.png */,
 			);
 			name = Images;
@@ -279,6 +282,7 @@
 				DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */,
 				DF750A4214E82B0700D9E0BA /* logo.png in Resources */,
 				DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */,
+				DFCA902314F05DF500E2C634 /* blotblue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +321,9 @@
 				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
-				DF0809F914E96FCC00CA164A /* homeViewController.m in Sources */,
 				80C68F1514E97216007CBD7B /* profileViewController.m in Sources */,
 				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
+				DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
