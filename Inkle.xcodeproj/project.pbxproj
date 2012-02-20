@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80C68F1514E97216007CBD7B /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C68F1414E97216007CBD7B /* profileViewController.m */; };
 		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
@@ -46,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80C68F1314E97216007CBD7B /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
-		80C68F1414E97216007CBD7B /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
 		80CC5EA814E97AE200127C3C /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -113,8 +110,6 @@
 			children = (
 				80CC5EA714E97AE200127C3C /* searchViewController.h */,
 				80CC5EA814E97AE200127C3C /* searchViewController.m */,
-				80C68F1314E97216007CBD7B /* profileViewController.h */,
-				80C68F1414E97216007CBD7B /* profileViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
@@ -321,7 +316,6 @@
 				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
-				80C68F1514E97216007CBD7B /* profileViewController.m in Sources */,
 				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
 				DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */,
 			);
