@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
+		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
 		DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
 		DF750A0314E8267F00D9E0BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
 		80CC5EA814E97AE200127C3C /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
+		DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsViewController.h; sourceTree = "<group>"; };
+		DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsViewController.m; sourceTree = "<group>"; };
 		DF7509FA14E8267F00D9E0BA /* Inkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7509FE14E8267F00D9E0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DF750A0014E8267F00D9E0BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */,
+				DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */,
 				DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */,
 				DFCA902014F05CC900E2C634 /* mainMenuViewController.m */,
 				DF750A3D14E829DA00D9E0BA /* loginViewController.h */,
@@ -318,6 +323,7 @@
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
 				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
 				DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */,
+				DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cFh-eE-nSH" kind="modal" id="92G-2L-ZBL"/>
+                                    <segue destination="Tib-V7-nH0" kind="modal" id="iy0-dx-gsR"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="logo.png" id="6IK-OP-KXV">
@@ -53,265 +53,77 @@
             </objects>
             <point key="canvasLocation" x="15" y="69"/>
         </scene>
-        <scene sceneID="cz7-lw-k7J">
+        <scene sceneID="QmH-kT-spV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Se1-SV-RhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Inklings" id="J6W-SX-175" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Q6k-Qn-ybt">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ufP-BL-Wla" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Unc-Or-SFb">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mine" id="k3M-WN-ijK"/>
+                    <tabBarItem key="tabBarItem" title="My Inklings" id="Gbv-Kp-bxz"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1969" y="-530"/>
+            <point key="canvasLocation" x="1035" y="351"/>
         </scene>
-        <scene sceneID="qBX-Ow-KrX">
+        <scene sceneID="LTL-an-Wbs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjR-Xv-69l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Inklings" id="BcY-AJ-boc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PmG-Ul-Q6v">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Iwy-RV-8wv" customClass="othersInklingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dM-PR-89R">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Others'" id="Tk0-tq-kPH"/>
+                    <tabBarItem key="tabBarItem" title="Others' Inklings" id="xaJ-4h-DJi"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1969" y="-1095"/>
+            <point key="canvasLocation" x="1035" y="-213"/>
         </scene>
-        <scene sceneID="zUc-Wr-Xec">
+        <scene sceneID="RfG-xo-HOb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kry-hO-3ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController title="Inklings" definesPresentationContext="YES" id="xm5-fN-hyP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Vgw-BD-SYo"/>
-                    <navigationItem key="navigationItem" id="EC2-Ys-8q4"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="Tib-V7-nH0" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nt8-da-8zn">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="O9O-oB-U0I">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BcY-AJ-boc" kind="relationship" relationship="viewControllers" id="5pp-UW-wIt"/>
-                        <segue destination="J6W-SX-175" kind="relationship" relationship="viewControllers" id="uzB-0v-Us2"/>
+                        <segue destination="Iwy-RV-8wv" kind="relationship" relationship="viewControllers" id="wk0-hP-JZj"/>
+                        <segue destination="ufP-BL-Wla" kind="relationship" relationship="viewControllers" id="qB6-fL-T36"/>
+                        <segue destination="FPt-Ea-SWe" kind="relationship" relationship="viewControllers" id="KIV-ne-fKx"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="1435" y="-814"/>
+            <point key="canvasLocation" x="499" y="71"/>
         </scene>
-        <scene sceneID="aQp-w1-MbE">
+        <scene sceneID="bTz-9p-V90">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CrD-DY-pZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController modalTransitionStyle="crossDissolve" id="Boe-FK-Ico" customClass="mainMenuViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Eqd-vE-Wvz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mei-Db-2Yk">
-                                <rect key="frame" x="20" y="120" width="86" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="10"/>
-                                <state key="normal" title="Inklings" backgroundImage="blotblue.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xm5-fN-hyP" kind="push" id="PE5-wQ-mY6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0cq-ua-XO8">
-                                <rect key="frame" x="114" y="120" width="86" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Profile">
-                                    <color key="titleColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wuw-NF-lEI" kind="push" id="BjV-W7-F7y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q3U-vM-XgS">
-                                <rect key="frame" x="214" y="120" width="86" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ZPJ-aZ-DZi" kind="push" id="wRe-sC-xlN"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.png" id="GYM-aP-TRv">
-                                <rect key="frame" x="76" y="8" width="169" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l7H-Mv-55d">
-                                <rect key="frame" x="20" y="226" width="86" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Map">
-                                    <color key="titleColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aAY-t2-9OO" kind="push" id="lQN-aV-fwm"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Menu" id="pql-i1-BIs"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="951" y="69"/>
-        </scene>
-        <scene sceneID="119-9g-vhv">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V3U-iR-BYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="cFh-eE-nSH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="TS5-t1-wUV"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z43-41-GVa">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Boe-FK-Ico" kind="relationship" relationship="rootViewController" id="T8Y-Md-I3b"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="517" y="69"/>
-        </scene>
-        <scene sceneID="OF6-pZ-suB">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrc-zr-kUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="tYc-m5-wr1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aJy-0v-znM">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="FPt-Ea-SWe" customClass="searchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dea-eL-Pcc">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" id="w8q-6c-QKH"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="e9Z-yv-rbm"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2503" y="478"/>
-        </scene>
-        <scene sceneID="D2Z-5B-bbe">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kVH-wo-sjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="1Dg-Fs-HWB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3DV-J1-bim">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Place" id="DOI-hD-o6t"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2869" y="69"/>
-        </scene>
-        <scene sceneID="h8L-h2-2Zh">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T3r-zq-FwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="09f-mM-Tmi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3pm-7f-skM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Blots" id="Q9E-g1-rCR"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2503" y="-324"/>
-        </scene>
-        <scene sceneID="kSl-jq-JMY">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FPv-vZ-IyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="wuw-NF-lEI" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GKo-TW-d9f"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="7UK-is-qV3">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="09f-mM-Tmi" kind="relationship" relationship="viewControllers" id="AKe-Pz-93C"/>
-                        <segue destination="1Dg-Fs-HWB" kind="relationship" relationship="viewControllers" id="uqQ-HQ-Buk"/>
-                        <segue destination="tYc-m5-wr1" kind="relationship" relationship="viewControllers" id="JWg-36-2gl"/>
-                    </connections>
-                </tabBarController>
-            </objects>
-            <point key="canvasLocation" x="1969" y="74"/>
-        </scene>
-        <scene sceneID="fAD-mB-Lck">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FAq-az-eQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="aAY-t2-9OO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fTb-MJ-g0e">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="j6Y-Pe-ZGA"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1132" y="679"/>
-        </scene>
-        <scene sceneID="1sD-Zb-4ja">
-            <objects>
-                <searchDisplayController id="ONS-ai-rmi">
-                    <connections>
-                        <outlet property="delegate" destination="ZPJ-aZ-DZi" id="RV8-oZ-P48"/>
-                        <outlet property="searchContentsController" destination="ZPJ-aZ-DZi" id="5Op-MR-IRS"/>
-                        <outlet property="searchResultsDataSource" destination="ZPJ-aZ-DZi" id="D9R-fI-s9g"/>
-                        <outlet property="searchResultsDelegate" destination="ZPJ-aZ-DZi" id="KLM-VK-6Gf"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LI5-Gu-YsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Search" id="ZPJ-aZ-DZi" customClass="searchViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Myu-da-xcY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="TBY-lp-keW"/>
-                    <navigationItem key="navigationItem" title="Search" id="RMV-eR-NVB">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="LVW-m2-8nf"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="ONS-ai-rmi" id="6vg-x6-9nT"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1599" y="478"/>
+            <point key="canvasLocation" x="1035" y="935"/>
         </scene>
     </scenes>
     <resources>
-        <image name="blotblue.png" width="150" height="150"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
     <classes>
         <class className="loginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
         </class>
-        <class className="mainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/mainMenuViewController.h"/>
+        <class className="othersInklingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
         </class>
         <class className="searchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/searchViewController.h"/>
