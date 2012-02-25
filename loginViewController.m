@@ -28,13 +28,13 @@
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     
-    NSLog(@"postData: %@", postData);
+    //NSLog(@"postData: %@", postData);
     
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"responseData: %@", responseString);
+    //NSLog(@"responseData: %@", responseString);
     
     if ( [responseString isEqualToString: [NSString stringWithFormat:@"True"]] ) {
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
