@@ -47,20 +47,13 @@
                                 <rect key="frame" x="40" y="282" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" text="Label" lineBreakMode="wordWrap" numberOfLines="3" minimumFontSize="10" id="foG-xh-uYh">
-                                <rect key="frame" x="80" y="171" width="164" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.55294117649999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="PsX-S8-0Cd" id="p5w-ZO-c7h"/>
-                        <outlet property="loginLabel" destination="foG-xh-uYh" id="mFE-kM-ae3"/>
                         <outlet property="password" destination="loY-cJ-TJC" id="4g8-RW-0ab"/>
+                        <segue destination="Tib-V7-nH0" kind="modal" identifier="loginSegue" id="yPL-Gf-y48"/>
                     </connections>
                 </viewController>
             </objects>
