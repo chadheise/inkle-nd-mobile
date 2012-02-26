@@ -9,6 +9,8 @@
 #import "othersInklingsViewController.h"
 
 @implementation othersInklingsViewController
+- (IBAction)sessionTest:(id)sender {
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,12 +31,38 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/test/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *postData = [NSMutableData data];
+    /*[postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<email>%@</email>", [email text] ] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<password>%@</password>", [password text] ] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];*/
+    [request setHTTPBody: postData];
+    
+    //NSLog(@"postData: %@", postData);
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    NSLog(@"responseData: %@", responseString);
+    
+    /*if ( [responseString isEqualToString: [NSString stringWithFormat:@"True"]] ) {
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+    }*/
+
+    
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
