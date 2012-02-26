@@ -9,9 +9,8 @@
 #import "loginViewController.h"
 
 @implementation loginViewController
-@synthesize email;
-@synthesize password;
-@synthesize loginLabel;
+@synthesize email = _email;
+@synthesize password = _password;
 
 - (IBAction)LoginPress:(id)sender {
 
@@ -23,8 +22,8 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<email>%@</email>", [email text] ] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<password>%@</password>", [password text] ] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<email>%@</email>", [_email text] ] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<password>%@</password>", [_password text] ] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     
@@ -78,7 +77,6 @@
 
 - (void)viewDidUnload
 {
-    [self setLoginLabel:nil];
     [self setEmail:nil];
     [self setPassword:nil];
     [super viewDidUnload];
