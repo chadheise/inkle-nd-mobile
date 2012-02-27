@@ -42,7 +42,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+ /*   UIScrollView *tempScrollView = (UIScrollView *)self.view;
+    tempScrollView.contentSize = CGSizeMake(320,758);
+    tempScrollView.contentInset = UIEdgeInsetsMake(64.0, 0.0, 44.0, 0.0);
+    tempScrollView.scrollIndicatorInsets = UIEdgeInsetsMake (64.0, 0.0, 44.0, 0.0);*/
+    
      NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/test/"];
      NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
      
