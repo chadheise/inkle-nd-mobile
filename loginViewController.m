@@ -7,10 +7,12 @@
 //
 
 #import "loginViewController.h"
+#import "RXMLElement.h"
 
 @implementation loginViewController
 @synthesize email = _email;
 @synthesize password = _password;
+@synthesize errorLabel = _errorLabel;
 
 - (IBAction)LoginPress:(id)sender {
 
@@ -33,11 +35,29 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(@"responseData: %@", responseString);
+    NSLog(@"responseData: %@", responseString);
     
+    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
+    
+    if ( [[NSString stringWithFormat:@"%@", [responseXML child: @"valid"]] isEqualToString:[NSString stringWithFormat:@"True"]]) {
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+    }
+    else {
+        _errorLabel.text = [NSString stringWithFormat:@"%@", [responseXML child:@"error"]];
+        [responseXML iterate:@"errors.error" with: ^(RXMLElement *error) {
+            NSLog(_errorLabel.text);
+            _errorLabel.text = [NSString stringWithFormat: @"%@ \n %@", _errorLabel.text, error];
+        }];
+    }
+    
+    /*
     if ( [responseString isEqualToString: [NSString stringWithFormat:@"True"]] ) {
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }
+    else {
+        RXMLElement *rootXML = [RXMLElement elementFromXMLData:responseData];
+        _errorLabel.text = [NSString stringWithFormat:@"%@", [rootXML child:@"name"]];
+    }*/
     
 }
 
@@ -79,6 +99,7 @@
 {
     [self setEmail:nil];
     [self setPassword:nil];
+    [self setErrorLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

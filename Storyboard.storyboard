@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -47,11 +47,19 @@
                                 <rect key="frame" x="40" y="282" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" minimumFontSize="10" id="0me-r6-MRc">
+                                <rect key="frame" x="40" y="171" width="240" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.55294117649999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="PsX-S8-0Cd" id="p5w-ZO-c7h"/>
+                        <outlet property="errorLabel" destination="0me-r6-MRc" id="2Mu-WN-gW0"/>
                         <outlet property="password" destination="loY-cJ-TJC" id="4g8-RW-0ab"/>
                         <segue destination="Tib-V7-nH0" kind="modal" identifier="loginSegue" id="yPL-Gf-y48"/>
                     </connections>
@@ -173,14 +181,14 @@
                                 <rect key="frame" x="0.0" y="114" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="352009560.927297">
-                                    <!--2012-02-26 23:26:00 -0500-->
+                                    <!--2012-02-27 04:26:00 +0000-->
                                 </date>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="349786800">
-                                    <!--2012-02-01 06:00:00 -0500-->
+                                    <!--2012-02-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -198,7 +206,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                         </subviews>
@@ -284,6 +292,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -305,4 +314,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="wk0-hP-JZj"/>
+    </inferredMetricsTieBreakers>
 </document>
