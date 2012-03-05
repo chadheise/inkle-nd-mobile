@@ -35,9 +35,9 @@
 		DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3B14E8295400D9E0BA /* icon_retina.png */; };
 		DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A3E14E829DA00D9E0BA /* loginViewController.m */; };
 		DF750A4214E82B0700D9E0BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A4114E82B0700D9E0BA /* logo.png */; };
-		DF9289661504738C00C31446 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289611504738C00C31446 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DF9289671504738C00C31446 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289631504738C00C31446 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DF9289681504738C00C31446 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289651504738C00C31446 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289741504764B00C31446 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF92897A1504764B00C31446 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289761504764B00C31446 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF92897B1504764B00C31446 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289781504764B00C31446 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DFC7D12115043EC1000717D5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC7D12015043EC1000717D5 /* libz.dylib */; };
 		DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCA902014F05CC900E2C634 /* mainMenuViewController.m */; };
 		DFCA902314F05DF500E2C634 /* blotblue.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCA902214F05DF500E2C634 /* blotblue.png */; };
@@ -93,12 +93,12 @@
 		DF750A3D14E829DA00D9E0BA /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		DF750A3E14E829DA00D9E0BA /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		DF750A4114E82B0700D9E0BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		DF9289601504738C00C31446 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		DF9289611504738C00C31446 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
-		DF9289621504738C00C31446 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
-		DF9289631504738C00C31446 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
-		DF9289641504738C00C31446 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		DF9289651504738C00C31446 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		DF9289731504764B00C31446 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		DF9289741504764B00C31446 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		DF9289751504764B00C31446 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
+		DF9289761504764B00C31446 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
+		DF9289771504764B00C31446 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		DF9289781504764B00C31446 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		DFC7D12015043EC1000717D5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainMenuViewController.h; sourceTree = "<group>"; };
 		DFCA902014F05CC900E2C634 /* mainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainMenuViewController.m; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
-				DF92895F1504738C00C31446 /* RaptureXML */,
 				DFC7D12015043EC1000717D5 /* libz.dylib */,
+				DF9289691504760200C31446 /* RaptureXML */,
 				80CC5EA714E97AE200127C3C /* searchViewController.h */,
 				80CC5EA814E97AE200127C3C /* searchViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
@@ -238,18 +238,17 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		DF92895F1504738C00C31446 /* RaptureXML */ = {
+		DF9289691504760200C31446 /* RaptureXML */ = {
 			isa = PBXGroup;
 			children = (
-				DF9289601504738C00C31446 /* NSDataAdditions.h */,
-				DF9289611504738C00C31446 /* NSDataAdditions.m */,
-				DF9289621504738C00C31446 /* RXMLElement.h */,
-				DF9289631504738C00C31446 /* RXMLElement.m */,
-				DF9289641504738C00C31446 /* TBXML.h */,
-				DF9289651504738C00C31446 /* TBXML.m */,
+				DF9289731504764B00C31446 /* NSDataAdditions.h */,
+				DF9289741504764B00C31446 /* NSDataAdditions.m */,
+				DF9289751504764B00C31446 /* RXMLElement.h */,
+				DF9289761504764B00C31446 /* RXMLElement.m */,
+				DF9289771504764B00C31446 /* TBXML.h */,
+				DF9289781504764B00C31446 /* TBXML.m */,
 			);
 			name = RaptureXML;
-			path = "../ZaBlanc-RaptureXML-2c99581/RaptureXML";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
