@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class specifyBlotsNetworksViewController;
+
+@protocol specifyBlotsNetworksViewControllerDelegate <NSObject>
+-(void)specifyBlotsNetworksViewControllerDidCancel:
+    (specifyBlotsNetworksViewController *)controller;
+-(void)specifyBlotsNetworksViewControllerDidSave:(specifyBlotsNetworksViewController *)controller;
+@end
+
 @interface specifyBlotsNetworksViewController : UIViewController
+
+@property (nonatomic, weak) id <specifyBlotsNetworksViewControllerDelegate> delegate;
+
+-(IBAction)cancel:(id)sender;
+-(IBAction)done:(id)sender;
 
 @end

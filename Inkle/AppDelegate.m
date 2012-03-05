@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "Inklings.h"
+#import "OthersInklingsTableViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    NSMutableArray *inklings;
+}
 
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
@@ -17,6 +21,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    inklings = [NSMutableArray arrayWithCapacity:20];
+    Inklings *inkling = [[Inklings alloc] init];
+    inkling.name = @"Chad Heise";
+    inkling.location = @"Feve";
+    inkling.attendees = 102;
+    [inklings addObject:inkling];
+    inkling = [[Inklings alloc] init];
+    inkling.name = @"Julie Wamser";
+    inkling.location = @"Fiddlers";
+    inkling.attendees = 8;
+    [inklings addObject:inkling];
+    inkling = [[Inklings alloc] init];
+    inkling.name = @"Michael Floyd";
+    inkling.location = @"Brothers";
+    inkling.attendees = 150;
+    [inklings addObject:inkling];
+    UITabBarController *tabBarController = 
+    (UITabBarController *)self.window.rootViewController;
+    OthersInklingsTableViewController *othersInklingsTableViewController =
+    [ [tabBarController viewControllers] objectAtIndex:0];
+    othersInklingsTableViewController.inklings = inklings;
+    
+    
     /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

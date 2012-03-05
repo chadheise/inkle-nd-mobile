@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8007E689150441EF002D2F4D /* OthersInklingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */; };
+		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
 		80ADE28D14FB3E22007C6E34 /* specifyBlotsNetworksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADE28C14FB3E22007C6E34 /* specifyBlotsNetworksViewController.m */; };
 		80ADE29114FB3E9F007C6E34 /* specifyDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADE29014FB3E9F007C6E34 /* specifyDateViewController.m */; };
 		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
+		8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
+		8007E68B15044700002D2F4D /* Inklings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inklings.h; sourceTree = "<group>"; };
+		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
 		80ADE28B14FB3E22007C6E34 /* specifyBlotsNetworksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = specifyBlotsNetworksViewController.h; sourceTree = "<group>"; };
 		80ADE28C14FB3E22007C6E34 /* specifyBlotsNetworksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = specifyBlotsNetworksViewController.m; sourceTree = "<group>"; };
 		80ADE28F14FB3E9F007C6E34 /* specifyDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = specifyDateViewController.h; sourceTree = "<group>"; };
@@ -126,6 +132,10 @@
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */,
+				8007E68B15044700002D2F4D /* Inklings.h */,
+				8007E68C15044700002D2F4D /* Inklings.m */,
+				8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */,
 				80ADE28F14FB3E9F007C6E34 /* specifyDateViewController.h */,
 				80ADE29014FB3E9F007C6E34 /* specifyDateViewController.m */,
 				80ADE28B14FB3E22007C6E34 /* specifyBlotsNetworksViewController.h */,
@@ -336,6 +346,8 @@
 				DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */,
 				80ADE28D14FB3E22007C6E34 /* specifyBlotsNetworksViewController.m in Sources */,
 				80ADE29114FB3E9F007C6E34 /* specifyDateViewController.m in Sources */,
+				8007E689150441EF002D2F4D /* OthersInklingsTableViewController.m in Sources */,
+				8007E68D15044700002D2F4D /* Inklings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

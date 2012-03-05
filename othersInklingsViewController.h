@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface othersInklingsViewController : UIViewController
+@interface othersInklingsViewController : UIViewController <UITableViewDelegate>
+{
+    IBOutlet UITableView *tblView;
+    
+    NSMutableArray *inklings;
+    
+}
 
 @end

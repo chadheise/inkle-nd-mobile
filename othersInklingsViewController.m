@@ -9,6 +9,7 @@
 #import "othersInklingsViewController.h"
 
 @implementation othersInklingsViewController
+
 - (IBAction)sessionTest:(id)sender {
 }
 
