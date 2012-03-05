@@ -10,7 +10,9 @@
 #import "Inklings.h"
 #import "RXMLElement.h"
 
-@implementation OthersInklingsTableViewController
+@implementation OthersInklingsTableViewController {
+    NSMutableArray *othersInklings;
+}
 
 @synthesize inklings;
 
@@ -63,9 +65,17 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
+    
+    NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
+    NSInteger numLocations = [numLocationsString integerValue];
+    
+    othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
+    /*Inklings *inkling = [[Inklings alloc] init];
+    inkling.address = @"222 S Michigan St.\nSouth Bend, IN";
+    inkling.location = @"Club Fever";
+    inkling.attendees = @"102";*/
     
     [responseXML iterate:@"location" with: ^(RXMLElement *l) {
         /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);
@@ -73,6 +83,12 @@
         NSLog([NSString stringWithFormat: @"%@", [l child:@"street"]]);
         NSLog([NSString stringWithFormat: @"%@", [l child:@"citystate"]]);
         NSLog([NSString stringWithFormat: @"-----------------"]);*/
+        Inklings *inkling = [[Inklings alloc] init];
+        [othersInklings addObject:inkling];
+        inkling = [[Inklings alloc] init];
+        inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
+        inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
+        inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
         
     }];
     
@@ -124,15 +140,18 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    //The next line uses the array from the AppDelegate
     return [self.inklings count];
+    //return [self->othersInklings count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //JULIE'S TABLE DATA
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
+    //The next line uses the array from the AppDelegate
     Inklings *inkling = [self.inklings objectAtIndex:indexPath.row];
+    //Inklings *inkling = [self->othersInklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = inkling.location;
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
@@ -142,7 +161,6 @@
   //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
   //  ratingImageView.image = [self imageForRating:inkling.attendees];
     return cell;
-   //END JULIE'S TABLE DATA 
         
 }
 
