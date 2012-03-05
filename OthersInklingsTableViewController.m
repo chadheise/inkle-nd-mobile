@@ -8,6 +8,7 @@
 
 #import "OthersInklingsTableViewController.h"
 #import "Inklings.h"
+#import "RXMLElement.h"
 
 @implementation OthersInklingsTableViewController
 
@@ -41,6 +42,40 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    //Get inkling data
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *postData = [NSMutableData data];
+    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>02/24/2012</date>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<peopleType>network</peopleType>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<peopleId>1</peopleId>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<inklingType>all</inklingType>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [request setHTTPBody: postData];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    
+    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
+    
+    [responseXML iterate:@"location" with: ^(RXMLElement *l) {
+        /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);
+        NSLog([NSString stringWithFormat: @"%@", [l child:@"name"]]);
+        NSLog([NSString stringWithFormat: @"%@", [l child:@"street"]]);
+        NSLog([NSString stringWithFormat: @"%@", [l child:@"citystate"]]);
+        NSLog([NSString stringWithFormat: @"-----------------"]);*/
+        
+    }];
+    
 }
 
 - (void)viewDidUnload
@@ -94,6 +129,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    //JULIE'S TABLE DATA
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
     Inklings *inkling = [self.inklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
@@ -105,6 +142,8 @@
   //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
   //  ratingImageView.image = [self imageForRating:inkling.attendees];
     return cell;
+   //END JULIE'S TABLE DATA 
+        
 }
 
 /*
