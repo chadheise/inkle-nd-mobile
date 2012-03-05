@@ -10,8 +10,8 @@
 
 @implementation Inklings
 
-@synthesize name;
-@synthesize location;
-@synthesize attendees;
+@synthesize address = _address;
+@synthesize location = _location;
+@synthesize attendees = _attendees;
 
 @end

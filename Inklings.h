@@ -10,7 +10,7 @@
 
 @interface Inklings : NSObject
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSString *attendees;
 

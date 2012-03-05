@@ -94,12 +94,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
     Inklings *inkling = [self.inklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = inkling.location;
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
-    nameLabel.text = inkling.name;
+    nameLabel.text = inkling.address;
     UILabel *attendeesLabel = (UILabel *)[cell viewWithTag:102];
     attendeesLabel.text = inkling.attendees;
   //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
