@@ -100,6 +100,8 @@
     locationLabel.text = inkling.location;
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
     nameLabel.text = inkling.name;
+    UILabel *attendeesLabel = (UILabel *)[cell viewWithTag:102];
+    attendeesLabel.text = inkling.attendees;
   //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
   //  ratingImageView.image = [self imageForRating:inkling.attendees];
     return cell;

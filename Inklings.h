@@ -12,6 +12,6 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *location;
-@property (nonatomic, assign) int attendees;
+@property (nonatomic, copy) NSString *attendees;
 
 @end

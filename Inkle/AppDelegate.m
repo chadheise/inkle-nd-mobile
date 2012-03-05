@@ -25,17 +25,17 @@
     Inklings *inkling = [[Inklings alloc] init];
     inkling.name = @"Chad Heise";
     inkling.location = @"Feve";
-    inkling.attendees = 102;
+    inkling.attendees = @"102";
     [inklings addObject:inkling];
     inkling = [[Inklings alloc] init];
     inkling.name = @"Julie Wamser";
     inkling.location = @"Fiddlers";
-    inkling.attendees = 8;
+    inkling.attendees = @"8";
     [inklings addObject:inkling];
     inkling = [[Inklings alloc] init];
     inkling.name = @"Michael Floyd";
     inkling.location = @"Brothers";
-    inkling.attendees = 150;
+    inkling.attendees = @"150";
     [inklings addObject:inkling];
     UITabBarController *tabBarController = 
     (UITabBarController *)self.window.rootViewController;

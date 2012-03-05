@@ -375,6 +375,9 @@
 				80ADE29114FB3E9F007C6E34 /* specifyDateViewController.m in Sources */,
 				8007E689150441EF002D2F4D /* OthersInklingsTableViewController.m in Sources */,
 				8007E68D15044700002D2F4D /* Inklings.m in Sources */,
+				DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */,
+				DF92897A1504764B00C31446 /* RXMLElement.m in Sources */,
+				DF92897B1504764B00C31446 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
