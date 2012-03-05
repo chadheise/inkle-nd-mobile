@@ -132,6 +132,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80B5FE00150487F40012CA21 /* InklingTable */ = {
+			isa = PBXGroup;
+			children = (
+				8007E68C15044700002D2F4D /* Inklings.m */,
+				8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */,
+				8007E68B15044700002D2F4D /* Inklings.h */,
+				8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */,
+			);
+			name = InklingTable;
+			sourceTree = "<group>";
+		};
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
@@ -146,10 +157,7 @@
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
-				8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */,
-				8007E68B15044700002D2F4D /* Inklings.h */,
-				8007E68C15044700002D2F4D /* Inklings.m */,
-				8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */,
+				80B5FE00150487F40012CA21 /* InklingTable */,
 				80ADE28F14FB3E9F007C6E34 /* specifyDateViewController.h */,
 				80ADE29014FB3E9F007C6E34 /* specifyDateViewController.m */,
 				80ADE28B14FB3E22007C6E34 /* specifyBlotsNetworksViewController.h */,
