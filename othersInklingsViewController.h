@@ -10,9 +10,9 @@
 
 @interface othersInklingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    IBOutlet UITableView *tblView;
+    //IBOutlet UITableView *tblView;
     
-    NSMutableArray *inklings;
+    //NSMutableArray *inklings;
     
 }
 

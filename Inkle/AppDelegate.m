@@ -57,11 +57,9 @@
     inkling.location = @"Mulliagan's Bar & Grill";
     inkling.attendees = @"33";
     [inklings addObject:inkling];
-    UITabBarController *tabBarController = 
-    (UITabBarController *)self.window.rootViewController;
-    OthersInklingsTableViewController *othersInklingsTableViewController =
-    [ [tabBarController viewControllers] objectAtIndex:0];
-    othersInklingsTableViewController.inklings = inklings;
+    //UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    //OthersInklingsTableViewController *othersInklingsTableViewController = [ [tabBarController viewControllers] objectAtIndex:0];
+    //othersInklingsTableViewController.inklings = inklings;
     
     
     /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
