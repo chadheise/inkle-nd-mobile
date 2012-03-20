@@ -34,8 +34,7 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"responseData: %@", responseString);
+    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     
@@ -45,7 +44,7 @@
     else {
         _errorLabel.text = [NSString stringWithFormat:@"%@", [responseXML child:@"error"]];
         [responseXML iterate:@"errors.error" with: ^(RXMLElement *error) {
-            NSLog(_errorLabel.text);
+            //NSLog(_errorLabel.text);
             _errorLabel.text = [NSString stringWithFormat: @"%@ \n %@", _errorLabel.text, error];
         }];
     }

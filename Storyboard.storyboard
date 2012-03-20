@@ -86,7 +86,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rn1-ci-O7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="E6s-i5-cGA" customClass="OthersInklingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="gfH-YT-o45">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -346,10 +346,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="E6s-i5-cGA" kind="relationship" relationship="viewControllers" id="AVl-KI-Ey3"/>
+                        <segue destination="Iwy-RV-8wv" kind="relationship" relationship="viewControllers" id="Wi1-00-uZM"/>
                         <segue destination="ufP-BL-Wla" kind="relationship" relationship="viewControllers" id="qB6-fL-T36"/>
                         <segue destination="FPt-Ea-SWe" kind="relationship" relationship="viewControllers" id="KIV-ne-fKx"/>
-                        <segue destination="Iwy-RV-8wv" kind="relationship" relationship="viewControllers" id="Wi1-00-uZM"/>
                     </connections>
                 </tabBarController>
             </objects>
