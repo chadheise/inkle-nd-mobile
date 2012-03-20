@@ -7,8 +7,13 @@
 //
 
 #import "othersInklingsViewController.h"
+#import "Inklings.h"
 
-@implementation othersInklingsViewController
+@implementation othersInklingsViewController {
+    
+}
+
+@synthesize inklings;
 
 - (IBAction)sessionTest:(id)sender {
 }
@@ -88,5 +93,49 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+/*---TABLE VIEW FUNCTIONS*/
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
+    //The next line uses the array from the AppDelegate
+    Inklings *inkling = [self.inklings objectAtIndex:indexPath.row];
+    //Inklings *inkling = [self->othersInklings objectAtIndex:indexPath.row];
+    UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
+    locationLabel.text = inkling.location;
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
+    nameLabel.text = inkling.address;
+    UILabel *attendeesLabel = (UILabel *)[cell viewWithTag:102];
+    attendeesLabel.text = inkling.attendees;
+    //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
+    //  ratingImageView.image = [self imageForRating:inkling.attendees];
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    //The next line uses the array from the AppDelegate
+    return [self.inklings count];
+    //return [self->othersInklings count];
+}
+
 
 @end

@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface othersInklingsViewController : UIViewController <UITableViewDelegate>
+@interface othersInklingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *tblView;
     
     NSMutableArray *inklings;
     
 }
+
+@property (nonatomic, strong) NSMutableArray *inklings;
 
 @end
