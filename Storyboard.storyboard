@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="Ie4-Ru-Tut">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-LQ-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,6 +68,7 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
+        <!--View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,6 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="351"/>
         </scene>
+        <!--Others Inklings Table View Controller - Example Table-->
         <scene sceneID="oZc-bD-Hvq">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rn1-ci-O7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,6 +139,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-803"/>
         </scene>
+        <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,6 +243,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-213"/>
         </scene>
+        <!--Specify Date View Controller-->
         <scene sceneID="upe-xt-gbQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y5-Gc-VL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,7 +264,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iwy-RV-8wv" kind="modal" id="egb-hV-HHs"/>
+                                    <segue destination="Tib-V7-nH0" kind="modal" id="6XT-7L-mwD"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="Pk9-PL-ig6">
@@ -301,6 +306,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1487" y="-4"/>
         </scene>
+        <!--Specify Blots Networks View Controller-->
         <scene sceneID="USy-3D-oG0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A54-C9-O3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,7 +327,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iwy-RV-8wv" kind="modal" id="P2Q-9v-Zk3"/>
+                                    <segue destination="Tib-V7-nH0" kind="modal" id="gBA-tC-VHW"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" id="oAJ-dS-Sv3">
@@ -333,8 +339,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1483" y="-566"/>
+            <point key="canvasLocation" x="1487" y="-582"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,6 +361,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="477" y="-4"/>
         </scene>
+        <!--Search View Controller-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>

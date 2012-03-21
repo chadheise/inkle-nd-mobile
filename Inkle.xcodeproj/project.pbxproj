@@ -304,7 +304,7 @@
 		DF7509F114E8267E00D9E0BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = DF7509F414E8267E00D9E0BA /* Build configuration list for PBXProject "Inkle" */;
 			compatibilityVersion = "Xcode 3.2";
