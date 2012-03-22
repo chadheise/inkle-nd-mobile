@@ -196,7 +196,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mTS-Qc-brR" kind="push" id="8m0-mF-LYD"/>
+                                    <action selector="pickDate:" destination="Iwy-RV-8wv" eventType="touchUpInside" id="nSy-es-PPH"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="OKV-eo-e6R">

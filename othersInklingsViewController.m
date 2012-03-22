@@ -93,7 +93,24 @@
     [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
 }
 
-- (IBAction)sessionTest:(id)sender {
+- (IBAction)pickDate:(id)sender {
+    
+    UIDatePicker* picker = [[UIDatePicker alloc] init];
+    picker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    picker.datePickerMode = UIDatePickerModeDate;
+    
+    [picker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
+    picker.frame = CGRectMake(0.0, 250, pickerSize.width, 460);
+    picker.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:picker];
+    
+}
+
+-(void) dateChanged:(UIDatePicker *)sender {
+    inklingDate = [sender date];
+    NSLog([self stringFromDate:inklingDate]);
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
