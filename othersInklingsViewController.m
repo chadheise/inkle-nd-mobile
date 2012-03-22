@@ -15,6 +15,8 @@
     
     NSDate *inklingDate;
     NSString *inklingType;
+    NSString *peopleType;
+    NSString *peopleId;
 }
 
 @synthesize inklings;
@@ -22,7 +24,7 @@
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
-- (void) getInklingsWithDate:(NSDate *)date forPeopleType:(NSString *)peopleType withPeopleId:(NSString *)peopleId withInklingType:(NSString *)inklingType
+- (void) updateInklings
 {
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
@@ -33,7 +35,7 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:date]] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:inklingDate]] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleType>%@</peopleType>", peopleType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleId>%@</peopleId>", peopleId] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
@@ -74,9 +76,6 @@
 /*------------------------------------------*/
 - (IBAction)segmentSelect:(UISegmentedControl *)sender {
     
-    NSString *peopleType = @"network";
-    NSString *peopleId = @"1";
-    
     if (sender.selectedSegmentIndex == 0) {
         inklingType = @"all";
     }
@@ -90,7 +89,7 @@
         inklingType = @"mainEvent";
     }
     
-    [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
+    [self updateInklings];
 }
 
 - (IBAction)pickDate:(id)sender {
@@ -109,7 +108,8 @@
 
 -(void) dateChanged:(UIDatePicker *)sender {
     inklingDate = [sender date];
-    NSLog([self stringFromDate:inklingDate]);
+    
+    [self updateInklings];
     
 }
 
@@ -146,10 +146,10 @@
     [super viewDidLoad];
                       
     inklingDate = [NSDate date]; //Initialize inklingDate to today
-    NSString *peopleType = @"network";
-    NSString *peopleId = @"1";
+    peopleType = @"network";
+    peopleId = @"1";
     inklingType = @"all";
-    [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
+    [self updateInklings];
 
 }
 
