@@ -16,6 +16,51 @@
 
 @synthesize inklings;
 
+/*------------CUSTOM FUNCTIONS--------------*/
+
+- (void) getInklingsWithDate:(NSString *)date forPeopleType:(NSString *)peopleType withPeopleId:(NSString *)peopleId withInklingType:(NSString *)inklingType
+{
+    //Get inkling data
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *postData = [NSMutableData data];
+    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", date] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<peopleType>%@</peopleType>", peopleType] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<peopleId>%@</peopleId>", peopleId] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [request setHTTPBody: postData];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    
+    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
+    
+    NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
+    NSInteger numLocations = [numLocationsString integerValue];
+    
+    othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
+    
+    [responseXML iterate:@"location" with: ^(RXMLElement *l) {
+        /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
+        Inklings *inkling = [[Inklings alloc] init];
+        inkling = [[Inklings alloc] init];
+        inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
+        inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
+        inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
+        [othersInklings addObject:inkling];
+        
+    }];
+}
+
+/*------------------------------------------*/
+
 - (IBAction)sessionTest:(id)sender {
 }
 
@@ -49,67 +94,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.tabBarController setSelectedIndex:0];
-    //[self.tabBarController.tabBar setHidden:NO]; 
     
- /*   UIScrollView *tempScrollView = (UIScrollView *)self.view;
-    tempScrollView.contentSize = CGSizeMake(320,758);
-    tempScrollView.contentInset = UIEdgeInsetsMake(64.0, 0.0, 44.0, 0.0);
-    tempScrollView.scrollIndicatorInsets = UIEdgeInsetsMake (64.0, 0.0, 44.0, 0.0);*/
-    
-    //Get inkling data
-    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
-    
-    NSMutableData *postData = [NSMutableData data];
-    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>02/24/2012</date>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<peopleType>network</peopleType>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<peopleId>1</peopleId>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<inklingType>all</inklingType>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [request setHTTPBody: postData];
-    
-    NSURLResponse *response;
-    NSError *err;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    
-    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
-    
-    NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
-    NSInteger numLocations = [numLocationsString integerValue];
-    
-    othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
-    /*Inklings *inkling = [[Inklings alloc] init];
-     inkling.address = @"222 S Michigan St.\nSouth Bend, IN";
-     inkling.location = @"Club Fever";
-     inkling.attendees = @"102";*/
-    
-    [responseXML iterate:@"location" with: ^(RXMLElement *l) {
-        /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);
-         NSLog([NSString stringWithFormat: @"%@", [l child:@"name"]]);
-         NSLog([NSString stringWithFormat: @"%@", [l child:@"street"]]);
-         NSLog([NSString stringWithFormat: @"%@", [l child:@"citystate"]]);
-         NSLog([NSString stringWithFormat: @"-----------------"]);*/
-        Inklings *inkling = [[Inklings alloc] init];
-        inkling = [[Inklings alloc] init];
-        inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
-        inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
-        inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
-        [othersInklings addObject:inkling];
-        
-    }];
-    
-    //NSLog([NSString stringWithFormat: @"othersInklings"]);
-    //NSLog(othersInklings);
-    //Inklings *myInkle = [othersInklings objectAtIndex:0];
-    //NSLog(myInkle.location);
-    //NSLog([NSString stringWithFormat: @"%@", othersInklings]);
-    
-    //[self.tableView reloadData];
+    NSString *date = @"02/24/2012";
+    NSString *peopleType = @"network";
+    NSString *peopleId = @"1";
+    NSString *inklingType = @"all";
+    [self getInklingsWithDate:date forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
 
 }
 
