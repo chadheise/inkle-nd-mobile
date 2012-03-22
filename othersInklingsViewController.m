@@ -43,12 +43,8 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
-    NSLog(@"Before child");
     NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
     NSInteger numLocations = [numLocationsString integerValue];
-    
-    //Clear array content
-    othersInklings = [NSMutableArray array];
     
     othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
     
