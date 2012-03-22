@@ -20,7 +20,7 @@
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
-- (void) getInklingsWithDate:(NSString *)date forPeopleType:(NSString *)peopleType withPeopleId:(NSString *)peopleId withInklingType:(NSString *)inklingType
+- (void) getInklingsWithDate:(NSDate *)date forPeopleType:(NSString *)peopleType withPeopleId:(NSString *)peopleId withInklingType:(NSString *)inklingType
 {
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
@@ -31,7 +31,7 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", date] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:date]] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleType>%@</peopleType>", peopleType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleId>%@</peopleId>", peopleId] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
@@ -66,10 +66,17 @@
     [inklingTable reloadData];
 }
 
+- (NSString *)stringFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    
+    return [dateFormat stringFromDate:date];
+}
+
 /*------------------------------------------*/
 - (IBAction)segmentSelect:(UISegmentedControl *)sender {
     
-    NSString *date = @"02/24/2012";
     NSString *peopleType = @"network";
     NSString *peopleId = @"1";
     
@@ -84,7 +91,7 @@
         inklingType = @"mainEvent";
     }
     
-    [self getInklingsWithDate:date forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
+    [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
 }
 
 - (IBAction)sessionTest:(id)sender {
@@ -117,21 +124,16 @@
 }*/
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
                       
-    inklingDate = [NSDate date];
-                      
-    NSString *date = [dateFormat stringFromDate:inklingDate];
+    inklingDate = [NSDate date]; //Initialize inklingDate to today
     NSString *peopleType = @"network";
     NSString *peopleId = @"1";
     NSString *inklingType = @"all";
-    [self getInklingsWithDate:date forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
+    [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
 
 }
 
