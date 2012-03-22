@@ -121,17 +121,13 @@
 {
     [super viewDidLoad];
 
-    /*
+    
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM/dd/yyyy"];
                       
-    //inklingDate = [[NSDate alloc] init];
     inklingDate = [NSDate date];
                       
     NSString *date = [dateFormat stringFromDate:inklingDate];
-    NSLog(date);*/
-    
-    NSString *date = @"02/24/2012";
     NSString *peopleType = @"network";
     NSString *peopleId = @"1";
     NSString *inklingType = @"all";
