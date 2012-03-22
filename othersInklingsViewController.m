@@ -43,7 +43,7 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
-    
+    NSLog(@"Before child");
     NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
     NSInteger numLocations = [numLocationsString integerValue];
     
@@ -52,16 +52,15 @@
     
     othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
     
-    [responseXML iterate:@"location" with: ^(RXMLElement *l) {
-        /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
-        Inklings *inkling = [[Inklings alloc] init];
-        inkling = [[Inklings alloc] init];
-        inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
-        inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
-        inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
-        [othersInklings addObject:inkling];
-        
-    }];
+        [responseXML iterate:@"location" with: ^(RXMLElement *l) {
+            /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
+            Inklings *inkling = [[Inklings alloc] init];
+            inkling = [[Inklings alloc] init];
+            inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
+            inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
+            inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
+            [othersInklings addObject:inkling];
+        }];
     
     [inklingTable reloadData];
 }
