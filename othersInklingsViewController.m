@@ -101,7 +101,7 @@
     
     [picker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
-    picker.frame = CGRectMake(0.0, 250, pickerSize.width, 460);
+    picker.frame = CGRectMake(0.0, 152, pickerSize.width, 460);
     picker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:picker];
     
