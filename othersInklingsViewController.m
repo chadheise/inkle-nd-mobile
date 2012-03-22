@@ -12,7 +12,9 @@
 
 @implementation othersInklingsViewController {
     NSMutableArray *othersInklings;
+    
     NSDate *inklingDate;
+    NSString *inklingType;
 }
 
 @synthesize inklings;
@@ -75,8 +77,10 @@
     NSString *peopleType = @"network";
     NSString *peopleId = @"1";
     
-    NSString *inklingType = @"all";
-    if (sender.selectedSegmentIndex == 1) {
+    if (sender.selectedSegmentIndex == 0) {
+        inklingType = @"all";
+    }
+    else if (sender.selectedSegmentIndex == 1) {
         inklingType = @"dinner";
     }
     else if (sender.selectedSegmentIndex == 2) {
@@ -127,7 +131,7 @@
     inklingDate = [NSDate date]; //Initialize inklingDate to today
     NSString *peopleType = @"network";
     NSString *peopleId = @"1";
-    NSString *inklingType = @"all";
+    inklingType = @"all";
     [self getInklingsWithDate:inklingDate forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
 
 }
