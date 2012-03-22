@@ -262,8 +262,14 @@
                                 <segment title="Main Event"/>
                             </segments>
                             <color key="tintColor" red="0.41568627953529358" green="0.73333334922790527" blue="0.41568627953529358" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="segmentSelect:" destination="Iwy-RV-8wv" eventType="valueChanged" id="gRa-Px-M0J"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inklingTable" destination="OKV-eo-e6R" id="BDc-VK-hVw"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1521" y="-231"/>
@@ -404,6 +410,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="othersInklingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="searchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/searchViewController.h"/>

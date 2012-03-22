@@ -15,6 +15,7 @@
 }
 
 @synthesize inklings;
+@synthesize inklingTable;
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
@@ -45,6 +46,9 @@
     NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
     NSInteger numLocations = [numLocationsString integerValue];
     
+    //Clear array content
+    othersInklings = [NSMutableArray array];
+    
     othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
     
     [responseXML iterate:@"location" with: ^(RXMLElement *l) {
@@ -57,9 +61,30 @@
         [othersInklings addObject:inkling];
         
     }];
+    
+    [inklingTable reloadData];
 }
 
 /*------------------------------------------*/
+- (IBAction)segmentSelect:(UISegmentedControl *)sender {
+    
+    NSString *date = @"02/24/2012";
+    NSString *peopleType = @"network";
+    NSString *peopleId = @"1";
+    
+    NSString *inklingType = @"all";
+    if (sender.selectedSegmentIndex == 1) {
+        inklingType = @"dinner";
+    }
+    else if (sender.selectedSegmentIndex == 2) {
+        inklingType = @"pregame";
+    }
+    else if (sender.selectedSegmentIndex == 3) {
+        inklingType = @"mainEvent";
+    }
+    
+    [self getInklingsWithDate:date forPeopleType:peopleType withPeopleId:peopleId withInklingType:inklingType];
+}
 
 - (IBAction)sessionTest:(id)sender {
 }
@@ -109,6 +134,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [self setInklingTable:nil];
+    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

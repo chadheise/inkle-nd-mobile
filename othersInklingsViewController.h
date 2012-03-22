@@ -17,5 +17,6 @@
 }
 
 @property (nonatomic, strong) NSMutableArray *inklings;
+@property (weak, nonatomic) IBOutlet UITableView *inklingTable;
 
 @end
