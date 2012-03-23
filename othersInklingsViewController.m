@@ -105,9 +105,22 @@
 
 -(void) dateChanged:(UIDatePicker *)sender {
     inklingDate = [sender date];
-    
+}
+
+- (IBAction)pickerNavBack:(id)sender {
+    if (!datePicker.hidden) {
+        [datePicker setHidden:YES];
+    }
+    [pickerNavigation setHidden:YES];
+    [inklingTypeSegment setHidden:NO];
+}
+- (IBAction)pickerNavSubmit:(id)sender {
     [self updateInklings];
-    
+    if (!datePicker.hidden) {
+        [datePicker setHidden:YES];
+    }
+    [pickerNavigation setHidden:YES];
+    [inklingTypeSegment setHidden:NO];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -155,7 +168,7 @@
     
     [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
-    datePicker.frame = CGRectMake(0.0, 170, pickerSize.width, 460);
+    datePicker.frame = CGRectMake(0.0, 195, pickerSize.width, 460);
     datePicker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:datePicker];
     [datePicker setHidden:YES];
@@ -274,5 +287,4 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
 @end

@@ -22,4 +22,5 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *pickerNavigation;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *inklingTypeSegment;
 
+
 @end

@@ -172,9 +172,15 @@
                                     <navigationItem title="Select Date" id="bci-kH-Vob">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="QmK-EL-ch7">
                                             <color key="tintColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="pickerNavBack:" destination="Iwy-RV-8wv" id="hcv-4H-8Zf"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Submit" id="Omu-aU-6fs">
                                             <color key="tintColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="pickerNavSubmit:" destination="Iwy-RV-8wv" id="y0d-yj-Yyc"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
