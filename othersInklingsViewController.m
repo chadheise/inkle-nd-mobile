@@ -22,6 +22,8 @@
 @synthesize inklings;
 @synthesize inklingTable;
 @synthesize datePicker;
+@synthesize pickerNavigation;
+@synthesize inklingTypeSegment;
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
@@ -95,17 +97,9 @@
 
 - (IBAction)pickDate:(id)sender {
     
-    /*UIDatePicker* picker = [[UIDatePicker alloc] init];
-    picker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    picker.datePickerMode = UIDatePickerModeDate;
-    
-    [picker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-    CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
-    picker.frame = CGRectMake(0.0, 152, pickerSize.width, 460);
-    picker.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:picker];*/
-    
     [datePicker setHidden:NO];
+    [pickerNavigation setHidden:NO];
+    [inklingTypeSegment setHidden:YES];
     
 }
 
@@ -161,16 +155,21 @@
     
     [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
-    datePicker.frame = CGRectMake(0.0, 152, pickerSize.width, 460);
+    datePicker.frame = CGRectMake(0.0, 170, pickerSize.width, 460);
     datePicker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:datePicker];
     [datePicker setHidden:YES];
 
+    [pickerNavigation setHidden:YES]; //Hide nav bar
+    
 }
 
 
 - (void)viewDidUnload
 {
+    [self setPickerNavigation:nil];
+    [self setInklingTypeSegment:nil];
+    [self setInklingTypeSegment:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

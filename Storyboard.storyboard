@@ -149,6 +149,36 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ULI-A5-LOh">
+                                <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Dinner"/>
+                                    <segment title="Pregame"/>
+                                    <segment title="Main Event"/>
+                                </segments>
+                                <color key="tintColor" red="0.43921568989999998" green="0.50588238240000005" blue="0.85882353779999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentSelect:" destination="Iwy-RV-8wv" eventType="valueChanged" id="8P7-rm-UdR"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="0F3-aI-vKQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Select Date" id="bci-kH-Vob">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="QmK-EL-ch7">
+                                            <color key="tintColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Omu-aU-6fs">
+                                            <color key="tintColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7eC-Hv-BYF">
                                 <rect key="frame" x="12" y="55" width="193" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -222,40 +252,14 @@
                                     <outlet property="delegate" destination="Iwy-RV-8wv" id="HyN-uq-cOo"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="0F3-aI-vKQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem id="VW6-0Y-N2r">
-                                        <nil key="title"/>
-                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="wgp-Cc-cqz">
-                                            <rect key="frame" x="8" y="7" width="304" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
-                                            <segments>
-                                                <segment title="All"/>
-                                                <segment title="Dinner"/>
-                                                <segment title="Pregame"/>
-                                                <segment title="Main Event"/>
-                                            </segments>
-                                            <color key="tintColor" red="0.43921568989999998" green="0.50588238240000005" blue="0.85882353779999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="segmentSelect:" destination="Iwy-RV-8wv" eventType="valueChanged" id="gRa-Px-M0J"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Others' Inklings" id="xaJ-4h-DJi"/>
-                    <navigationItem key="navigationItem" id="gPw-rx-Sra">
-                        <nil key="title"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="inklingTable" destination="OKV-eo-e6R" id="BDc-VK-hVw"/>
+                        <outlet property="inklingTypeSegment" destination="ULI-A5-LOh" id="TGq-Lk-iiG"/>
+                        <outlet property="pickerNavigation" destination="0F3-aI-vKQ" id="DRU-BZ-lkz"/>
                     </connections>
                 </viewController>
             </objects>
@@ -399,6 +403,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="pickerNavigation" candidateClass="UINavigationBar"/>
             </relationships>
         </class>
         <class className="searchViewController" superclassName="UIViewController">
