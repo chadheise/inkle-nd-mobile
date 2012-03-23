@@ -21,6 +21,7 @@
 
 @synthesize inklings;
 @synthesize inklingTable;
+@synthesize datePicker;
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
@@ -94,7 +95,7 @@
 
 - (IBAction)pickDate:(id)sender {
     
-    UIDatePicker* picker = [[UIDatePicker alloc] init];
+    /*UIDatePicker* picker = [[UIDatePicker alloc] init];
     picker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     picker.datePickerMode = UIDatePickerModeDate;
     
@@ -102,7 +103,9 @@
     CGSize pickerSize = [picker sizeThatFits:CGSizeZero];
     picker.frame = CGRectMake(0.0, 152, pickerSize.width, 460);
     picker.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:picker];
+    [self.view addSubview:picker];*/
+    
+    [datePicker setHidden:NO];
     
 }
 
@@ -150,6 +153,18 @@
     peopleId = @"1";
     inklingType = @"all";
     [self updateInklings];
+    
+    //Initialize datePicker and hide it
+    datePicker = [[UIDatePicker alloc] init];
+    datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    
+    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
+    datePicker.frame = CGRectMake(0.0, 152, pickerSize.width, 460);
+    datePicker.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:datePicker];
+    [datePicker setHidden:YES];
 
 }
 

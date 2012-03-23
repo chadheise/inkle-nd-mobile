@@ -18,5 +18,6 @@
 
 @property (nonatomic, strong) NSMutableArray *inklings;
 @property (weak, nonatomic) IBOutlet UITableView *inklingTable;
+@property (nonatomic, strong) UIDatePicker *datePicker;
 
 @end
