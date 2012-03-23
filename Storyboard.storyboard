@@ -207,6 +207,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Others' Inklings" id="xaJ-4h-DJi"/>
                     <connections>
+                        <outlet property="dateButton" destination="IJS-2r-Doo" id="aOd-lU-HAi"/>
                         <outlet property="inklingTable" destination="OKV-eo-e6R" id="BDc-VK-hVw"/>
                         <outlet property="inklingTypeSegment" destination="ULI-A5-LOh" id="TGq-Lk-iiG"/>
                         <outlet property="pickerNavigation" destination="0F3-aI-vKQ" id="DRU-BZ-lkz"/>
@@ -267,6 +268,7 @@
         <class className="othersInklingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="pickerNavigation" candidateClass="UINavigationBar"/>

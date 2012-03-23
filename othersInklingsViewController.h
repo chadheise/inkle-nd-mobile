@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UINavigationBar *pickerNavigation;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *inklingTypeSegment;
+@property (weak, nonatomic) IBOutlet UIButton *dateButton;
 
 
 @end

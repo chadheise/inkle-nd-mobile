@@ -24,11 +24,14 @@
 @synthesize datePicker;
 @synthesize pickerNavigation;
 @synthesize inklingTypeSegment;
+@synthesize dateButton;
 
 /*------------CUSTOM FUNCTIONS--------------*/
 
 - (void) updateInklings
 {
+    [dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
+    
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -104,17 +107,19 @@
 }
 
 -(void) dateChanged:(UIDatePicker *)sender {
-    inklingDate = [sender date];
+
 }
 
 - (IBAction)pickerNavBack:(id)sender {
     if (!datePicker.hidden) {
         [datePicker setHidden:YES];
+        [datePicker setDate:inklingDate]; //Reset the date picker to the current date
     }
     [pickerNavigation setHidden:YES];
     [inklingTypeSegment setHidden:NO];
 }
 - (IBAction)pickerNavSubmit:(id)sender {
+    inklingDate = datePicker.date;
     [self updateInklings];
     if (!datePicker.hidden) {
         [datePicker setHidden:YES];
@@ -175,6 +180,8 @@
 
     [pickerNavigation setHidden:YES]; //Hide nav bar
     
+    [dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal];
+    
 }
 
 
@@ -183,6 +190,7 @@
     [self setPickerNavigation:nil];
     [self setInklingTypeSegment:nil];
     [self setInklingTypeSegment:nil];
+    [self setDateButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
