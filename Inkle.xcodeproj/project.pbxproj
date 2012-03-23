@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8007E689150441EF002D2F4D /* OthersInklingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */; };
 		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
 		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
@@ -39,6 +38,7 @@
 		DFC7D12115043EC1000717D5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC7D12015043EC1000717D5 /* libz.dylib */; };
 		DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCA902014F05CC900E2C634 /* mainMenuViewController.m */; };
 		DFCA902314F05DF500E2C634 /* blotblue.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCA902214F05DF500E2C634 /* blotblue.png */; };
+		DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
-		8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
 		8007E68B15044700002D2F4D /* Inklings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inklings.h; sourceTree = "<group>"; };
 		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
 		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
@@ -97,6 +95,8 @@
 		DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainMenuViewController.h; sourceTree = "<group>"; };
 		DFCA902014F05CC900E2C634 /* mainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainMenuViewController.m; sourceTree = "<group>"; };
 		DFCA902214F05DF500E2C634 /* blotblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blotblue.png; sourceTree = "<group>"; };
+		DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
+		DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,20 +126,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		80B5FE00150487F40012CA21 /* InklingTable */ = {
-			isa = PBXGroup;
-			children = (
-				8007E68C15044700002D2F4D /* Inklings.m */,
-				8007E687150441EF002D2F4D /* OthersInklingsTableViewController.h */,
-				8007E68B15044700002D2F4D /* Inklings.h */,
-				8007E688150441EF002D2F4D /* OthersInklingsTableViewController.m */,
-			);
-			name = InklingTable;
-			sourceTree = "<group>";
-		};
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */,
+				DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */,
 				DFC7D12015043EC1000717D5 /* libz.dylib */,
 				DF9289691504760200C31446 /* RaptureXML */,
 				80CC5EA714E97AE200127C3C /* searchViewController.h */,
@@ -151,7 +142,8 @@
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
-				80B5FE00150487F40012CA21 /* InklingTable */,
+				8007E68C15044700002D2F4D /* Inklings.m */,
+				8007E68B15044700002D2F4D /* Inklings.h */,
 				DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */,
 				DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */,
 				DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */,
@@ -369,11 +361,11 @@
 				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
 				DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */,
 				DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */,
-				8007E689150441EF002D2F4D /* OthersInklingsTableViewController.m in Sources */,
 				8007E68D15044700002D2F4D /* Inklings.m in Sources */,
 				DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */,
 				DF92897A1504764B00C31446 /* RXMLElement.m in Sources */,
 				DF92897B1504764B00C31446 /* TBXML.m in Sources */,
+				DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
