@@ -27,7 +27,13 @@
 @synthesize dateButton;
 
 /*------------CUSTOM FUNCTIONS--------------*/
-
+- (NSString *)stringFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    
+    return [dateFormat stringFromDate:date];
+}
 - (void) updateInklings
 {
     [dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
@@ -71,13 +77,7 @@
     [inklingTable reloadData];
 }
 
-- (NSString *)stringFromDate:(NSDate *)date
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    
-    return [dateFormat stringFromDate:date];
-}
+
 
 /*------------------------------------------*/
 - (IBAction)segmentSelect:(UISegmentedControl *)sender {
