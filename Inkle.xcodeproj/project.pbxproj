@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
-		80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5EA814E97AE200127C3C /* searchViewController.m */; };
+		8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8021925B1520B7E900C7D3D6 /* InvitesViewController.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
@@ -54,8 +54,8 @@
 /* Begin PBXFileReference section */
 		8007E68B15044700002D2F4D /* Inklings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inklings.h; sourceTree = "<group>"; };
 		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
-		80CC5EA714E97AE200127C3C /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
-		80CC5EA814E97AE200127C3C /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
+		8021925A1520B7E900C7D3D6 /* InvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesViewController.h; sourceTree = "<group>"; };
+		8021925B1520B7E900C7D3D6 /* InvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesViewController.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsViewController.h; sourceTree = "<group>"; };
 		DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsViewController.m; sourceTree = "<group>"; };
@@ -133,11 +133,11 @@
 				DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */,
 				DFC7D12015043EC1000717D5 /* libz.dylib */,
 				DF9289691504760200C31446 /* RaptureXML */,
-				80CC5EA714E97AE200127C3C /* searchViewController.h */,
-				80CC5EA814E97AE200127C3C /* searchViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
+				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
 				8007E68B15044700002D2F4D /* Inklings.h */,
 				DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */,
@@ -358,7 +358,6 @@
 				DF750A1114E8267F00D9E0BA /* AppDelegate.m in Sources */,
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
-				80CC5EA914E97AE200127C3C /* searchViewController.m in Sources */,
 				DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */,
 				DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */,
 				8007E68D15044700002D2F4D /* Inklings.m in Sources */,
@@ -366,6 +365,7 @@
 				DF92897A1504764B00C31446 /* RXMLElement.m in Sources */,
 				DF92897B1504764B00C31446 /* TBXML.m in Sources */,
 				DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */,
+				8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
