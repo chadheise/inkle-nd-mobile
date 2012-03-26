@@ -137,10 +137,6 @@
 				80CC5EA814E97AE200127C3C /* searchViewController.m */,
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
-				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
-				DF750A3914E8295100D9E0BA /* icon.png */,
-				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
-				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
 				8007E68B15044700002D2F4D /* Inklings.h */,
@@ -222,6 +218,10 @@
 		DF750A4014E82AEC00D9E0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF750A3514E8294600D9E0BA /* Default.png */,
+				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
+				DF750A3914E8295100D9E0BA /* icon.png */,
+				DF750A3B14E8295400D9E0BA /* icon_retina.png */,
 				DFCA902214F05DF500E2C634 /* blotblue.png */,
 				DF750A4114E82B0700D9E0BA /* logo.png */,
 			);
