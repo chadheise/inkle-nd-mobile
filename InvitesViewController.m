@@ -9,6 +9,7 @@
 #import "InvitesViewController.h"
 
 @implementation InvitesViewController
+@synthesize invitesTable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +47,7 @@
 
 - (void)viewDidUnload
 {
+    [self setInvitesTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,4 +59,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)btnAccept:(id)sender {
+}
+
+- (IBAction)btnDecline:(id)sender {
+}
 @end

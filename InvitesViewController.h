@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InvitesViewController : UIViewController
+@interface InvitesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *invites;
+@property (weak, nonatomic) IBOutlet UITableView *invitesTable;
+- (IBAction)btnAccept:(id)sender;
+- (IBAction)btnDecline:(id)sender;
+
+
 
 @end
