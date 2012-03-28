@@ -140,6 +140,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wBt-e2-py3" kind="push" id="Njw-sV-sPA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IJS-2r-Doo">
                                 <rect key="frame" x="213" y="55" width="99" height="27"/>
@@ -216,6 +219,42 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1465" y="-245"/>
+        </scene>
+        <!--Blot Picker View Controller - Select Blot or Network-->
+        <scene sceneID="bUP-oV-4A3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xH-TQ-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="wBt-e2-py3" customClass="blotPickerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ff-79-Tas">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FZ4-fQ-Zya">
+                                <rect key="frame" x="20" y="62" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="DV8-70-XnS">
+                                <rect key="frame" x="0.0" y="151" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wBt-e2-py3" id="P4h-py-vrW"/>
+                                    <outlet property="delegate" destination="wBt-e2-py3" id="ZI0-52-g8h"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Blot or Network" id="hIG-MK-eiA"/>
+                    <connections>
+                        <outlet property="blotPicker" destination="DV8-70-XnS" id="nlU-sx-gMD"/>
+                        <outlet property="resultsLabel" destination="FZ4-fQ-Zya" id="oXv-Vp-2UA"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1962" y="-593"/>
         </scene>
         <!--Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
@@ -372,6 +411,13 @@
                 <relationship kind="action" name="btnAccept:"/>
                 <relationship kind="action" name="btnDecline:"/>
                 <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="blotPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="blotPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="resultsLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="loginViewController" superclassName="UIViewController">

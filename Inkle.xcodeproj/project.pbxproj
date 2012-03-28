@@ -12,6 +12,7 @@
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
+		DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA03915237D0B00FA679E /* blotPickerViewController.m */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
 		DF750A0114E8267F00D9E0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0014E8267F00D9E0BA /* Foundation.framework */; };
 		DF750A0314E8267F00D9E0BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF750A0214E8267F00D9E0BA /* CoreGraphics.framework */; };
@@ -62,6 +63,8 @@
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsViewController.h; sourceTree = "<group>"; };
 		DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsViewController.m; sourceTree = "<group>"; };
+		DF5DA03815237D0B00FA679E /* blotPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blotPickerViewController.h; sourceTree = "<group>"; };
+		DF5DA03915237D0B00FA679E /* blotPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blotPickerViewController.m; sourceTree = "<group>"; };
 		DF7509FA14E8267F00D9E0BA /* Inkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7509FE14E8267F00D9E0BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DF750A0014E8267F00D9E0BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,6 +142,8 @@
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
+				DF5DA03915237D0B00FA679E /* blotPickerViewController.m */,
 				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
@@ -372,6 +377,7 @@
 				DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */,
 				8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */,
 				80EC990A15235DC500F7CACA /* Invites.m in Sources */,
+				DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
