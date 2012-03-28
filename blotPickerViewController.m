@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.blotNames = [[NSArray alloc] initWithObjects: @"Blot 1", @"Blot 2", @"Blot 3", @"Network 1", @"Network 2", nil];
+    self.blotNames = [[NSMutableArray alloc] initWithObjects: @"Blot 1", @"Blot 2", @"Blot 3", @"Network 1", @"Network 2", nil];
     
 }
 
