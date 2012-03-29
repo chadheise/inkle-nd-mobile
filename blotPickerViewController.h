@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *blotPicker;
 @property (nonatomic, strong) NSMutableArray *blotNames;
+@property (nonatomic, strong) NSMutableArray *networkNames;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 
 @end

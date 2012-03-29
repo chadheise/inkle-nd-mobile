@@ -10,9 +10,11 @@
 
 @implementation blotPickerViewController {
     NSMutableArray *blotNames;
+    NSMutableArray *networkNames;
 }
 @synthesize blotPicker;
 @synthesize blotNames;
+@synthesize networkNames;
 @synthesize resultsLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
