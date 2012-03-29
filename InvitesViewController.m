@@ -19,7 +19,6 @@
 /*---------CUSTOM FUNCTIONS-------------*/
 - (void) updateInvites
 {
-    NSLog(@"Function called");
     //Get invite data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getInvitations/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -42,6 +41,7 @@
         //NSLog([NSString stringWithFormat: @"%@", [i child:@"from"]]);
         Invites *invite = [[Invites alloc] init];
         invite = [[Invites alloc] init];
+        invite.inviteID = [NSString stringWithFormat:@"%@", [i child:@"id"]];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
         invite.from = [NSString stringWithFormat:@"%@", [i child:@"from"]];
         invite.type = [NSString stringWithFormat:@"%@", [i child:@"type"]];
@@ -110,9 +110,36 @@
 }
 
 - (IBAction)btnAccept:(id)sender {
-    //need to figure out what to do here:
-        //-send the information to the server for accept
-        //-update the table
+    //Get the rowIndex of the table
+    NSIndexPath *indexPath =[self.invitesTable indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
+    NSUInteger row = indexPath.row;
+    Invites *invite = [invites objectAtIndex:row];
+    //NSString *inviteIndex = [NSString stringWithFormat:@"%d", row];
+    //NSLog(invite.inviteID);
+    
+    //Get inkling data
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/invitationResponse/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *postData = [NSMutableData data];
+    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<id>%@</id>", invite.inviteID] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<response>accepted</response>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [request setHTTPBody: postData];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    //Should verify that response string is 'completed'
+    //NSLog(responseString);
+
+    [self updateInvites];
+    
 }
 
 - (IBAction)btnDecline:(id)sender {
