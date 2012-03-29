@@ -14,6 +14,7 @@
     NSMutableArray *invites;
 }
 @synthesize invitesTable;
+@dynamic invites;
 
 /*---------CUSTOM FUNCTIONS-------------*/
 - (void) updateInvites
@@ -29,21 +30,16 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    
+    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numInvitesString = [[responseXML child:@"invitations"] attribute:@"number"];
     NSInteger numInvites = [numInvitesString integerValue];
     
-    NSLog(@"Values Returned");
-    NSLog(responseString);
-    NSLog(@"Response printed");
-    NSLog(numInvitesString);
-    
     invites = [NSMutableArray arrayWithCapacity:numInvites];
     
-    [responseXML iterate:@"invite" with:^(RXMLElement *i) {
+    [responseXML iterate:@"invitation" with:^(RXMLElement *i) {
+        //NSLog([NSString stringWithFormat: @"%@", [i child:@"from"]]);
         Invites *invite = [[Invites alloc] init];
         invite = [[Invites alloc] init];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
@@ -94,6 +90,10 @@
     [self updateInvites];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self updateInvites];
+}
 
 - (void)viewDidUnload
 {
@@ -135,25 +135,22 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    //The next line uses the array from the AppDelegate
-    //return [self.inklings count];
     return [invites count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InviteCell"];
     Invites *invite = [invites objectAtIndex:indexPath.row];
     
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = invite.location;
     
-    UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:101];
-    descriptionLabel.text = invite.description;
+    UILabel *infoLabel = (UILabel *)[cell viewWithTag:101];
+    infoLabel.text = [NSString stringWithFormat:@"%@ has invited you to a %@ on @%", invite.from, invite.type, invite.date];
     
-    //UILabel *messageLabel = (UILabel *)[cell viewWithTag:102];
-    //messageLabel.text = invite.message;
+    UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:102];
+    descriptionLabel.text = invite.description;
 
     return cell;
     
