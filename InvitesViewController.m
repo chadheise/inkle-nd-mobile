@@ -18,8 +18,9 @@
 /*---------CUSTOM FUNCTIONS-------------*/
 - (void) updateInvites
 {
+    NSLog(@"Function called");
     //Get invite data
-    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/invites/"];
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getInvitations/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
@@ -28,10 +29,17 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numInvitesString = [[responseXML child:@"invitations"] attribute:@"number"];
     NSInteger numInvites = [numInvitesString integerValue];
+    
+    NSLog(@"Values Returned");
+    NSLog(responseString);
+    NSLog(@"Response printed");
+    NSLog(numInvitesString);
     
     invites = [NSMutableArray arrayWithCapacity:numInvites];
     
@@ -144,7 +152,7 @@
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:101];
     descriptionLabel.text = invite.description;
     
-    UILabel *messageLabel = (UILabel *)[cell viewWithTag:102];
+    //UILabel *messageLabel = (UILabel *)[cell viewWithTag:102];
     //messageLabel.text = invite.message;
 
     return cell;
