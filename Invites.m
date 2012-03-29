@@ -10,6 +10,7 @@
 
 @implementation Invites
 
+@synthesize inviteID;
 @synthesize location;
 @synthesize from;
 @synthesize type;
