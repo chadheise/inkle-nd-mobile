@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
 		8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8021925B1520B7E900C7D3D6 /* InvitesViewController.m */; };
+		802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 802ABEB71524F15B0012B18C /* peopleGroups.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
@@ -58,6 +59,8 @@
 		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
 		8021925A1520B7E900C7D3D6 /* InvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesViewController.h; sourceTree = "<group>"; };
 		8021925B1520B7E900C7D3D6 /* InvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesViewController.m; sourceTree = "<group>"; };
+		802ABEB61524F15B0012B18C /* peopleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleGroups.h; sourceTree = "<group>"; };
+		802ABEB71524F15B0012B18C /* peopleGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleGroups.m; sourceTree = "<group>"; };
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
+				802ABEB61524F15B0012B18C /* peopleGroups.h */,
+				802ABEB71524F15B0012B18C /* peopleGroups.m */,
 				DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */,
 				DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */,
 				DFC7D12015043EC1000717D5 /* libz.dylib */,
@@ -378,6 +383,7 @@
 				8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */,
 				80EC990A15235DC500F7CACA /* Invites.m in Sources */,
 				DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */,
+				802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
