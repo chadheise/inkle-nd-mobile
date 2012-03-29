@@ -201,7 +201,7 @@
     locationLabel.text = invite.location;
     
     UILabel *infoLabel = (UILabel *)[cell viewWithTag:101];
-    infoLabel.text = [NSString stringWithFormat:@"%@ has invited you to a %@ on @%", invite.from, invite.type, invite.date];
+    infoLabel.text = [NSString stringWithFormat:@"%@ has invited you to a %@ on %@", invite.from, invite.type, invite.date];
     
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:102];
     descriptionLabel.text = invite.description;
