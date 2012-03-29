@@ -131,13 +131,11 @@
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSLog(@"Got num of rows");
     return [invites count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Inside cell");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InviteCell"];
     Invites *invite = [invites objectAtIndex:indexPath.row];
     
