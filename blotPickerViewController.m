@@ -78,7 +78,8 @@ numberOfRowsInComponent:(NSInteger)component
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    return [blotNames objectAtIndex:row];
+    peopleGroups *blot = [blotNames objectAtIndex:row];
+    return blot.name;
 } 
 
 #pragma mark -
@@ -86,9 +87,10 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
+    peopleGroups *blot = [blotNames objectAtIndex:row];
+    resultsLabel.text = blot.name;
     
-
-    resultsLabel.text = [NSString stringWithFormat: @"%@", [blotNames objectAtIndex:row]];
+    //resultsLabel.text = [NSString stringWithFormat: @"%@", [blotNames objectAtIndex:row]];
 }
 
 
