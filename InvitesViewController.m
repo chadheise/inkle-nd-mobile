@@ -90,6 +90,10 @@
     [self updateInvites];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self updateInvites];
+}
 
 - (void)viewDidUnload
 {
