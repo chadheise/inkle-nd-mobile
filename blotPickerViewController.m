@@ -7,6 +7,7 @@
 //
 
 #import "blotPickerViewController.h"
+#import "peopleGroups.h"
 
 @implementation blotPickerViewController {
     NSMutableArray *blotNames;
@@ -30,8 +31,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    /*
     self.blotNames = [[NSMutableArray alloc] initWithObjects: @"Blot 1", @"Blot 2", @"Blot 3", @"Network 1", @"Network 2", nil];
+  */
+    self.blotNames = [NSMutableArray arrayWithCapacity:5];
+    self.networkNames = [NSMutableArray arrayWithCapacity:5];
     
+    peopleGroups *blot = [[peopleGroups alloc]init];
+    blot.pid = @"3";
+    blot.name = @"Pizza Group";
+    [blotNames addObject:blot];
+    peopleGroups *network = [[peopleGroups alloc]init];
+    network.pid = @"2";
+    network.name = @"MIT Network";
+    [networkNames addObject:network];
+    //blot = 
 }
 
 - (void)viewDidUnload
