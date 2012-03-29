@@ -10,8 +10,10 @@
 
 @implementation Invites
 
-@synthesize location = _location;
-@synthesize description = _description;
-@synthesize message = _message; 
+@synthesize location;
+@synthesize from;
+@synthesize type;
+@synthesize date;
+@synthesize description;
 
 @end

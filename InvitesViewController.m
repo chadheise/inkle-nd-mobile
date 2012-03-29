@@ -38,9 +38,12 @@
     [responseXML iterate:@"invite" with:^(RXMLElement *i) {
         Invites *invite = [[Invites alloc] init];
         invite = [[Invites alloc] init];
-        invite.location = [NSString stringWithFormat:@"%@\n%@", [i child:@"location"]];
-        invite.description = [NSString stringWithFormat:@"%@\n%@",[i child:@"inviter"], [i child:@"inviteType"], [i child:@"date"]];
-        invite.message = [NSString stringWithFormat:@"%@\n%@",[i child:@"message"]];
+        invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
+        invite.from = [NSString stringWithFormat:@"%@", [i child:@"from"]];
+        invite.type = [NSString stringWithFormat:@"%@", [i child:@"type"]];
+        invite.date = [NSString stringWithFormat:@"%@", [i child:@"date"]];
+        invite.description = [NSString stringWithFormat:@"%@", [i child:@"description"]];
+        
         [invites addObject:invite];
         
     }];
@@ -142,7 +145,7 @@
     descriptionLabel.text = invite.description;
     
     UILabel *messageLabel = (UILabel *)[cell viewWithTag:102];
-    messageLabel.text = invite.message;
+    //messageLabel.text = invite.message;
 
     return cell;
     

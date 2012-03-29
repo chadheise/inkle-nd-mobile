@@ -11,7 +11,9 @@
 @interface Invites : NSObject
 
 @property (nonatomic, copy) NSString *location;
+@property (nonatomic, copy) NSString *from;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSString *description;
-@property (nonatomic, copy) NSString *message;
 
 @end
