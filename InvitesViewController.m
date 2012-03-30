@@ -134,11 +134,23 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //Should verify that response string is 'completed'
-    //NSLog(responseString);
-
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    
+    NSString *title = [NSString alloc];
+    NSString *message = [NSString alloc];
+    if ([responseString isEqualToString:@"completed"]) {
+        title = @"Accepted!";
+        message = @"You have sucessfully accepted the invitation";
+    }
+    else {
+        title = @"Accepted Not Complete";
+        message = @"There was an error accepting the invitation";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
     [self updateInvites];
+
     
 }
 
@@ -167,10 +179,21 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //Should verify that response string is 'completed'
-    //NSLog(responseString);
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
+    NSString *title = [NSString alloc];
+    NSString *message = [NSString alloc];
+    if ([responseString isEqualToString:@"completed"]) {
+        title = @"Declined";
+        message = @"You have declined the invitation";
+    }
+    else {
+        title = @"Decline Not Complete";
+        message = @"There was an error declining the invitation";
+    }
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
     [self updateInvites];
 
 }
