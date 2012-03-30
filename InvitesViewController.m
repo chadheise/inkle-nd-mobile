@@ -44,6 +44,7 @@
         Invites *invite = [[Invites alloc] init];
         invite = [[Invites alloc] init];
         invite.inviteID = [NSString stringWithFormat:@"%@", [i child:@"id"]];
+        invite.locationType = [NSString stringWithFormat:@"%@", [i child:@"locationType"]];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
         invite.locationID = [NSString stringWithFormat:@"%@", [i child:@"locationID"]];
         invite.from = [NSString stringWithFormat:@"%@", [i child:@"from"]];
@@ -245,8 +246,12 @@
 	AsyncImageView* asyncImage = [[AsyncImageView alloc]
                                    initWithFrame:frame];
 	asyncImage.tag = 999;
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/4.jpg"]];
-	[asyncImage loadImageFromURL:url];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]];
+    NSLog([NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]);
+    if ([invite.locationType isEqualToString:@"place"]) {
+        url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", invite.locationID]];
+    }
+    [asyncImage loadImageFromURL:url];
     
 	[cell.contentView addSubview:asyncImage];
     //End image

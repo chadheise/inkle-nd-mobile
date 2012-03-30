@@ -11,6 +11,7 @@
 @interface Invites : NSObject
 
 @property (nonatomic, copy) NSString *inviteID;
+@property (nonatomic, copy) NSString *locationType;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSString *locationID;
 @property (nonatomic, copy) NSString *from;

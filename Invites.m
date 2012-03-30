@@ -11,6 +11,7 @@
 @implementation Invites
 
 @synthesize inviteID;
+@synthesize locationType;
 @synthesize location;
 @synthesize locationID;
 @synthesize from;
