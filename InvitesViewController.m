@@ -9,6 +9,7 @@
 #import "InvitesViewController.h"
 #import "Invites.h"
 #import "RXMLElement.h"
+#import "asyncimageview.h"
 
 @implementation InvitesViewController{
     NSMutableArray *invites;
@@ -19,6 +20,7 @@
 /*---------CUSTOM FUNCTIONS-------------*/
 - (void) updateInvites
 {
+    
     //Get invite data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getInvitations/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -43,12 +45,13 @@
         invite = [[Invites alloc] init];
         invite.inviteID = [NSString stringWithFormat:@"%@", [i child:@"id"]];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
+        invite.locationID = [NSString stringWithFormat:@"%@", [i child:@"locationID"]];
         invite.from = [NSString stringWithFormat:@"%@", [i child:@"from"]];
         invite.type = [NSString stringWithFormat:@"%@", [i child:@"type"]];
         invite.date = [NSString stringWithFormat:@"%@", [i child:@"date"]];
         invite.description = [NSString stringWithFormat:@"%@", [i child:@"description"]];
         
-        [invites addObject:invite];
+    [invites addObject:invite];
         
     }];
     
@@ -229,6 +232,26 @@
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:102];
     descriptionLabel.text = invite.description;
 
+    //Get invite image
+    if (cell != nil) {
+        AsyncImageView* oldImage = (AsyncImageView*)
+        [cell.contentView viewWithTag:999];
+        [oldImage removeFromSuperview];
+    }
+    
+	CGRect frame;
+	frame.size.width=75; frame.size.height=75;
+	frame.origin.x=5; frame.origin.y=25;
+	AsyncImageView* asyncImage = [[AsyncImageView alloc]
+                                   initWithFrame:frame];
+	asyncImage.tag = 999;
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/4.jpg"]];
+	[asyncImage loadImageFromURL:url];
+    
+	[cell.contentView addSubview:asyncImage];
+    //End image
+    
+    
     return cell;
     
 }

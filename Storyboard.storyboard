@@ -315,9 +315,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="yJo-xQ-mFi">
                                 <rect key="frame" x="0.0" y="44" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.41568627949999998" green="0.73333334920000004" blue="0.41568627949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InviteCell" rowHeight="124" id="b3H-je-8Rz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InviteCell" rowHeight="124" id="b3H-je-8Rz">
                                         <rect key="frame" x="0.0" y="22" width="320" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -328,29 +329,28 @@
                                                     <rect key="frame" x="88" y="6" width="160" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                                    <color key="textColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.17254902422428131" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="deviceRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Invite Info (who, what, when)" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="13" id="O8Y-mf-hNV">
-                                                    <rect key="frame" x="88" y="32" width="160" height="48"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Invite Info (who, what, when)" lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="13" id="O8Y-mf-hNV">
+                                                    <rect key="frame" x="88" y="32" width="160" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="13" id="nJC-R3-kz1">
-                                                    <rect key="frame" x="88" y="76" width="160" height="27"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="13" id="nJC-R3-kz1">
+                                                    <rect key="frame" x="88" y="77" width="160" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VZH-4r-zME">
-                                                    <rect key="frame" x="256" y="20" width="59" height="37"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VZH-4r-zME">
+                                                    <rect key="frame" x="256" y="24" width="59" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.43921568989999998" green="0.50588238240000005" blue="0.85882353779999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
-                                                    <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="deviceRGB"/>
                                                     <state key="normal" title="Accept">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" red="0.43921568989999998" green="0.50588238240000005" blue="0.85882353779999998" alpha="1" colorSpace="deviceRGB"/>
@@ -362,12 +362,11 @@
                                                         <action selector="btnAccept:" destination="FPt-Ea-SWe" eventType="touchUpInside" id="Qbr-9s-4Vm"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C24-fN-Xuj">
-                                                    <rect key="frame" x="256" y="65" width="59" height="37"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C24-fN-Xuj">
+                                                    <rect key="frame" x="256" y="72" width="59" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.89803922176361084" green="0.45098039507865906" blue="0.43529412150382996" alpha="1" colorSpace="deviceRGB"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
-                                                    <color key="tintColor" red="0.80392158031463623" green="0.10196078568696976" blue="0.14901961386203766" alpha="1" colorSpace="deviceRGB"/>
                                                     <state key="normal" title="Decline">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" red="0.89803922176361084" green="0.45098039507865906" blue="0.43529412150382996" alpha="1" colorSpace="deviceRGB"/>
@@ -379,13 +378,14 @@
                                                         <action selector="btnDecline:" destination="FPt-Ea-SWe" eventType="touchUpInside" id="fgZ-mZ-u0h"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="LocationImage" id="U3z-KK-0QD">
-                                                    <rect key="frame" x="6" y="20" width="74" height="74"/>
+                                                <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleToFill" image="location.jpg" id="TPp-KC-VVn">
+                                                    <rect key="frame" x="7" y="24" width="73" height="73"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.41568627949999998" green="0.73333334920000004" blue="0.41568627949999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -414,8 +414,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LocationImage" width="16" height="16"/>
         <image name="blotblue.png" width="150" height="150"/>
+        <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
     <classes>
