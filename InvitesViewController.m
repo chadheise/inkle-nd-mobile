@@ -52,7 +52,7 @@
         invite.date = [NSString stringWithFormat:@"%@", [i child:@"date"]];
         invite.description = [NSString stringWithFormat:@"%@", [i child:@"description"]];
         
-    [invites addObject:invite];
+        [invites addObject:invite];
         
     }];
     
@@ -247,7 +247,7 @@
                                    initWithFrame:frame];
 	asyncImage.tag = 999;
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]];
-    if ([invite.locationType isEqualToString:@"place"]) {
+    if ([invite.locationType isEqualToString:@"member"]) {
         url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", invite.locationID]];
     }
     [asyncImage loadImageFromURL:url];
