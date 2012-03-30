@@ -107,6 +107,7 @@
     }];
     
     self.namesArr = self.blotNames; //Preload picker with blots
+
 }
 
 - (void)viewDidUnload
@@ -175,6 +176,14 @@ numberOfRowsInComponent:(NSInteger)component
     //resultsLabel.text = [NSString stringWithFormat: @"%@", [blotNames objectAtIndex:row]]; previous #1
 }
 
-
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
+    switch (component){
+        case 0: 
+            return 110.0f;
+        case 1: 
+            return 180.0f;
+    }
+    return 0;
+}
 
 @end
