@@ -247,7 +247,6 @@
                                    initWithFrame:frame];
 	asyncImage.tag = 999;
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]];
-    NSLog([NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]);
     if ([invite.locationType isEqualToString:@"place"]) {
         url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", invite.locationID]];
     }
