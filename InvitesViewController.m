@@ -232,7 +232,7 @@
     
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:102];
     descriptionLabel.text = invite.description;
-
+    
     //Get invite image
     if (cell != nil) {
         AsyncImageView* oldImage = (AsyncImageView*)
