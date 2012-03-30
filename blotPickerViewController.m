@@ -105,6 +105,8 @@
         network.name = [NSString stringWithFormat:@"%@", [n child:@"name"]];
         [networkNames addObject:network];        
     }];
+    
+    self.namesArr = self.blotNames; //Preload picker with blots
 }
 
 - (void)viewDidUnload
