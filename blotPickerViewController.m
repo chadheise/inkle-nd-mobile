@@ -9,12 +9,15 @@
 #import "blotPickerViewController.h"
 #import "peopleGroups.h"
 #import "RXMLElement.h"
+#import "PickerAppDataObject.h"
+#import "AppDelegateProtocol.h"
 
 @implementation blotPickerViewController {
     NSMutableArray *blotNames;
     NSMutableArray *networkNames;
     NSMutableArray *categoryNames;
     NSMutableArray *namesArr;
+    NSString *bNSelection;
 }
 @synthesize picker;
 @synthesize blotNames;
@@ -22,6 +25,14 @@
 @synthesize resultsLabel;
 @synthesize categoryNames;
 @synthesize namesArr;
+
+- (PickerAppDataObject *) theAppDataObject
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    PickerAppDataObject *theDataObject;
+    theDataObject = (PickerAppDataObject*) theDelegate.theAppDataObject;
+    return theDataObject;
+}
 
 -(IBAction) buttonPressed {
     NSInteger catRow = [picker selectedRowInComponent:leftComponent];
@@ -38,12 +49,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
--(NSString *) selection{
-    //get the blot/network selection
-}
--(void) setSelection:(NSString *) newSelection{
-    //set the blot/network
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -176,6 +182,12 @@ numberOfRowsInComponent:(NSInteger)component
         [picker reloadComponent:rightComponent];
         
     }
+
+    PickerAppDataObject *theDataObject = [self theAppDataObject];
+    peopleGroups *ppl = [self.namesArr objectAtIndex:row];
+    NSString *pickerSelection = ppl.name;
+    theDataObject.selection = pickerSelection;
+    NSLog(@"Picker page: the selection is: %@", theDataObject.selection);
    // peopleGroups *blot = [blotNames objectAtIndex:row]; previous #2
    // resultsLabel.text = blot.name;
     

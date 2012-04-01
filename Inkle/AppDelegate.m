@@ -9,18 +9,38 @@
 #import "AppDelegate.h"
 #import "Inklings.h"
 #import "OthersInklingsTableViewController.h"
+#import "othersInklingsViewController.h"
+#import "AppDelegateProtocol.h"
+#import "PickerAppDataObject.h"
+
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
 }
 
 @synthesize window = _window;
+@synthesize navController;
+@synthesize theAppDataObject;
+@synthesize theBlotPickerViewController;
+
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+-(void) pushSecondView
+{
+    [navController pushViewController:theBlotPickerViewController animated:TRUE];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [window addSubview:navController.view];
+    [window makeKeyAndVisible];
+    
+    return YES;
+    
+    
+    /*Old Hardcoded inklings
     inklings = [NSMutableArray arrayWithCapacity:20];
     Inklings *inkling = [[Inklings alloc] init];
     inkling.address = @"222 S Michigan St.\nSouth Bend, IN";
@@ -56,7 +76,7 @@
     inkling.address = @"1705 South Bend Ave\nSouth Bend, IN";
     inkling.location = @"Mulliagan's Bar & Grill";
     inkling.attendees = @"33";
-    [inklings addObject:inkling];
+    [inklings addObject:inkling];*/
     //UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     //OthersInklingsTableViewController *othersInklingsTableViewController = [ [tabBarController viewControllers] objectAtIndex:0];
     //othersInklingsTableViewController.inklings = inklings;
@@ -66,9 +86,23 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];*/
-    return YES;
+    //return YES;
 }
 
+#pragma mark -
+#pragma mark Memory management
+
+-(id) init
+{
+    self.theAppDataObject = [[PickerAppDataObject alloc] init];
+    return [super init];
+    
+}
+-(void) dealloc
+{
+    self.theAppDataObject = nil;
+    self.theBlotPickerViewController = nil;
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

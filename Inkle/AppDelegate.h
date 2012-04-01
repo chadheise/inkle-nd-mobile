@@ -7,10 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "othersInklingsNavigationController.h"
+#import "othersInklingsViewController.h"
+#import "AppDelegateProtocol.h"
+#import "blotPickerViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@class PickerAppDataObject;
+
+//@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : NSObject <UIApplicationDelegate, AppDelegateProtocol>
+{
+    UIWindow *window;
+    UINavigationController *navController;
+    PickerAppDataObject *theAppDataObject;
+    IBOutlet blotPickerViewController *theBlotPickerViewController;
+}
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UINavigationController *navController;
+
+@property (nonatomic, retain) PickerAppDataObject *theAppDataObject;
+@property (nonatomic, retain) IBOutlet blotPickerViewController *theBlotPickerViewController;
+
+
+
+
+
+/*-----------------------------------*/
+//@property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

@@ -9,6 +9,8 @@
 #import "othersInklingsViewController.h"
 #import "Inklings.h"
 #import "RXMLElement.h"
+#import "PickerAppDataObject.h"
+#import "AppDelegateProtocol.h"
 
 @implementation othersInklingsViewController {
     NSMutableArray *othersInklings;
@@ -17,6 +19,7 @@
     NSString *inklingType;
     NSString *peopleType;
     NSString *peopleId;
+    NSString *bNSelection;//text of the blot/network selection i.e. "University of Notre Dame" or "Pizza Group"
 }
 
 @synthesize inklings;
@@ -27,8 +30,17 @@
 @synthesize navigationItem;
 @synthesize submitButton;
 @synthesize backButton;
+@synthesize bNButton;
+
 
 /*------------CUSTOM FUNCTIONS--------------*/
+- (PickerAppDataObject *) theAppDataObject
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    PickerAppDataObject *theDataObject;
+    theDataObject = (PickerAppDataObject*) theDelegate.theAppDataObject;
+    return theDataObject;
+}
 - (NSString *)stringFromDate:(NSDate *)date
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -39,6 +51,14 @@
 - (void) updateInklings
 {
     [dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
+    
+    // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
+    bNSelection = @"None";
+    PickerAppDataObject* theDataObject = [self theAppDataObject];
+    bNSelection = theDataObject.selection;
+    NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
+    //print this out to check if it's working
+    //send this information to the server to update inklings
     
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
@@ -96,6 +116,11 @@
         inklingType = @"mainEvent";
     }
     
+    [self updateInklings];
+}
+- (IBAction)pickBN:(id)sender{
+    PickerAppDataObject* theDataObject = [self theAppDataObject];
+    bNSelection = theDataObject.selection;
     [self updateInklings];
 }
 

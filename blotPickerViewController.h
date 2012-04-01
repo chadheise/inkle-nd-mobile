@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 
 -(IBAction) buttonPressed;
--(NSString *) selection;
--(void) setSelection:(NSString *) newSelection;
+
 
 @end
