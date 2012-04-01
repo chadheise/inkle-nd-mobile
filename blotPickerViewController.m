@@ -38,6 +38,12 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
+-(NSString *) selection{
+    //get the blot/network selection
+}
+-(void) setSelection:(NSString *) newSelection{
+    //set the blot/network
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
