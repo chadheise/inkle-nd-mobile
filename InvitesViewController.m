@@ -9,6 +9,7 @@
 #import "InvitesViewController.h"
 #import "Invites.h"
 #import "RXMLElement.h"
+#import "asyncimageview.h"
 
 @implementation InvitesViewController{
     NSMutableArray *invites;
@@ -19,6 +20,7 @@
 /*---------CUSTOM FUNCTIONS-------------*/
 - (void) updateInvites
 {
+    
     //Get invite data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getInvitations/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -42,7 +44,9 @@
         Invites *invite = [[Invites alloc] init];
         invite = [[Invites alloc] init];
         invite.inviteID = [NSString stringWithFormat:@"%@", [i child:@"id"]];
+        invite.locationType = [NSString stringWithFormat:@"%@", [i child:@"locationType"]];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
+        invite.locationID = [NSString stringWithFormat:@"%@", [i child:@"locationID"]];
         invite.from = [NSString stringWithFormat:@"%@", [i child:@"from"]];
         invite.type = [NSString stringWithFormat:@"%@", [i child:@"type"]];
         invite.date = [NSString stringWithFormat:@"%@", [i child:@"date"]];
@@ -134,11 +138,23 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //Should verify that response string is 'completed'
-    //NSLog(responseString);
-
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    
+    NSString *title = [NSString alloc];
+    NSString *message = [NSString alloc];
+    if ([responseString isEqualToString:@"completed"]) {
+        title = @"Accepted!";
+        message = @"You have sucessfully accepted the invitation";
+    }
+    else {
+        title = @"Accepted Not Complete";
+        message = @"There was an error accepting the invitation";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
     [self updateInvites];
+
     
 }
 
@@ -167,10 +183,21 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //Should verify that response string is 'completed'
-    //NSLog(responseString);
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     
+    NSString *title = [NSString alloc];
+    NSString *message = [NSString alloc];
+    if ([responseString isEqualToString:@"completed"]) {
+        title = @"Declined";
+        message = @"You have declined the invitation";
+    }
+    else {
+        title = @"Decline Not Complete";
+        message = @"There was an error declining the invitation";
+    }
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
     [self updateInvites];
 
 }
@@ -205,7 +232,30 @@
     
     UILabel *descriptionLabel = (UILabel *)[cell viewWithTag:102];
     descriptionLabel.text = invite.description;
-
+    
+    //Get invite image
+    if (cell != nil) {
+        AsyncImageView* oldImage = (AsyncImageView*)
+        [cell.contentView viewWithTag:999];
+        [oldImage removeFromSuperview];
+    }
+    
+	CGRect frame;
+	frame.size.width=75; frame.size.height=75;
+	frame.origin.x=5; frame.origin.y=25;
+	AsyncImageView* asyncImage = [[AsyncImageView alloc]
+                                   initWithFrame:frame];
+	asyncImage.tag = 999;
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", invite.locationID]];
+    if ([invite.locationType isEqualToString:@"member"]) {
+        url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", invite.locationID]];
+    }
+    [asyncImage loadImageFromURL:url];
+    
+	[cell.contentView addSubview:asyncImage];
+    //End image
+    
+    
     return cell;
     
 }

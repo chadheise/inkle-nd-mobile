@@ -22,9 +22,11 @@
 @synthesize inklings;
 @synthesize inklingTable;
 @synthesize datePicker;
-@synthesize pickerNavigation;
 @synthesize inklingTypeSegment;
 @synthesize dateButton;
+@synthesize navigationItem;
+@synthesize submitButton;
+@synthesize backButton;
 
 /*------------CUSTOM FUNCTIONS--------------*/
 - (NSString *)stringFromDate:(NSDate *)date
@@ -100,7 +102,6 @@
 - (IBAction)pickDate:(id)sender {
     
     [datePicker setHidden:NO];
-    [pickerNavigation setHidden:NO];
     [inklingTypeSegment setHidden:YES];
     
 }
@@ -114,7 +115,6 @@
         [datePicker setHidden:YES];
         [datePicker setDate:inklingDate]; //Reset the date picker to the current date
     }
-    [pickerNavigation setHidden:YES];
     [inklingTypeSegment setHidden:NO];
 }
 - (IBAction)pickerNavSubmit:(id)sender {
@@ -123,7 +123,6 @@
     if (!datePicker.hidden) {
         [datePicker setHidden:YES];
     }
-    [pickerNavigation setHidden:YES];
     [inklingTypeSegment setHidden:NO];
 }
 
@@ -176,8 +175,12 @@
     datePicker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:datePicker];
     [datePicker setHidden:YES];
+    
+    //[navigationItem setLeftBarButtonItem:nil];
+    //[navigationItem setRightBarButtonItem:nil];
+    [navigationItem setLeftBarButtonItem:backButton];
+    [navigationItem setRightBarButtonItem:submitButton];
 
-    [pickerNavigation setHidden:YES]; //Hide nav bar
     
     [dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal];
     
@@ -186,10 +189,12 @@
 
 - (void)viewDidUnload
 {
-    [self setPickerNavigation:nil];
     [self setInklingTypeSegment:nil];
     [self setInklingTypeSegment:nil];
     [self setDateButton:nil];
+    [self setNavigationItem:nil];
+    [self setSubmitButton:nil];
+    [self setBackButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
