@@ -8,12 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDataObject.h"
+#import "peopleGroups.h"
 
 @interface PickerAppDataObject : AppDataObject
 {
     NSString* selection;
+    peopleGroups *peopleGroup;
+    NSString *pid;
+    NSString *type;
+    
 }
 
 @property (nonatomic, copy) NSString* selection;
+@property (nonatomic, copy) peopleGroups *peopleGroup;
+@property (nonatomic, copy) NSString *pid;
+@property (nonatomic, copy) NSString *type;
 
 @end

@@ -11,6 +11,7 @@
 #import "RXMLElement.h"
 #import "PickerAppDataObject.h"
 #import "AppDelegateProtocol.h"
+#import "peopleGroups.h"
 
 @implementation othersInklingsViewController {
     NSMutableArray *othersInklings;
@@ -30,6 +31,7 @@
 @synthesize navigationItem;
 @synthesize submitButton;
 @synthesize backButton;
+@synthesize peopleButton;
 @synthesize bNButton;
 
 
@@ -56,7 +58,10 @@
     bNSelection = @"None";
     PickerAppDataObject* theDataObject = [self theAppDataObject];
     bNSelection = theDataObject.selection;
-    NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
+    //NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
+    peopleType = theDataObject.type;
+    peopleId = theDataObject.pid;
+    //NSLog(@"pid: %@ - type: %@", theDataObject.pid, theDataObject.type);
     //print this out to check if it's working
     //send this information to the server to update inklings
     
@@ -177,6 +182,11 @@
     
 }*/
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self updateInklings];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 
 - (void)viewDidLoad
@@ -220,6 +230,7 @@
     [self setNavigationItem:nil];
     [self setSubmitButton:nil];
     [self setBackButton:nil];
+    [self setPeopleButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *type;
 
 @end
