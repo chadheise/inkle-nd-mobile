@@ -61,6 +61,7 @@
     //NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
     peopleType = theDataObject.type;
     peopleId = theDataObject.pid;
+    [peopleButton setTitle:theDataObject.selection forState:UIControlStateNormal];
     //NSLog(@"pid: %@ - type: %@", theDataObject.pid, theDataObject.type);
     //print this out to check if it's working
     //send this information to the server to update inklings
