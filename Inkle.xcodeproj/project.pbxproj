@@ -66,7 +66,6 @@
 		802ABEB61524F15B0012B18C /* peopleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleGroups.h; sourceTree = "<group>"; };
 		802ABEB71524F15B0012B18C /* peopleGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleGroups.m; sourceTree = "<group>"; };
 		804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateProtocol.h; path = ../AppDelegateProtocol.h; sourceTree = "<group>"; };
-		804DBEB41528E516000FFC1B /* OthersInklingsDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; name = OthersInklingsDataObject.h; path = Inkle/OthersInklingsDataObject.h; sourceTree = "<group>"; };
 		804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OthersInklingsDataObject.m; path = Inkle/OthersInklingsDataObject.m; sourceTree = "<group>"; };
 		804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsNavigationController.h; sourceTree = "<group>"; };
 		804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsNavigationController.m; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		DFCA902214F05DF500E2C634 /* blotblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blotblue.png; sourceTree = "<group>"; };
 		DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
 		DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
+		DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OthersInklingsDataObject.h; path = Inkle/OthersInklingsDataObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 				804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */,
 				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
 				DF5DA03915237D0B00FA679E /* blotPickerViewController.m */,
-				804DBEB41528E516000FFC1B /* OthersInklingsDataObject.h */,
+				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
 				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
 				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
