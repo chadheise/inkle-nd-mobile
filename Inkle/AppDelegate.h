@@ -13,20 +13,20 @@
 #import "blotPickerViewController.h"
 
 
-@class PickerAppDataObject;
+@class OthersInklingsDataObject;
 
 //@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @interface AppDelegate : NSObject <UIApplicationDelegate, AppDelegateProtocol>
 {
     UIWindow *window;
     UINavigationController *navController;
-    PickerAppDataObject *theAppDataObject;
+    OthersInklingsDataObject *theAppDataObject;
     IBOutlet blotPickerViewController *theBlotPickerViewController;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
-@property (nonatomic, retain) PickerAppDataObject *theAppDataObject;
+@property (nonatomic, retain) OthersInklingsDataObject *theAppDataObject;
 @property (nonatomic, retain) IBOutlet blotPickerViewController *theBlotPickerViewController;
 
 

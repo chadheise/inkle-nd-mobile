@@ -9,7 +9,7 @@
 #import "othersInklingsViewController.h"
 #import "Inklings.h"
 #import "RXMLElement.h"
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 #import "peopleGroups.h"
 
@@ -36,11 +36,11 @@
 
 
 /*------------CUSTOM FUNCTIONS--------------*/
-- (PickerAppDataObject *) theAppDataObject
+- (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    PickerAppDataObject *theDataObject;
-    theDataObject = (PickerAppDataObject*) theDelegate.theAppDataObject;
+    OthersInklingsDataObject *theDataObject;
+    theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
     return theDataObject;
 }
 - (NSString *)stringFromDate:(NSDate *)date
@@ -56,7 +56,7 @@
     
     // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
     bNSelection = @"None";
-    PickerAppDataObject* theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     bNSelection = theDataObject.selection;
     //NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
     peopleType = theDataObject.type;
@@ -125,7 +125,7 @@
     [self updateInklings];
 }
 - (IBAction)pickBN:(id)sender{
-    PickerAppDataObject* theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     bNSelection = theDataObject.selection;
     [self updateInklings];
 }

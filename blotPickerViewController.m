@@ -9,7 +9,7 @@
 #import "blotPickerViewController.h"
 #import "peopleGroups.h"
 #import "RXMLElement.h"
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 
 @implementation blotPickerViewController {
@@ -26,11 +26,11 @@
 @synthesize categoryNames;
 @synthesize namesArr;
 
-- (PickerAppDataObject *) theAppDataObject
+- (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    PickerAppDataObject *theDataObject;
-    theDataObject = (PickerAppDataObject*) theDelegate.theAppDataObject;
+    OthersInklingsDataObject *theDataObject;
+    theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
     return theDataObject;
 }
 
@@ -185,7 +185,7 @@ numberOfRowsInComponent:(NSInteger)component
         
     }
 
-    PickerAppDataObject *theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject *theDataObject = [self theAppDataObject];
     peopleGroups *ppl = [self.namesArr objectAtIndex:row];
     theDataObject.selection = ppl.name;
     //theDataObject.peopleGroup = ppl;

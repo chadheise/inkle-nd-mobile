@@ -11,7 +11,7 @@
 #import "OthersInklingsTableViewController.h"
 #import "othersInklingsViewController.h"
 #import "AppDelegateProtocol.h"
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 
 
 @implementation AppDelegate{
@@ -46,7 +46,7 @@
 
 -(id) init
 {
-    self.theAppDataObject = [[PickerAppDataObject alloc] init];
+    self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
     return [super init];
     
 }

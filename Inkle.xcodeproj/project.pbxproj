@@ -10,8 +10,7 @@
 		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
 		8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8021925B1520B7E900C7D3D6 /* InvitesViewController.m */; };
 		802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 802ABEB71524F15B0012B18C /* peopleGroups.m */; };
-		804DBEAD1528E115000FFC1B /* AppDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEAC1528E115000FFC1B /* AppDataObject.m */; };
-		804DBEB61528E516000FFC1B /* PickerAppDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* PickerAppDataObject.m */; };
+		804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */; };
 		804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
@@ -66,11 +65,9 @@
 		8021925B1520B7E900C7D3D6 /* InvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesViewController.m; sourceTree = "<group>"; };
 		802ABEB61524F15B0012B18C /* peopleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleGroups.h; sourceTree = "<group>"; };
 		802ABEB71524F15B0012B18C /* peopleGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleGroups.m; sourceTree = "<group>"; };
-		804DBEAB1528E115000FFC1B /* AppDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDataObject.h; sourceTree = "<group>"; };
-		804DBEAC1528E115000FFC1B /* AppDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDataObject.m; sourceTree = "<group>"; };
 		804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateProtocol.h; path = ../AppDelegateProtocol.h; sourceTree = "<group>"; };
-		804DBEB41528E516000FFC1B /* PickerAppDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerAppDataObject.h; path = Inkle/PickerAppDataObject.h; sourceTree = "<group>"; };
-		804DBEB51528E516000FFC1B /* PickerAppDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerAppDataObject.m; path = Inkle/PickerAppDataObject.m; sourceTree = "<group>"; };
+		804DBEB41528E516000FFC1B /* OthersInklingsDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; name = OthersInklingsDataObject.h; path = Inkle/OthersInklingsDataObject.h; sourceTree = "<group>"; };
+		804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OthersInklingsDataObject.m; path = Inkle/OthersInklingsDataObject.m; sourceTree = "<group>"; };
 		804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsNavigationController.h; sourceTree = "<group>"; };
 		804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsNavigationController.m; sourceTree = "<group>"; };
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
@@ -166,12 +163,10 @@
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
 				804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */,
 				804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */,
-				804DBEAB1528E115000FFC1B /* AppDataObject.h */,
-				804DBEAC1528E115000FFC1B /* AppDataObject.m */,
 				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
 				DF5DA03915237D0B00FA679E /* blotPickerViewController.m */,
-				804DBEB41528E516000FFC1B /* PickerAppDataObject.h */,
-				804DBEB51528E516000FFC1B /* PickerAppDataObject.m */,
+				804DBEB41528E516000FFC1B /* OthersInklingsDataObject.h */,
+				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
 				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
@@ -411,8 +406,7 @@
 				DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */,
 				802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */,
 				DFBC3645152557EA00137ABE /* asyncimageview.m in Sources */,
-				804DBEAD1528E115000FFC1B /* AppDataObject.m in Sources */,
-				804DBEB61528E516000FFC1B /* PickerAppDataObject.m in Sources */,
+				804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */,
 				804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
