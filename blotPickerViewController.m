@@ -22,7 +22,6 @@
 @synthesize picker;
 @synthesize blotNames;
 @synthesize networkNames;
-@synthesize resultsLabel;
 @synthesize categoryNames;
 @synthesize namesArr;
 
@@ -123,11 +122,14 @@
     self.namesArr = self.blotNames; //Preload picker with blots
 
 }
-
+- (void)viewDidAppear:(BOOL)animated
+{
+   // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:<#(BOOL)#>];
+    //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
+}
 - (void)viewDidUnload
 {
     [self setPicker:nil];
-    [self setResultsLabel:nil];
     self.categoryNames = nil;
     self.blotNames = nil;
     self.networkNames = nil;
@@ -194,9 +196,7 @@ numberOfRowsInComponent:(NSInteger)component
     NSLog(@"pid: %@ -> type: %@", theDataObject.pid, theDataObject.type);
     //NSLog(@"Picker page: the selection is: %@", theDataObject.selection);
    // peopleGroups *blot = [blotNames objectAtIndex:row]; previous #2
-   // resultsLabel.text = blot.name;
-    
-    //resultsLabel.text = [NSString stringWithFormat: @"%@", [blotNames objectAtIndex:row]]; previous #1
+
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{

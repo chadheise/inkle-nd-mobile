@@ -15,7 +15,6 @@
 @synthesize errorLabel = _errorLabel;
 
 - (IBAction)LoginPress:(id)sender {
-
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/login/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
