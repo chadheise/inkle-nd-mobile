@@ -69,20 +69,95 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
-        <!--View Controller - My Inklings-->
+        <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ufP-BL-Wla" sceneMemberID="viewController">
+                <viewController id="ufP-BL-Wla" customClass="MyInklingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Unc-Or-SFb">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="0ck-ou-1oD">
+                                <rect key="frame" x="0.0" y="40" width="320" height="327"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="109" id="Nx8-iq-C8C">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inkling Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="qWQ-df-vFc">
+                                                    <rect key="frame" x="15" y="0.0" width="159" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                    <color key="textColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="location.jpg" id="RKD-wn-d0n">
+                                                    <rect key="frame" x="15" y="31" width="72" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fkN-9i-g9A">
+                                                    <rect key="frame" x="95" y="36" width="188" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                    <color key="textColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
+                                                    <rect key="frame" x="95" y="67" width="185" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGq-FB-uhW">
+                                <rect key="frame" x="55" y="5" width="211" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="Select Date">
+                                    <color key="titleColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Inklings" id="Gbv-Kp-bxz"/>
+                    <navigationItem key="navigationItem" title="My Inklings" id="fyR-Ul-T1J"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1035" y="351"/>
+            <point key="canvasLocation" x="1592" y="350"/>
+        </scene>
+        <!--Navigation Controller - My Inklings-->
+        <scene sceneID="rTf-ft-Eem">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="UlP-XX-2ou" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Inklings" id="jfo-sa-8JH"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="IYD-Vb-Yjk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ufP-BL-Wla" kind="relationship" relationship="rootViewController" id="ajL-rq-mG9"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1035" y="350"/>
         </scene>
         <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
@@ -299,7 +374,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="NWj-Mx-mGy" kind="relationship" relationship="viewControllers" id="7H6-nc-I9m"/>
-                        <segue destination="ufP-BL-Wla" kind="relationship" relationship="viewControllers" id="qB6-fL-T36"/>
+                        <segue destination="UlP-XX-2ou" kind="relationship" relationship="viewControllers" id="UJ8-FP-UNs"/>
                         <segue destination="FPt-Ea-SWe" kind="relationship" relationship="viewControllers" id="KIV-ne-fKx"/>
                     </connections>
                 </tabBarController>
@@ -421,6 +496,54 @@
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
+    <classes>
+        <class className="InvitesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnAccept:"/>
+                <relationship kind="action" name="btnDecline:"/>
+                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MyInklingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="blotPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="resultsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="loginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
+        </class>
+        <class className="othersInklingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
