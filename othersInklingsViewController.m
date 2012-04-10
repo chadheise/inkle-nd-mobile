@@ -39,8 +39,8 @@
 - (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDataObject *theDataObject;
-    theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
+    OthersInklingsDataObject *theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
+    
     return theDataObject;
 }
 - (NSString *)stringFromDate:(NSDate *)date
