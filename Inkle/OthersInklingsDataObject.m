@@ -6,10 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 
-@implementation PickerAppDataObject
+@implementation OthersInklingsDataObject
 @synthesize selection;
+@synthesize peopleGroup;
+@synthesize pid;
+@synthesize type;
 
 #pragma mark -
 #pragma mark -Memory management methods
@@ -18,6 +21,9 @@
 {
     //Release any properties declared as retain or copy
     self.selection = nil;
+    self.peopleGroup = nil;
+    self.pid = nil;
+    self.type = nil;
 }
 
 @end

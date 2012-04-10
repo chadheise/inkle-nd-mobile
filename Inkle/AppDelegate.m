@@ -11,7 +11,7 @@
 #import "OthersInklingsTableViewController.h"
 #import "othersInklingsViewController.h"
 #import "AppDelegateProtocol.h"
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 
 
 @implementation AppDelegate{
@@ -39,54 +39,6 @@
     
     return YES;
     
-    
-    /*Old Hardcoded inklings
-    inklings = [NSMutableArray arrayWithCapacity:20];
-    Inklings *inkling = [[Inklings alloc] init];
-    inkling.address = @"222 S Michigan St.\nSouth Bend, IN";
-    inkling.location = @"Club Fever";
-    inkling.attendees = @"102";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"127 N. Main St\nSouth Bend, IN";
-    inkling.location = @"Fiddler's Hearth";
-    inkling.attendees = @"8";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"1234 N. Eddy St\nSouth Bend, IN";
-    inkling.location = @"Brother's Bar & Grill";
-    inkling.attendees = @"150";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"1044 E. Angela Blvd\nSouth Bend, IN";
-    inkling.location = @"O'Rourke's";
-    inkling.attendees = @"250";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"1044 E. Angela Blvd\nSouth Bend, IN";
-    inkling.location = @"Kilwin's Chocolates and Ice Cream";
-    inkling.attendees = @"10";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"1130 Angela Blvd\nSouth Bend, IN";
-    inkling.location = @"McAlister's Deli";
-    inkling.attendees = @"6";
-    [inklings addObject:inkling];
-    inkling = [[Inklings alloc] init];
-    inkling.address = @"1705 South Bend Ave\nSouth Bend, IN";
-    inkling.location = @"Mulliagan's Bar & Grill";
-    inkling.attendees = @"33";
-    [inklings addObject:inkling];*/
-    //UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    //OthersInklingsTableViewController *othersInklingsTableViewController = [ [tabBarController viewControllers] objectAtIndex:0];
-    //othersInklingsTableViewController.inklings = inklings;
-    
-    
-    /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];*/
-    //return YES;
 }
 
 #pragma mark -
@@ -94,7 +46,7 @@
 
 -(id) init
 {
-    self.theAppDataObject = [[PickerAppDataObject alloc] init];
+    self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
     return [super init];
     
 }

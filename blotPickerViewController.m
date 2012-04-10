@@ -9,7 +9,7 @@
 #import "blotPickerViewController.h"
 #import "peopleGroups.h"
 #import "RXMLElement.h"
-#import "PickerAppDataObject.h"
+#import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 
 @implementation blotPickerViewController {
@@ -26,11 +26,11 @@
 @synthesize categoryNames;
 @synthesize namesArr;
 
-- (PickerAppDataObject *) theAppDataObject
+- (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    PickerAppDataObject *theDataObject;
-    theDataObject = (PickerAppDataObject*) theDelegate.theAppDataObject;
+    OthersInklingsDataObject *theDataObject;
+    theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
     return theDataObject;
 }
 
@@ -90,6 +90,7 @@
         peopleGroups *blot = [[peopleGroups alloc]init];
         blot.pid = [NSString stringWithFormat:@"%@", [b child:@"id"]];
         blot.name = [NSString stringWithFormat:@"%@", [b child:@"name"]];
+        blot.type = @"blot";
         [blotNames addObject:blot];        
     }];
     
@@ -115,6 +116,7 @@
         peopleGroups *network = [[peopleGroups alloc]init];
         network.pid = [NSString stringWithFormat:@"%@", [n child:@"id"]];
         network.name = [NSString stringWithFormat:@"%@", [n child:@"name"]];
+        network.type = @"network";
         [networkNames addObject:network];        
     }];
     
@@ -183,11 +185,14 @@ numberOfRowsInComponent:(NSInteger)component
         
     }
 
-    PickerAppDataObject *theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject *theDataObject = [self theAppDataObject];
     peopleGroups *ppl = [self.namesArr objectAtIndex:row];
-    NSString *pickerSelection = ppl.name;
-    theDataObject.selection = pickerSelection;
-    NSLog(@"Picker page: the selection is: %@", theDataObject.selection);
+    theDataObject.selection = ppl.name;
+    //theDataObject.peopleGroup = ppl;
+    theDataObject.pid = ppl.pid;
+    theDataObject.type = ppl.type;
+    NSLog(@"pid: %@ -> type: %@", theDataObject.pid, theDataObject.type);
+    //NSLog(@"Picker page: the selection is: %@", theDataObject.selection);
    // peopleGroups *blot = [blotNames objectAtIndex:row]; previous #2
    // resultsLabel.text = blot.name;
     

@@ -12,5 +12,6 @@
 
 @synthesize pid = _pid;
 @synthesize name = _name;
+@synthesize type = _type;
 
 @end
