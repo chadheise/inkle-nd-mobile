@@ -83,14 +83,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="109" id="Nx8-iq-C8C">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myInklingCell" rowHeight="109" id="Nx8-iq-C8C">
                                         <rect key="frame" x="0.0" y="22" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inkling Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="qWQ-df-vFc">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" text="Inkling Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="qWQ-df-vFc">
                                                     <rect key="frame" x="15" y="0.0" width="159" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
@@ -101,15 +101,15 @@
                                                     <rect key="frame" x="15" y="31" width="72" height="72"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fkN-9i-g9A">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="201" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fkN-9i-g9A">
                                                     <rect key="frame" x="95" y="36" width="188" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                                     <color key="textColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
-                                                    <rect key="frame" x="95" y="67" width="185" height="30"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="202" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
+                                                    <rect key="frame" x="95" y="71" width="185" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,6 +120,10 @@
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ufP-BL-Wla" id="64G-7M-sjK"/>
+                                    <outlet property="delegate" destination="ufP-BL-Wla" id="fsq-kP-EgX"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGq-FB-uhW">
                                 <rect key="frame" x="55" y="5" width="211" height="27"/>
@@ -138,6 +142,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Inklings" id="Gbv-Kp-bxz"/>
                     <navigationItem key="navigationItem" title="My Inklings" id="fyR-Ul-T1J"/>
+                    <connections>
+                        <outlet property="myInklingDate" destination="UGq-FB-uhW" id="le3-Bq-3rL"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1592" y="350"/>
@@ -509,6 +516,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="blotPickerViewController" superclassName="UIViewController">

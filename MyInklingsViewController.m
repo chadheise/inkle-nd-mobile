@@ -15,9 +15,12 @@
 
 @implementation MyInklingsViewController {
     NSDate *inklingDate;
+    NSMutableArray *inklingTypes;
+    NSMutableArray *myInklings;
 }
 
 @synthesize inklingTable;
+@synthesize myInklingDate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +35,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    inklingTypes = [NSMutableArray arrayWithObjects:@"Dinner", @"Pregame", @"Main Event", nil];
+    myInklings = [NSMutableArray arrayWithObjects:@"", @"", @"", nil];
+    
+    //Set date to today
+    inklingDate = [NSDate date];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    myInklingDate.titleLabel.text = [dateFormatter stringFromDate:[NSDate date]];
 }
 
 - (void)viewDidUnload
 {
+    [self setMyInklingDate:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -63,7 +80,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myInklingCell"];
+    UILabel *typeLabel = (UILabel *)[cell viewWithTag:200]; //Get the inkling type label 
+    typeLabel.text = [inklingTypes objectAtIndex:indexPath.row]; //Set the label (dinner, pregame, or main event)
+    
     /****Inklings *inkling = [othersInklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = inkling.location;
@@ -76,45 +96,6 @@
     return cell;
     
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
