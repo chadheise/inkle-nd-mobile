@@ -124,7 +124,7 @@
 }
 - (void)viewDidAppear:(BOOL)animated
 {
-   // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:<#(BOOL)#>];
+   // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:YES];
     //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
 }
 - (void)viewDidUnload
