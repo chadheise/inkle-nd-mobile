@@ -46,6 +46,7 @@
 		DFCA902114F05CC900E2C634 /* mainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCA902014F05CC900E2C634 /* mainMenuViewController.m */; };
 		DFCA902314F05DF500E2C634 /* blotblue.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCA902214F05DF500E2C634 /* blotblue.png */; };
 		DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */; };
+		DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		DFCA902214F05DF500E2C634 /* blotblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blotblue.png; sourceTree = "<group>"; };
 		DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
 		DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
+		DFFB71E31534C12B00E74DF3 /* MyInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInklingsViewController.h; sourceTree = "<group>"; };
+		DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInklingsViewController.m; sourceTree = "<group>"; };
 		DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OthersInklingsDataObject.h; path = Inkle/OthersInklingsDataObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +164,8 @@
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DFFB71E31534C12B00E74DF3 /* MyInklingsViewController.h */,
+				DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */,
 				804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */,
 				804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */,
 				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
@@ -408,6 +413,7 @@
 				DFBC3645152557EA00137ABE /* asyncimageview.m in Sources */,
 				804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */,
 				804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */,
+				DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
