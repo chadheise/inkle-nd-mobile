@@ -129,43 +129,40 @@
 {
     //Get previous selection
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    NSInteger count = 0;
     if (theDataObject.type == @"blot")
     {
         [picker selectRow:0 inComponent:leftComponent animated:YES];
         self.namesArr = self.blotNames;
-        NSInteger count = 0;
-        BOOL found = NO;
-        NSLog(@"blotPicker page: the current DataObject selection is: %@",theDataObject.selection);
+        //Find the location of the current selection, update picker display
         for (peopleGroups *grp in namesArr)
         {
             if([grp.name isEqualToString:theDataObject.selection]){
-                found = YES;
+                [picker selectRow:count inComponent:rightComponent animated:YES];
+                [picker reloadComponent:rightComponent];
                 break;
             }
             count++;
         }
-        if (found)
-            [picker selectRow:count inComponent:rightComponent animated:YES];
-        else
-            [picker selectRow:0 inComponent:rightComponent animated:YES];
-        [picker reloadComponent:rightComponent];
     }
     else if (theDataObject.type == @"network")
     {
         [picker selectRow:1 inComponent:leftComponent animated:YES];
-       // [picker selectRow:0 inComponent:rightComponent animated:YES];
         self.namesArr = self.networkNames;
-        [picker reloadComponent:rightComponent];
+        //Find the location of the current selection, update picker display
+        for (peopleGroups *grp in namesArr)
+        {
+            if([grp.name isEqualToString:theDataObject.selection]){
+                [picker selectRow:count inComponent:rightComponent animated:YES];
+                [picker reloadComponent:rightComponent];
+                break;
+            }
+            count++;
+        }
+
     }
 
     NSLog(@"blotPicker page: the blot/network is: %@", theDataObject.type);
-  //  peopleType = theDataObject.type;
-  //  peopleId = theDataObject.pid;
-   // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:YES];
-    //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
-    
-   // [picker selectRow:0 inComponent:rightComponent animated:YES];
-   // [picker reloadComponent:rightComponent];
     
 }
 - (void)viewDidUnload
