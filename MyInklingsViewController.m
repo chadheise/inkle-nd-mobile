@@ -119,7 +119,7 @@
     myInklingDate.titleLabel.text = stringDate;
     
     //Get inkling data
-    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/myInklings/"];
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
