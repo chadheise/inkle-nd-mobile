@@ -22,10 +22,10 @@
     NSString *peopleId;
 }
 @synthesize picker;
-@synthesize blotNames;//array containing the user's blots
-@synthesize networkNames;//array containing the user's networks
-@synthesize categoryNames;//array containing the words 'Blots' or 'Networks'
-@synthesize namesArr;//array containing either blotNames or networkNames--it is modified depending on user selection
+@synthesize blotNames;//array of strings containing the user's blots
+@synthesize networkNames;//array of strings containing the user's networks
+@synthesize categoryNames;//array of strings containing the words 'Blots' or 'Networks'
+@synthesize namesArr;//array of peopleGroups containing either blotNames or networkNames--it is modified depending on user selection
 
 - (OthersInklingsDataObject *) theAppDataObject
 {
@@ -64,7 +64,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
     self.categoryNames = [[NSMutableArray alloc] initWithObjects: @"Blots",@"Networks",nil];
     
     //Get blots
@@ -125,27 +125,49 @@
     self.namesArr = self.blotNames; 
 
 }
-/*- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     //Get previous selection
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
-    if (theDataObject.type == 
-    else if (theDataObject.type == @"Blots")
+    if (theDataObject.type == @"blot")
     {
-        
+        [picker selectRow:0 inComponent:leftComponent animated:YES];
+        self.namesArr = self.blotNames;
+        NSInteger count = 0;
+        BOOL found = NO;
+        NSLog(@"blotPicker page: the current DataObject selection is: %@",theDataObject.selection);
+        for (peopleGroups *grp in namesArr)
+        {
+            if([grp.name isEqualToString:theDataObject.selection]){
+                found = YES;
+                break;
+            }
+            count++;
+        }
+        if (found)
+            [picker selectRow:count inComponent:rightComponent animated:YES];
+        else
+            [picker selectRow:0 inComponent:rightComponent animated:YES];
+        [picker reloadComponent:rightComponent];
     }
-    else if (theDataObject.type == @"Networks")
+    else if (theDataObject.type == @"network")
     {
-        
+        [picker selectRow:1 inComponent:leftComponent animated:YES];
+       // [picker selectRow:0 inComponent:rightComponent animated:YES];
+        self.namesArr = self.networkNames;
+        [picker reloadComponent:rightComponent];
     }
 
-    bNSelection = theDataObject.selection;
-    //NSLog(@"blotPicker page: the selection is: %@", bNSelection);
-    peopleType = theDataObject.type;
-    peopleId = theDataObject.pid;
+    NSLog(@"blotPicker page: the blot/network is: %@", theDataObject.type);
+  //  peopleType = theDataObject.type;
+  //  peopleId = theDataObject.pid;
    // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:YES];
     //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
-}*/
+    
+   // [picker selectRow:0 inComponent:rightComponent animated:YES];
+   // [picker reloadComponent:rightComponent];
+    
+}
 - (void)viewDidUnload
 {
     [self setPicker:nil];
