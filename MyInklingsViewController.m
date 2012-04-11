@@ -22,6 +22,49 @@
 @synthesize inklingTable;
 @synthesize myInklingDate;
 
+//*****************CUSTOM FUNCTIONS********************//
+- (void) updateMyInklings
+{
+    //Update date button text to display new date
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
+    myInklingDate.titleLabel.text = stringDate;
+    
+    //Get inkling data
+    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *postData = [NSMutableData data];
+    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", stringDate] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
+    [request setHTTPBody: postData];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    
+    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
+    
+    myInklings = [NSMutableArray arrayWithCapacity:3]; //Empty myInklings array to store new data
+    
+    //[responseXML iterate:@"inklings" with: ^(RXMLElement *l) {
+    /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
+    //    Inklings *inkling = [[Inklings alloc] init];
+    //    inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
+    //    inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
+    //    inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
+    //    [othersInklings addObject:inkling];
+    //}];
+    
+    [inklingTable reloadData];
+}
+//**************************************************************//
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -109,47 +152,6 @@
 }
 
 
-//*****************CUSTOM FUNCTIONS********************//
-- (void) updateMyInklings
-{
-    //Update date button text to display new date
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-    NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
-    myInklingDate.titleLabel.text = stringDate;
-    
-    //Get inkling data
-    NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setValue: @"text/xml" forHTTPHeaderField: @"Content-Type"];
-    
-    NSMutableData *postData = [NSMutableData data];
-    [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", stringDate] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [request setHTTPBody: postData];
-    
-    NSURLResponse *response;
-    NSError *err;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    
-    RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
-    
-    myInklings = [NSMutableArray arrayWithCapacity:3]; //Empty myInklings array to store new data
-    
-    //[responseXML iterate:@"inklings" with: ^(RXMLElement *l) {
-        /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
-    //    Inklings *inkling = [[Inklings alloc] init];
-    //    inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
-    //    inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
-    //    inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
-    //    [othersInklings addObject:inkling];
-    //}];
-    
-    [inklingTable reloadData];
-}
-//**************************************************************//
+
 
 @end

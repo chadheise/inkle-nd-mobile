@@ -125,10 +125,10 @@
     self.namesArr = self.blotNames; 
 
 }
-- (void)viewDidAppear:(BOOL)animated
+/*- (void)viewDidAppear:(BOOL)animated
 {
     //Get previous selection
-  /*  OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     if (theDataObject.type == 
     else if (theDataObject.type == @"Blots")
     {
@@ -142,10 +142,10 @@
     bNSelection = theDataObject.selection;
     //NSLog(@"blotPicker page: the selection is: %@", bNSelection);
     peopleType = theDataObject.type;
-    peopleId = theDataObject.pid;*/
+    peopleId = theDataObject.pid;
    // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:YES];
     //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
-}
+}*/
 - (void)viewDidUnload
 {
     [self setPicker:nil];
