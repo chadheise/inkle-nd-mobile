@@ -17,13 +17,15 @@
     NSMutableArray *networkNames;
     NSMutableArray *categoryNames;
     NSMutableArray *namesArr;
-    NSString *bNSelection;
+    NSString *bNSelection;//set to the name of the blot or network
+    NSString *peopleType;
+    NSString *peopleId;
 }
 @synthesize picker;
-@synthesize blotNames;
-@synthesize networkNames;
-@synthesize categoryNames;
-@synthesize namesArr;
+@synthesize blotNames;//array containing the user's blots
+@synthesize networkNames;//array containing the user's networks
+@synthesize categoryNames;//array containing the words 'Blots' or 'Networks'
+@synthesize namesArr;//array containing either blotNames or networkNames--it is modified depending on user selection
 
 - (OthersInklingsDataObject *) theAppDataObject
 {
@@ -62,7 +64,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+        
     self.categoryNames = [[NSMutableArray alloc] initWithObjects: @"Blots",@"Networks",nil];
     
     //Get blots
@@ -119,11 +121,28 @@
         [networkNames addObject:network];        
     }];
     
-    self.namesArr = self.blotNames; //Preload picker with blots
+    //Preload picker with blots
+    self.namesArr = self.blotNames; 
 
 }
 - (void)viewDidAppear:(BOOL)animated
 {
+    //Get previous selection
+  /*  OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    if (theDataObject.type == 
+    else if (theDataObject.type == @"Blots")
+    {
+        
+    }
+    else if (theDataObject.type == @"Networks")
+    {
+        
+    }
+
+    bNSelection = theDataObject.selection;
+    //NSLog(@"blotPicker page: the selection is: %@", bNSelection);
+    peopleType = theDataObject.type;
+    peopleId = theDataObject.pid;*/
    // [picker selectRow:<#(NSInteger)#> inComponent:<#(NSInteger)#> animated:YES];
     //need to select the row based on what the user has already selected, i.e. Networks, University of Notre Dame
 }
@@ -177,10 +196,10 @@ numberOfRowsInComponent:(NSInteger)component
       inComponent:(NSInteger)component
 {
     if (component == leftComponent){
-        NSString *selectedCat = [self.categoryNames objectAtIndex:row];
+        NSString* selectedCat = [self.categoryNames objectAtIndex:row];
         if (selectedCat == @"Blots")
             self.namesArr = self.blotNames;
-        else if(selectedCat == @"Networks")
+        else if(selectedCat == @"Networks")   
             self.namesArr = self.networkNames;
         [picker selectRow:0 inComponent:rightComponent animated:YES];
         [picker reloadComponent:rightComponent];
@@ -190,7 +209,7 @@ numberOfRowsInComponent:(NSInteger)component
     OthersInklingsDataObject *theDataObject = [self theAppDataObject];
     peopleGroups *ppl = [self.namesArr objectAtIndex:row];
     theDataObject.selection = ppl.name;
-    //theDataObject.peopleGroup = ppl;
+    //theDataObject.peopleGroup = ppl; this doesn't work
     theDataObject.pid = ppl.pid;
     theDataObject.type = ppl.type;
     NSLog(@"pid: %@ -> type: %@", theDataObject.pid, theDataObject.type);
