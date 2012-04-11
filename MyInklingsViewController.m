@@ -7,6 +7,7 @@
 //
 
 #import "MyInklingsViewController.h"
+#import "Inklings.h"
 #import "RXMLElement.h"
 
 @interface MyInklingsViewController ()
@@ -47,19 +48,33 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    //NSString *str = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    //NSLog(@"%@",str);
+    
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
-    
     myInklings = [NSMutableArray arrayWithCapacity:3]; //Empty myInklings array to store new data
     
-    //[responseXML iterate:@"inklings" with: ^(RXMLElement *l) {
-    /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
-    //    Inklings *inkling = [[Inklings alloc] init];
-    //    inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
-    //    inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
-    //    inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
-    //    [othersInklings addObject:inkling];
-    //}];
+    RXMLElement *dinnerXML = [responseXML child:@"dinner"];
+    Inklings *dinnerInkling = [[Inklings alloc] init];
+    dinnerInkling.address = [NSString stringWithFormat: @"%@\n%@", [dinnerXML child:@"address1"], [dinnerXML child:@"address2"]];
+    dinnerInkling.location = [NSString stringWithFormat: @"%@", [dinnerXML child:@"location"]];
+    dinnerInkling.attendees = [NSString stringWithFormat: @""];
+    [myInklings addObject:dinnerInkling];
+    
+    RXMLElement *pregameXML = [responseXML child:@"pregame"];
+    Inklings *pregameInkling = [[Inklings alloc] init];
+    pregameInkling.address = [NSString stringWithFormat: @"%@\n%@", [pregameXML child:@"address1"], [pregameXML child:@"address2"]];
+    pregameInkling.location = [NSString stringWithFormat: @"%@", [pregameXML child:@"location"]];
+    pregameInkling.attendees = [NSString stringWithFormat: @""];
+    [myInklings addObject:pregameInkling];
+    
+    RXMLElement *main_eventXML = [responseXML child:@"main_event"];
+    Inklings *main_eventInkling = [[Inklings alloc] init];
+    main_eventInkling.address = [NSString stringWithFormat: @"%@\n%@", [main_eventXML child:@"address1"], [main_eventXML child:@"address2"]];
+    main_eventInkling.location = [NSString stringWithFormat: @"%@", [main_eventXML child:@"location"]];
+    main_eventInkling.attendees = [NSString stringWithFormat: @""];
+    [myInklings addObject:main_eventInkling];
     
     [inklingTable reloadData];
 }
@@ -79,7 +94,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     inklingTypes = [NSMutableArray arrayWithObjects:@"Dinner", @"Pregame", @"Main Event", nil];
-    myInklings = [NSMutableArray arrayWithObjects:@"", @"", @"", nil];
+    //myInklings = [NSMutableArray arrayWithObjects:@"", @"", @"", nil];
     
     inklingDate = [NSDate date]; //Initialize date to today
     
@@ -95,7 +110,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    
+    [self updateMyInklings];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -125,15 +140,12 @@
     UILabel *typeLabel = (UILabel *)[cell viewWithTag:200]; //Get the inkling type label 
     typeLabel.text = [inklingTypes objectAtIndex:indexPath.row]; //Set the label (dinner, pregame, or main event)
     
-    /****Inklings *inkling = [othersInklings objectAtIndex:indexPath.row];
-    UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
+    Inklings *inkling = [myInklings objectAtIndex:indexPath.row];
+    UILabel *locationLabel = (UILabel *)[cell viewWithTag:201];
     locationLabel.text = inkling.location;
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
-    nameLabel.text = inkling.address;
-    UILabel *attendeesLabel = (UILabel *)[cell viewWithTag:102];
-    attendeesLabel.text = inkling.attendees; ****/
-    //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
-    //  ratingImageView.image = [self imageForRating:inkling.attendees];
+    UILabel *addressLabel = (UILabel *)[cell viewWithTag:202];
+    addressLabel.text = inkling.address;
+    
     return cell;
     
 }
