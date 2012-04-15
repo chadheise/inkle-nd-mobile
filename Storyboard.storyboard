@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="Ie4-Ru-Tut">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-LQ-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
+        <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,18 +98,18 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="location.jpg" id="RKD-wn-d0n">
-                                                    <rect key="frame" x="15" y="31" width="72" height="72"/>
+                                                    <rect key="frame" x="15" y="30" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="201" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fkN-9i-g9A">
-                                                    <rect key="frame" x="95" y="36" width="188" height="27"/>
+                                                    <rect key="frame" x="95" y="30" width="188" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                                     <color key="textColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="202" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
-                                                    <rect key="frame" x="95" y="71" width="185" height="30"/>
+                                                    <rect key="frame" x="95" y="64" width="185" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -147,6 +149,7 @@
             </objects>
             <point key="canvasLocation" x="1592" y="350"/>
         </scene>
+        <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,6 +166,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="350"/>
         </scene>
+        <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,6 +300,7 @@
             </objects>
             <point key="canvasLocation" x="1465" y="-245"/>
         </scene>
+        <!--Blot Picker View Controller - Select Blot or Network-->
         <scene sceneID="bUP-oV-4A3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xH-TQ-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,6 +343,7 @@
             </objects>
             <point key="canvasLocation" x="1962" y="-593"/>
         </scene>
+        <!--Others Inklings Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7L-Tb-O0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,6 +360,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-245"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -373,6 +380,7 @@
             </objects>
             <point key="canvasLocation" x="441" y="-4"/>
         </scene>
+        <!--Invites View Controller - Invites-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>

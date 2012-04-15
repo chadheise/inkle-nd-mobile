@@ -9,6 +9,7 @@
 #import "MyInklingsViewController.h"
 #import "Inklings.h"
 #import "RXMLElement.h"
+#import "asyncimageview.h"
 
 @interface MyInklingsViewController ()
 
@@ -18,6 +19,7 @@
     NSDate *inklingDate;
     NSMutableArray *inklingTypes;
     NSMutableArray *myInklings;
+    NSMutableArray *inklingLocationIDs;
 }
 
 @synthesize inklingTable;
@@ -54,27 +56,37 @@
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     myInklings = [NSMutableArray arrayWithCapacity:3]; //Empty myInklings array to store new data
+    inklingLocationIDs = [NSMutableArray arrayWithCapacity:3]; //Empty array of location IDs
     
     RXMLElement *dinnerXML = [responseXML child:@"dinner"];
     Inklings *dinnerInkling = [[Inklings alloc] init];
     dinnerInkling.address = [NSString stringWithFormat: @"%@\n%@", [dinnerXML child:@"address1"], [dinnerXML child:@"address2"]];
     dinnerInkling.location = [NSString stringWithFormat: @"%@", [dinnerXML child:@"location"]];
     dinnerInkling.attendees = [NSString stringWithFormat: @""];
+    dinnerInkling.locationType = [NSString stringWithFormat: @"%@", [dinnerXML child:@"locationType"]];
+    dinnerInkling.locationID = [NSString stringWithFormat: @"%@", [dinnerXML child:@"locationID"]];
     [myInklings addObject:dinnerInkling];
+    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [dinnerXML child: @"locationID"]]];
     
     RXMLElement *pregameXML = [responseXML child:@"pregame"];
     Inklings *pregameInkling = [[Inklings alloc] init];
     pregameInkling.address = [NSString stringWithFormat: @"%@\n%@", [pregameXML child:@"address1"], [pregameXML child:@"address2"]];
     pregameInkling.location = [NSString stringWithFormat: @"%@", [pregameXML child:@"location"]];
     pregameInkling.attendees = [NSString stringWithFormat: @""];
+    pregameInkling.locationType = [NSString stringWithFormat: @"%@", [pregameXML child:@"locationType"]];
+    pregameInkling.locationID = [NSString stringWithFormat: @"%@", [pregameXML child:@"locationID"]];
     [myInklings addObject:pregameInkling];
+    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [pregameXML child: @"locationID"]]];
     
     RXMLElement *main_eventXML = [responseXML child:@"main_event"];
     Inklings *main_eventInkling = [[Inklings alloc] init];
     main_eventInkling.address = [NSString stringWithFormat: @"%@\n%@", [main_eventXML child:@"address1"], [main_eventXML child:@"address2"]];
     main_eventInkling.location = [NSString stringWithFormat: @"%@", [main_eventXML child:@"location"]];
     main_eventInkling.attendees = [NSString stringWithFormat: @""];
+    main_eventInkling.locationType = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationType"]];
+    main_eventInkling.locationID = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationID"]];
     [myInklings addObject:main_eventInkling];
+    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [main_eventXML child: @"locationID"]]];
     
     [inklingTable reloadData];
 }
@@ -145,6 +157,30 @@
     locationLabel.text = inkling.location;
     UILabel *addressLabel = (UILabel *)[cell viewWithTag:202];
     addressLabel.text = inkling.address;
+    
+    //Get invite image
+    if (cell != nil) {
+        AsyncImageView* oldImage = (AsyncImageView*)
+        [cell.contentView viewWithTag:999];
+        [oldImage removeFromSuperview];
+    }
+    
+	CGRect frame;
+	frame.size.width=70; frame.size.height=70;
+	frame.origin.x=15; frame.origin.y=30;
+	AsyncImageView* asyncImage = [[AsyncImageView alloc]
+                                  initWithFrame:frame];
+	asyncImage.tag = 999;
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/locations/%@.jpg", inkling.locationID]];
+    if ([inkling.locationType isEqualToString:@"member"]) {
+        url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", inkling.locationID]];
+    }
+    [asyncImage loadImageFromURL:url];
+    
+	[cell.contentView addSubview:asyncImage];
+    //End image
+
+    
     
     return cell;
     
