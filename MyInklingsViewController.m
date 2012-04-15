@@ -109,6 +109,7 @@
     inklingTypes = [NSMutableArray arrayWithObjects:@"Dinner", @"Pregame", @"Main Event", nil];
     
     inklingDate = [NSDate date]; //Initialize date to today
+    //theDelegate.myInklingsDate = [NSDate date]; //Initialize date to today
     //NSLog(@"viewDidLoad");
     [self updateMyInklings];
     //NSLog(@" end viewDidLoad");

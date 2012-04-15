@@ -16,11 +16,13 @@
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
+    NSDate *myInklingsDate;
 }
 
 @synthesize window = _window;
 @synthesize navController;
 @synthesize theAppDataObject;
+@synthesize myInklingsDate;
 @synthesize theBlotPickerViewController;
 
 @synthesize managedObjectContext = __managedObjectContext;
