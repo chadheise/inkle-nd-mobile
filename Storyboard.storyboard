@@ -118,6 +118,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="ctj-J6-GBg" kind="push" id="bEG-Zw-7BQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -200,7 +203,32 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="Ntn-r9-aVC"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2096" y="134"/>
+            <point key="canvasLocation" x="2061" y="-4"/>
+        </scene>
+        <!--Set My Inkling View Controller-->
+        <scene sceneID="eiq-Uk-rpI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4C9-tT-22R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ctj-J6-GBg" customClass="SetMyInklingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2n-pu-3ts">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="pYo-Gh-4OH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C8n-pk-1ce"/>
+                    <connections>
+                        <outlet property="myInklingWebView" destination="pYo-Gh-4OH" id="L1W-dM-rcd"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2061" y="598"/>
         </scene>
         <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
@@ -548,57 +576,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
-    <classes>
-        <class className="InvitesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAccept:"/>
-                <relationship kind="action" name="btnDecline:"/>
-                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MyInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="blotPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="myInklingsDateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myInklingsDateViewController.h"/>
-        </class>
-        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
-        </class>
-        <class className="othersInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
