@@ -66,7 +66,6 @@
     dinnerInkling.locationType = [NSString stringWithFormat: @"%@", [dinnerXML child:@"locationType"]];
     dinnerInkling.locationID = [NSString stringWithFormat: @"%@", [dinnerXML child:@"locationID"]];
     [myInklings addObject:dinnerInkling];
-    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [dinnerXML child: @"locationID"]]];
     
     RXMLElement *pregameXML = [responseXML child:@"pregame"];
     Inklings *pregameInkling = [[Inklings alloc] init];
@@ -76,7 +75,6 @@
     pregameInkling.locationType = [NSString stringWithFormat: @"%@", [pregameXML child:@"locationType"]];
     pregameInkling.locationID = [NSString stringWithFormat: @"%@", [pregameXML child:@"locationID"]];
     [myInklings addObject:pregameInkling];
-    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [pregameXML child: @"locationID"]]];
     
     RXMLElement *main_eventXML = [responseXML child:@"main_event"];
     Inklings *main_eventInkling = [[Inklings alloc] init];
@@ -86,9 +84,12 @@
     main_eventInkling.locationType = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationType"]];
     main_eventInkling.locationID = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationID"]];
     [myInklings addObject:main_eventInkling];
-    //[inklingLocationIDs addObject: [NSString stringWithFormat: @"%@", [main_eventXML child: @"locationID"]]];
-    
+    //NSLog(@"before table reload");
+    //Inklings *temp = [myInklings objectAtIndex:0];
+    //NSLog(temp.location);
     [inklingTable reloadData];
+    //[inklingTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    //NSLog(@"reloaded data");
 }
 //**************************************************************//
 
@@ -106,11 +107,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     inklingTypes = [NSMutableArray arrayWithObjects:@"Dinner", @"Pregame", @"Main Event", nil];
-    //myInklings = [NSMutableArray arrayWithObjects:@"", @"", @"", nil];
     
     inklingDate = [NSDate date]; //Initialize date to today
-    
+    //NSLog(@"viewDidLoad");
     [self updateMyInklings];
+    //NSLog(@" end viewDidLoad");
 }
 
 - (void)viewDidUnload
