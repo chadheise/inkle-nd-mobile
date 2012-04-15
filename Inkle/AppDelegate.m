@@ -16,12 +16,14 @@
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
+    NSDate *othersInklingsDate;
     NSDate *myInklingsDate;
 }
 
 @synthesize window = _window;
 @synthesize navController;
 @synthesize theAppDataObject;
+@synthesize othersInklingsDate;
 @synthesize myInklingsDate;
 @synthesize theBlotPickerViewController;
 
@@ -49,12 +51,14 @@
 -(id) init
 {
     self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
+    self.othersInklingsDate = [[NSDate alloc] init];
     return [super init];
     
 }
 -(void) dealloc
 {
     self.theAppDataObject = nil;
+    self.othersInklingsDate = nil;
     self.theBlotPickerViewController = nil;
 }
 - (void)applicationWillResignActive:(UIApplication *)application

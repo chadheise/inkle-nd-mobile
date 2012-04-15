@@ -27,6 +27,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
 @property (nonatomic, retain) OthersInklingsDataObject *theAppDataObject;
+@property (nonatomic, retain) NSDate *othersInklingsDate;
 @property (nonatomic, retain) NSDate *myInklingsDate;
 @property (nonatomic, retain) IBOutlet blotPickerViewController *theBlotPickerViewController;
 

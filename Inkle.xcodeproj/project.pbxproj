@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
 		8021925C1520B7E900C7D3D6 /* InvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8021925B1520B7E900C7D3D6 /* InvitesViewController.m */; };
+		80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027460F153B7B1200CA792D /* othersInklingsDateViewController.m */; };
 		802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 802ABEB71524F15B0012B18C /* peopleGroups.m */; };
 		804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */; };
 		804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */; };
@@ -66,6 +67,8 @@
 		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
 		8021925A1520B7E900C7D3D6 /* InvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesViewController.h; sourceTree = "<group>"; };
 		8021925B1520B7E900C7D3D6 /* InvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesViewController.m; sourceTree = "<group>"; };
+		8027460E153B7B1200CA792D /* othersInklingsDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsDateViewController.h; sourceTree = "<group>"; };
+		8027460F153B7B1200CA792D /* othersInklingsDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsDateViewController.m; sourceTree = "<group>"; };
 		802ABEB61524F15B0012B18C /* peopleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleGroups.h; sourceTree = "<group>"; };
 		802ABEB71524F15B0012B18C /* peopleGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleGroups.m; sourceTree = "<group>"; };
 		804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateProtocol.h; path = ../AppDelegateProtocol.h; sourceTree = "<group>"; };
@@ -170,6 +173,10 @@
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				8027460E153B7B1200CA792D /* othersInklingsDateViewController.h */,
+				8027460F153B7B1200CA792D /* othersInklingsDateViewController.m */,
+				DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */,
+				DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */,
 				DF7DEEA2153A64E90001C0A1 /* SetMyInklingViewController.h */,
 				DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */,
 				DF7DEE9E153A5FDB0001C0A1 /* myInklingsDateViewController.h */,
@@ -188,8 +195,6 @@
 				8007E68B15044700002D2F4D /* Inklings.h */,
 				80EC990815235DC500F7CACA /* Invites.h */,
 				80EC990915235DC500F7CACA /* Invites.m */,
-				DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */,
-				DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */,
 				DFCA901F14F05CC900E2C634 /* mainMenuViewController.h */,
 				DFCA902014F05CC900E2C634 /* mainMenuViewController.m */,
 				DF750A3D14E829DA00D9E0BA /* loginViewController.h */,
@@ -426,6 +431,7 @@
 				DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */,
 				DF7DEEA0153A5FDB0001C0A1 /* myInklingsDateViewController.m in Sources */,
 				DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */,
+				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
