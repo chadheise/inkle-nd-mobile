@@ -13,5 +13,7 @@
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSString *attendees;
+@property (nonatomic, copy) NSString *locationType;
+@property (nonatomic, copy) NSString *locationID; 
 
 @end

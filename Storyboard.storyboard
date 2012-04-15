@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="Ie4-Ru-Tut">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-LQ-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
+        <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myInklingCell" rowHeight="109" id="Nx8-iq-C8C">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myInklingCell" rowHeight="109" id="Nx8-iq-C8C">
                                         <rect key="frame" x="0.0" y="22" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -96,18 +98,18 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="location.jpg" id="RKD-wn-d0n">
-                                                    <rect key="frame" x="15" y="31" width="72" height="72"/>
+                                                    <rect key="frame" x="15" y="30" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="201" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fkN-9i-g9A">
-                                                    <rect key="frame" x="95" y="36" width="188" height="27"/>
+                                                    <rect key="frame" x="95" y="30" width="188" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                                     <color key="textColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="202" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
-                                                    <rect key="frame" x="95" y="71" width="185" height="30"/>
+                                                    <rect key="frame" x="95" y="64" width="185" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -116,6 +118,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="ctj-J6-GBg" kind="push" id="bEG-Zw-7BQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -134,6 +139,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="nt9-kt-62P" kind="push" id="nQc-KY-172"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,6 +155,82 @@
             </objects>
             <point key="canvasLocation" x="1592" y="350"/>
         </scene>
+        <!--My Inklings Date View Controller-->
+        <scene sceneID="CWi-Dp-h2H">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myg-Be-8Dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="nt9-kt-62P" customClass="myInklingsDateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xV-aN-HTx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="CLL-ae-8aU">
+                                <rect key="frame" x="0.0" y="151" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="356147228.15903199">
+                                    <!--2012-04-15 01:47:08 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="350391600">
+                                    <!--2012-02-08 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ntn-r9-aVC"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2061" y="-4"/>
+        </scene>
+        <!--Set My Inkling View Controller-->
+        <scene sceneID="eiq-Uk-rpI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4C9-tT-22R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ctj-J6-GBg" customClass="SetMyInklingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2n-pu-3ts">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="pYo-Gh-4OH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C8n-pk-1ce"/>
+                    <connections>
+                        <outlet property="myInklingWebView" destination="pYo-Gh-4OH" id="L1W-dM-rcd"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2061" y="598"/>
+        </scene>
+        <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,6 +247,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="350"/>
         </scene>
+        <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,6 +381,7 @@
             </objects>
             <point key="canvasLocation" x="1465" y="-245"/>
         </scene>
+        <!--Blot Picker View Controller - Select Blot or Network-->
         <scene sceneID="bUP-oV-4A3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xH-TQ-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,6 +424,7 @@
             </objects>
             <point key="canvasLocation" x="1962" y="-593"/>
         </scene>
+        <!--Others Inklings Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7L-Tb-O0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,6 +441,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-245"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -373,6 +461,7 @@
             </objects>
             <point key="canvasLocation" x="441" y="-4"/>
         </scene>
+        <!--Invites View Controller - Invites-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,54 +576,6 @@
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
-    <classes>
-        <class className="InvitesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAccept:"/>
-                <relationship kind="action" name="btnDecline:"/>
-                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MyInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="blotPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
-        </class>
-        <class className="othersInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

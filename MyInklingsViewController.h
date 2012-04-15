@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Inklings.h"
 
 @interface MyInklingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {

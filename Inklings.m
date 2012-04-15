@@ -13,5 +13,7 @@
 @synthesize address = _address;
 @synthesize location = _location;
 @synthesize attendees = _attendees;
+@synthesize locationType = _locationType;
+@synthesize locationID = _locationID;
 
 @end
