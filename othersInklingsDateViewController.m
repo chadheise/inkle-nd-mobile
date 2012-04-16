@@ -7,10 +7,19 @@
 //
 
 #import "othersInklingsDateViewController.h"
+#import "AppDelegateProtocol.h"
 
 @implementation othersInklingsDateViewController
 
 @synthesize datePicker;
+/*--------CUSTOM FUNCTION--------*/
+- (NSDate *) othersInklingsDate
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    NSDate *theDate = (NSDate*) theDelegate.othersInklingsDate;
+    
+    return theDate;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,19 +47,44 @@
 }
 */
 
+- (NSString *)stringFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    
+    return [dateFormat stringFromDate:date];
+}
+- (IBAction)dateChanged:(id)sender {
+    NSDate* theDate = [self othersInklingsDate];
+    theDate = datePicker.date;
+    NSString *printOut = [self stringFromDate:theDate];
+    NSLog(@"The date in pickerChanged fcn is: %@",printOut);
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     //Initialize datePicker
     datePicker = [[UIDatePicker alloc] init];
     datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     datePicker.datePickerMode = UIDatePickerModeDate;
-    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    [datePicker addTarget:self 
+                action:@selector(dateChanged:) 
+                forControlEvents:UIControlEventValueChanged];
     CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
     datePicker.frame = CGRectMake(0.0, 195, pickerSize.width, 460);
     datePicker.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:datePicker];
+    [datePicker setHidden:NO];
+    
+    NSDate* theDate = [self othersInklingsDate];
+    theDate = datePicker.date; //set the date selection
+    NSString *printOut = [self stringFromDate:theDate];
+    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",printOut);
+
 }
 
 

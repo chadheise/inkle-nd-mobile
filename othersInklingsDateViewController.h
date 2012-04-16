@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface othersInklingsDateViewController : UIViewController
-
-@property (nonatomic, strong) UIDatePicker *datePicker;
+@interface othersInklingsDateViewController : UIViewController{
+    UIDatePicker *datePicker;
+}
+@property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
 
 @end
