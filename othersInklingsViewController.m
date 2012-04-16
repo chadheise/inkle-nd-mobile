@@ -62,7 +62,7 @@
     //[dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
     NSDate* theDate = [self othersInklingsDate];
     NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in othersInklingsViewController is: %@",printOut);
+    NSLog(@"The date in updateInklings is: %@",printOut);
     [dateButton setTitle:[self stringFromDate:theDate] forState:UIControlStateNormal]; //Update date button text to display new date
     // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
     bNSelection = @"None";
@@ -208,7 +208,7 @@
     inklingDate = [NSDate date]; //Initialize inklingDate to today
     
     NSDate* theDate = [self othersInklingsDate];
-    theDate = [NSDate date];//initialize date to today's date
+   // theDate = [NSDate date];//initialize date to today's date
     NSString *printOut = [self stringFromDate:theDate];
     NSLog(@"The date in othersInklingsViewController is: %@",printOut);
     

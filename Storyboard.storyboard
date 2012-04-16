@@ -426,13 +426,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Date" id="crD-8N-LG7">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="8TL-8w-WDX">
-                            <connections>
-                                <action selector="dateChanged:" destination="FnB-AS-jMm" id="3tJ-g3-1eb"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Select Date" id="crD-8N-LG7"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2033" y="-245"/>

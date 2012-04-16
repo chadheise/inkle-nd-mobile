@@ -54,11 +54,12 @@
     
     return [dateFormat stringFromDate:date];
 }
-- (IBAction)dateChanged:(id)sender {
+- (void)dateChanged:(id)sender {
     NSDate* theDate = [self othersInklingsDate];
     theDate = datePicker.date;
     NSString *printOut = [self stringFromDate:theDate];
     NSLog(@"The date in pickerChanged fcn is: %@",printOut);
+
 }
 
 
@@ -79,14 +80,16 @@
     datePicker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
-    
+
     NSDate* theDate = [self othersInklingsDate];
-    theDate = datePicker.date; //set the date selection
     NSString *printOut = [self stringFromDate:theDate];
     NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",printOut);
 
 }
+-(void)viewDidAppear:(BOOL)animated
+{
 
+}
 
 - (void)viewDidUnload
 {

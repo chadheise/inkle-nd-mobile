@@ -17,7 +17,6 @@
 @implementation AppDelegate{
     NSMutableArray *inklings;
     NSDate *myInklingsDate;
-    NSDate *othersInklingsDate;
 }
 
 @synthesize window = _window;
