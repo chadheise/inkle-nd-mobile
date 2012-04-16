@@ -11,7 +11,7 @@
 #import "othersInklingsViewController.h"
 #import "AppDelegateProtocol.h"
 #import "blotPickerViewController.h"
-
+#import "othersInklingsDateViewController.h"
 
 @class OthersInklingsDataObject;
 
@@ -22,12 +22,15 @@
     UINavigationController *navController;
     OthersInklingsDataObject *theAppDataObject;
     IBOutlet blotPickerViewController *theBlotPickerViewController;
+    NSDate *theDate;
+    IBOutlet othersInklingsDateViewController *theOthersInklingsDateViewController;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
 @property (nonatomic, retain) OthersInklingsDataObject *theAppDataObject;
 @property (nonatomic, retain) NSDate *othersInklingsDate;
+@property (nonatomic, retain) IBOutlet othersInklingsDateViewController *theOthersInklingsDateViewController;
 @property (nonatomic, retain) NSDate *myInklingsDate;
 @property (nonatomic, retain) IBOutlet blotPickerViewController *theBlotPickerViewController;
 

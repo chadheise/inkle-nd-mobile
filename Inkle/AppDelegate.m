@@ -16,8 +16,8 @@
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
-    NSDate *othersInklingsDate;
     NSDate *myInklingsDate;
+    NSDate *othersInklingsDate;
 }
 
 @synthesize window = _window;
@@ -26,6 +26,7 @@
 @synthesize othersInklingsDate;
 @synthesize myInklingsDate;
 @synthesize theBlotPickerViewController;
+@synthesize theOthersInklingsDateViewController;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
@@ -34,6 +35,7 @@
 -(void) pushSecondView
 {
     [navController pushViewController:theBlotPickerViewController animated:TRUE];
+    [navController pushViewController:theOthersInklingsDateViewController animated:TRUE];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
