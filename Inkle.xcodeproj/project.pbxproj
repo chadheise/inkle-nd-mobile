@@ -13,6 +13,7 @@
 		802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 802ABEB71524F15B0012B18C /* peopleGroups.m */; };
 		804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */; };
 		804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */; };
+		80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80556A981544F732002A7F2C /* OthersInklingsDate.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
@@ -75,6 +76,8 @@
 		804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OthersInklingsDataObject.m; path = Inkle/OthersInklingsDataObject.m; sourceTree = "<group>"; };
 		804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsNavigationController.h; sourceTree = "<group>"; };
 		804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsNavigationController.m; sourceTree = "<group>"; };
+		80556A971544F732002A7F2C /* OthersInklingsDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsDate.h; sourceTree = "<group>"; };
+		80556A981544F732002A7F2C /* OthersInklingsDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsDate.m; sourceTree = "<group>"; };
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */,
 				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
 				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
+				80556A971544F732002A7F2C /* OthersInklingsDate.h */,
+				80556A981544F732002A7F2C /* OthersInklingsDate.m */,
 				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
@@ -432,6 +437,7 @@
 				DF7DEEA0153A5FDB0001C0A1 /* myInklingsDateViewController.m in Sources */,
 				DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */,
 				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
+				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,11 +12,11 @@
 #import "othersInklingsViewController.h"
 #import "AppDelegateProtocol.h"
 #import "OthersInklingsDataObject.h"
+#import "OthersInklingsDate.h"
 
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
-    NSDate *myInklingsDate;
 }
 
 @synthesize window = _window;
@@ -27,15 +27,17 @@
 @synthesize theBlotPickerViewController;
 @synthesize theOthersInklingsDateViewController;
 
+@synthesize theAppDataObject2;
+
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
--(void) pushSecondView
+/*-(void) pushSecondView
 {
     [navController pushViewController:theBlotPickerViewController animated:TRUE];
     [navController pushViewController:theOthersInklingsDateViewController animated:TRUE];
-}
+}*/
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -52,10 +54,27 @@
 -(id) init
 {
     self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
-    self.othersInklingsDate = [[NSDate alloc] init];
+    
+    self.theAppDataObject2 = [[OthersInklingsDate alloc] init];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    theAppDataObject2.date = [NSDate date];
+    theAppDataObject2.dateString = [dateFormat stringFromDate:theAppDataObject2.date];
+    NSLog(@"The date in init is: %@",theAppDataObject2.dateString);
+    
+    /*
+     NSDate *othersDate = [[NSDate alloc]init];
+    othersDate = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    self.othersInklingsDate = [dateFormat stringFromDate:othersDate];
+    NSLog(@"The date in init is: %@",othersInklingsDate);
+     */
+    
     return [super init];
     
 }
+
 -(void) dealloc
 {
     self.theAppDataObject = nil;

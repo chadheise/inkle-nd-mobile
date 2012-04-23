@@ -8,18 +8,21 @@
 
 #import "othersInklingsDateViewController.h"
 #import "AppDelegateProtocol.h"
+#import "OthersInklingsDate.h"
 
 @implementation othersInklingsDateViewController
 
 @synthesize datePicker;
+
 /*--------CUSTOM FUNCTION--------*/
-- (NSDate *) othersInklingsDate
+- (OthersInklingsDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    NSDate *theDate = (NSDate*) theDelegate.othersInklingsDate;
+    OthersInklingsDate *theDataObject = (OthersInklingsDate*) theDelegate.theAppDataObject2;
     
-    return theDate;
+    return theDataObject;
 }
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,18 +50,14 @@
 }
 */
 
-- (NSString *)stringFromDate:(NSDate *)date
+
+- (void)dateChanged:(id)sender 
 {
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    
-    return [dateFormat stringFromDate:date];
-}
-- (void)dateChanged:(id)sender {
-    NSDate* theDate = [self othersInklingsDate];
-    theDate = datePicker.date;
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in pickerChanged fcn is: %@",printOut);
+    OthersInklingsDate* theDataObject = [self theAppDataObject2];
+    theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
+    theDataObject.date = datePicker.date;
+    NSLog(@"The dateString in othersInklingsDateViewController dateChanged is: %@",theDataObject.dateString);
+    NSLog(@"The date in othersInklingsDateViewController dateChanged is: %@",[theDataObject stringFromDate:theDataObject.date]);
 
 }
 
@@ -81,14 +80,17 @@
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
 
-    NSDate* theDate = [self othersInklingsDate];
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",printOut);
-
+    OthersInklingsDate* theDataObject = [self theAppDataObject2];
+    theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
+    theDataObject.date = datePicker.date;
+    NSLog(@"The dateString in othersInklingsDateViewController viewDidLoad is: %@",theDataObject.dateString);
+    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",[theDataObject stringFromDate:theDataObject.date]);
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-
+    OthersInklingsDate* theDataObject = [self theAppDataObject2];
+    NSLog(@"The dateString in othersInklingsDateViewController viewDidAppear is: %@",theDataObject.dateString);
+    NSLog(@"The date in othersInklingsDateViewController viewDidAppear is: %@",[theDataObject stringFromDate:theDataObject.date]);
 }
 
 - (void)viewDidUnload

@@ -12,6 +12,7 @@
 #import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 #import "peopleGroups.h"
+#import "OthersInklingsDate.h"
 
 @implementation othersInklingsViewController {
     NSMutableArray *othersInklings;
@@ -25,12 +26,12 @@
 
 @synthesize inklings;
 @synthesize inklingTable;
-@synthesize datePicker;
+//@synthesize datePicker;
 @synthesize inklingTypeSegment;
 @synthesize dateButton;
 @synthesize navigationItem;
-@synthesize submitButton;
-@synthesize backButton;
+//@synthesize submitButton;
+//@synthesize backButton;
 @synthesize peopleButton;
 @synthesize bNButton;
 
@@ -43,28 +44,23 @@
     
     return theDataObject;
 }
-- (NSDate *) othersInklingsDate
+- (OthersInklingsDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    NSDate *theDate = (NSDate*) theDelegate.othersInklingsDate;
+    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
     
-    return theDate;
+    return theDataObject2;
 }
-- (NSString *)stringFromDate:(NSDate *)date
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    
-    return [dateFormat stringFromDate:date];
-}
+
 - (void) updateInklings
 {
-    //[dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
-    NSDate* theDate = [self othersInklingsDate];
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in updateInklings is: %@",printOut);
-    [dateButton setTitle:[self stringFromDate:theDate] forState:UIControlStateNormal]; //Update date button text to display new date
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    NSLog(@"The date in othersInklingsViewController updateInklings is: %@",theAppDataObject2.dateString);
+    
+    [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; //Update date button text to display new date
+    
     // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
+    
     bNSelection = @"None";
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     bNSelection = theDataObject.selection;
@@ -73,8 +69,6 @@
     peopleId = theDataObject.pid;
     [peopleButton setTitle:theDataObject.selection forState:UIControlStateNormal];
     //NSLog(@"pid: %@ - type: %@", theDataObject.pid, theDataObject.type);
-    //print this out to check if it's working
-    //send this information to the server to update inklings
     
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
@@ -85,8 +79,7 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    //[postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:inklingDate]] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:theDate]] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theAppDataObject2.dateString] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleType>%@</peopleType>", peopleType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleId>%@</peopleId>", peopleId] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
@@ -111,7 +104,7 @@
             inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
             [othersInklings addObject:inkling];
         }];
-    
+        
     [inklingTable reloadData];
 }
 
@@ -141,7 +134,7 @@
     [self updateInklings];
 }
 
-- (IBAction)pickDate:(id)sender {
+/*- (IBAction)pickDate:(id)sender {
     
     [datePicker setHidden:NO];
     [inklingTypeSegment setHidden:YES];
@@ -166,7 +159,7 @@
         [datePicker setHidden:YES];
     }
     [inklingTypeSegment setHidden:NO];
-}
+}*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -207,10 +200,8 @@
                       
     inklingDate = [NSDate date]; //Initialize inklingDate to today
     
-    NSDate* theDate = [self othersInklingsDate];
-   // theDate = [NSDate date];//initialize date to today's date
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in othersInklingsViewController is: %@",printOut);
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    NSLog(@"The date in othersInklingsViewController viewDidLoad is: %@",theAppDataObject2.dateString);
     
     peopleType = @"network";
     peopleId = @"1";
@@ -218,6 +209,7 @@
     [self updateInklings];
     
     //Initialize datePicker and hide it
+    /*
     datePicker = [[UIDatePicker alloc] init];
     datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     datePicker.datePickerMode = UIDatePickerModeDate;
@@ -229,14 +221,11 @@
     [self.view addSubview:datePicker];
     [datePicker setHidden:YES];
     
-    //[navigationItem setLeftBarButtonItem:nil];
-    //[navigationItem setRightBarButtonItem:nil];
     [navigationItem setLeftBarButtonItem:backButton];
     [navigationItem setRightBarButtonItem:submitButton];
+    */
 
-    
-    //[dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal];
-    [dateButton setTitle:[self stringFromDate:theDate] forState:UIControlStateNormal];
+    [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
 
 }
 
@@ -247,8 +236,8 @@
     [self setInklingTypeSegment:nil];
     [self setDateButton:nil];
     [self setNavigationItem:nil];
-    [self setSubmitButton:nil];
-    [self setBackButton:nil];
+    //[self setSubmitButton:nil];
+    //[self setBackButton:nil];
     [self setPeopleButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
