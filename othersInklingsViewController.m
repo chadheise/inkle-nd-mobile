@@ -26,12 +26,12 @@
 
 @synthesize inklings;
 @synthesize inklingTable;
-@synthesize datePicker;
+//@synthesize datePicker;
 @synthesize inklingTypeSegment;
 @synthesize dateButton;
 @synthesize navigationItem;
-@synthesize submitButton;
-@synthesize backButton;
+//@synthesize submitButton;
+//@synthesize backButton;
 @synthesize peopleButton;
 @synthesize bNButton;
 
@@ -134,7 +134,7 @@
     [self updateInklings];
 }
 
-- (IBAction)pickDate:(id)sender {
+/*- (IBAction)pickDate:(id)sender {
     
     [datePicker setHidden:NO];
     [inklingTypeSegment setHidden:YES];
@@ -159,7 +159,7 @@
         [datePicker setHidden:YES];
     }
     [inklingTypeSegment setHidden:NO];
-}
+}*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -209,6 +209,7 @@
     [self updateInklings];
     
     //Initialize datePicker and hide it
+    /*
     datePicker = [[UIDatePicker alloc] init];
     datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     datePicker.datePickerMode = UIDatePickerModeDate;
@@ -222,6 +223,7 @@
     
     [navigationItem setLeftBarButtonItem:backButton];
     [navigationItem setRightBarButtonItem:submitButton];
+    */
 
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
 
@@ -234,8 +236,8 @@
     [self setInklingTypeSegment:nil];
     [self setDateButton:nil];
     [self setNavigationItem:nil];
-    [self setSubmitButton:nil];
-    [self setBackButton:nil];
+    //[self setSubmitButton:nil];
+    //[self setBackButton:nil];
     [self setPeopleButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

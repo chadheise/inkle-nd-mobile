@@ -277,7 +277,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pickDate:" destination="Iwy-RV-8wv" eventType="touchUpInside" id="nSy-es-PPH"/>
                                     <segue destination="FnB-AS-jMm" kind="push" id="UZZ-DA-0Ao"/>
                                 </connections>
                             </button>
@@ -333,14 +332,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <tabBarItem key="tabBarItem" title="Others' Inklings" id="xaJ-4h-DJi"/>
                     <navigationItem key="navigationItem" id="whM-7z-Zfw">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="QmK-EL-ch7">
-                            <color key="tintColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="pickerNavBack:" destination="Iwy-RV-8wv" id="hcv-4H-8Zf"/>
-                            </connections>
-                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ULI-A5-LOh">
-                            <rect key="frame" x="62" y="7" width="184" height="30"/>
+                            <rect key="frame" x="5" y="7" width="310" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                             <segments>
@@ -354,22 +347,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <action selector="segmentSelect:" destination="Iwy-RV-8wv" eventType="valueChanged" id="8P7-rm-UdR"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Omu-aU-6fs">
-                            <color key="tintColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="pickerNavSubmit:" destination="Iwy-RV-8wv" id="y0d-yj-Yyc"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bNButton" destination="7eC-Hv-BYF" id="l31-7U-RKV"/>
-                        <outlet property="backButton" destination="QmK-EL-ch7" id="9Mm-SC-gZw"/>
                         <outlet property="dateButton" destination="IJS-2r-Doo" id="aOd-lU-HAi"/>
                         <outlet property="inklingTable" destination="OKV-eo-e6R" id="BDc-VK-hVw"/>
                         <outlet property="inklingTypeSegment" destination="ULI-A5-LOh" id="TGq-Lk-iiG"/>
                         <outlet property="navigationItem" destination="whM-7z-Zfw" id="b3X-ro-XVk"/>
                         <outlet property="peopleButton" destination="7eC-Hv-BYF" id="4UJ-S0-0fs"/>
-                        <outlet property="submitButton" destination="Omu-aU-6fs" id="FTy-2D-0d5"/>
                     </connections>
                 </viewController>
             </objects>
@@ -633,13 +618,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
     </classes>
