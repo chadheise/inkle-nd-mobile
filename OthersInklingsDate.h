@@ -17,5 +17,6 @@
 @property (nonatomic, copy) NSString* dateString;
 @property (nonatomic, copy) NSDate *date;
 
+- (NSString *)stringFromDate:(NSDate *)date;
 
 @end

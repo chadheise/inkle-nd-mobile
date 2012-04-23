@@ -21,5 +21,11 @@
     self.dateString = nil;
     self.date = nil;
 }
-
+- (NSString *)stringFromDate:(NSDate *)date2
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    
+    return [dateFormat stringFromDate:date2];
+}
 @end
