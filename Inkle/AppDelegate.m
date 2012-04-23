@@ -16,7 +16,6 @@
 
 @implementation AppDelegate{
     NSMutableArray *inklings;
-    NSDate *myInklingsDate;
 }
 
 @synthesize window = _window;
@@ -31,11 +30,11 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
--(void) pushSecondView
+/*-(void) pushSecondView
 {
     [navController pushViewController:theBlotPickerViewController animated:TRUE];
     [navController pushViewController:theOthersInklingsDateViewController animated:TRUE];
-}
+}*/
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -52,10 +51,16 @@
 -(id) init
 {
     self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
-    self.othersInklingsDate = [[NSDate alloc] init];
+    NSDate *othersDate = [[NSDate alloc]init];
+    othersDate = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
+    self.othersInklingsDate = [dateFormat stringFromDate:othersDate];
+    NSLog(@"The date in init is: %@",othersInklingsDate);
     return [super init];
     
 }
+
 -(void) dealloc
 {
     self.theAppDataObject = nil;

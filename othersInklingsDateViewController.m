@@ -13,14 +13,13 @@
 
 @synthesize datePicker;
 /*--------CUSTOM FUNCTION--------*/
-- (NSDate *) othersInklingsDate
+- (NSString *) othersInklingsDate
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    NSDate *theDate = (NSDate*) theDelegate.othersInklingsDate;
+    NSString *theDate = (NSString *) theDelegate.othersInklingsDate;
     
     return theDate;
 }
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,10 +54,12 @@
     return [dateFormat stringFromDate:date];
 }
 - (void)dateChanged:(id)sender {
-    NSDate* theDate = [self othersInklingsDate];
-    theDate = datePicker.date;
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in pickerChanged fcn is: %@",printOut);
+    NSString * theDate = [self othersInklingsDate];
+    theDate = [self stringFromDate:datePicker.date];
+    NSLog(@"1 The date in pickerChanged fcn is: %@",theDate);
+    NSString *printOut = [self othersInklingsDate];
+    NSLog(@"2 The date in pickerChanged fcn is: %@",printOut);
+
 
 }
 
@@ -81,9 +82,8 @@
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
 
-    NSDate* theDate = [self othersInklingsDate];
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",printOut);
+    NSString* theDate = [self othersInklingsDate];
+    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",theDate);
 
 }
 -(void)viewDidAppear:(BOOL)animated

@@ -14,6 +14,6 @@
 @protocol AppDelegateProtocol
 
 - (AppDataObject *) theAppDataObject;
-- (NSDate *) othersInklingsDate;
+- (NSString *) othersInklingsDate;
 
 @end

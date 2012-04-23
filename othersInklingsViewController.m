@@ -43,10 +43,10 @@
     
     return theDataObject;
 }
-- (NSDate *) othersInklingsDate
+- (NSString *) othersInklingsDate
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    NSDate *theDate = (NSDate*) theDelegate.othersInklingsDate;
+    NSString *theDate = (NSString *) theDelegate.othersInklingsDate;
     
     return theDate;
 }
@@ -60,10 +60,9 @@
 - (void) updateInklings
 {
     //[dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal]; //Update date button text to display new date
-    NSDate* theDate = [self othersInklingsDate];
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in updateInklings is: %@",printOut);
-    [dateButton setTitle:[self stringFromDate:theDate] forState:UIControlStateNormal]; //Update date button text to display new date
+    NSString * theDate = [self othersInklingsDate];
+    NSLog(@"The date in updateInklings is: %@",theDate);
+    [dateButton setTitle:theDate forState:UIControlStateNormal]; //Update date button text to display new date
     // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
     bNSelection = @"None";
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
@@ -86,7 +85,7 @@
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     //[postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:inklingDate]] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", [self stringFromDate:theDate]] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theDate] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleType>%@</peopleType>", peopleType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<peopleId>%@</peopleId>", peopleId] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
@@ -207,10 +206,9 @@
                       
     inklingDate = [NSDate date]; //Initialize inklingDate to today
     
-    NSDate* theDate = [self othersInklingsDate];
+    NSString * theDate = [self othersInklingsDate];
    // theDate = [NSDate date];//initialize date to today's date
-    NSString *printOut = [self stringFromDate:theDate];
-    NSLog(@"The date in othersInklingsViewController is: %@",printOut);
+    NSLog(@"The date in othersInklingsViewController is: %@",theDate);
     
     peopleType = @"network";
     peopleId = @"1";
@@ -236,7 +234,7 @@
 
     
     //[dateButton setTitle:[self stringFromDate:inklingDate] forState:UIControlStateNormal];
-    [dateButton setTitle:[self stringFromDate:theDate] forState:UIControlStateNormal];
+    [dateButton setTitle:theDate forState:UIControlStateNormal];
 
 }
 
