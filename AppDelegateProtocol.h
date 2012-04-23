@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class AppDataObject;
+@class OthersInklingsDataObject;
+@class OthersInklingsDate;
 
 @protocol AppDelegateProtocol
 
-- (AppDataObject *) theAppDataObject;
+- (OthersInklingsDataObject *) theAppDataObject;
+- (OthersInklingsDate *) theAppDataObject2;
 - (NSString *) othersInklingsDate;
 
 @end
