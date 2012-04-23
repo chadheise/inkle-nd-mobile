@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.myInklingWebView.scalesPageToFit = NO;
     [self.myInklingWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.inkleit.com/mobile/setMyInkling"]]];
 }
 
