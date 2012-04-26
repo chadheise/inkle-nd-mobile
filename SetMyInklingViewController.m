@@ -32,7 +32,7 @@
     self.myInklingWebView.scalesPageToFit = NO;
     
     NSString *date = @"04/26/2012";
-    NSString *inklingType = @"main_event";
+    NSString *inklingType = @"dinner";
     
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/setMyInkling/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
