@@ -14,6 +14,7 @@
 		804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */; };
 		804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */; };
 		80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80556A981544F732002A7F2C /* OthersInklingsDate.m */; };
+		8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8094C04A1549EC4700E65A20 /* SingletonManager.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
@@ -78,6 +79,8 @@
 		804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsNavigationController.m; sourceTree = "<group>"; };
 		80556A971544F732002A7F2C /* OthersInklingsDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsDate.h; sourceTree = "<group>"; };
 		80556A981544F732002A7F2C /* OthersInklingsDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsDate.m; sourceTree = "<group>"; };
+		8094C0491549EC4700E65A20 /* SingletonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonManager.h; sourceTree = "<group>"; };
+		8094C04A1549EC4700E65A20 /* SingletonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonManager.m; sourceTree = "<group>"; };
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */,
 				804DBEB8152900C7000FFC1B /* othersInklingsNavigationController.m */,
 				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
+				8094C0491549EC4700E65A20 /* SingletonManager.h */,
+				8094C04A1549EC4700E65A20 /* SingletonManager.m */,
 				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
 				80556A971544F732002A7F2C /* OthersInklingsDate.h */,
 				80556A981544F732002A7F2C /* OthersInklingsDate.m */,
@@ -438,6 +443,7 @@
 				DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */,
 				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
 				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,
+				8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

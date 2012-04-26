@@ -9,6 +9,7 @@
 #import "SetMyInklingViewController.h"
 #import "AppDelegateProtocol.h"
 #import "OthersInklingsDate.h"
+#import "SingletonManager.h"
 
 @interface SetMyInklingViewController ()
 
@@ -42,8 +43,6 @@
 
     self.myInklingWebView.scalesPageToFit = NO;
     
-    NSString *inklingType = @"dinner";
-    
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/setMyInkling/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
@@ -53,7 +52,14 @@
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theAppDataObject2.dateString] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
+    
+    SingletonManager* sharedSingleton = [SingletonManager sharedInstance];
+    if (sharedSingleton.inklingType == NULL) {
+        sharedSingleton = [SingletonManager sharedInstance];
+    }
+    NSLog(@"inklingType in viewDidLoad of SetMyInklingViewController is %@",sharedSingleton.inklingType);
+    
+    [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", sharedSingleton.inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     

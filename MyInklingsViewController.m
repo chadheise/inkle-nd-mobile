@@ -12,6 +12,7 @@
 #import "asyncimageview.h"
 #import "OthersInklingsDate.h"
 #import "AppDelegateProtocol.h"
+#import "SingletonManager.h"
 
 @interface MyInklingsViewController ()
 
@@ -37,17 +38,11 @@
 }
 
 - (void) updateMyInklings
-{
+{    
     //Update date button text to display new date
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
     myInklingDate.titleLabel.text = theAppDataObject2.dateString;
     
-    //Update date button text to display new date
-    /*NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-    NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
-    myInklingDate.titleLabel.text = stringDate;
-    */
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -208,6 +203,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
+    SingletonManager *sharedSingleton = [SingletonManager sharedInstance];
+    if (indexPath.row == 0)
+        sharedSingleton.inklingType = @"dinner";
+    else if (indexPath.row == 1)
+        sharedSingleton.inklingType = @"pregame";
+    else if (indexPath.row == 2)
+        sharedSingleton.inklingType = @"main_event";
+    NSLog(@"in didSelectRowAtIndexPath inklingType is set to %@",sharedSingleton.inklingType);
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...

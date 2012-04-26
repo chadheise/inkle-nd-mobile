@@ -14,6 +14,7 @@
 #import "peopleGroups.h"
 #import "OthersInklingsDate.h"
 
+
 @implementation othersInklingsViewController {
     NSMutableArray *othersInklings;
     
@@ -37,6 +38,7 @@
 
 
 /*------------CUSTOM FUNCTIONS--------------*/
+
 - (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
@@ -54,6 +56,7 @@
 
 - (void) updateInklings
 {
+
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
     //NSLog(@"The date in othersInklingsViewController updateInklings is: %@",theAppDataObject2.dateString);
     
