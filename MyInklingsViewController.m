@@ -10,6 +10,8 @@
 #import "Inklings.h"
 #import "RXMLElement.h"
 #import "asyncimageview.h"
+#import "OthersInklingsDate.h"
+#import "AppDelegateProtocol.h"
 
 @interface MyInklingsViewController ()
 
@@ -26,14 +28,26 @@
 @synthesize myInklingDate;
 
 //*****************CUSTOM FUNCTIONS********************//
+- (OthersInklingsDate *) theAppDataObject2
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    
+    return theDataObject2;
+}
+
 - (void) updateMyInklings
 {
     //Update date button text to display new date
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    myInklingDate.titleLabel.text = theAppDataObject2.dateString;
+    
+    //Update date button text to display new date
+    /*NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd/yyyy"];
     NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
     myInklingDate.titleLabel.text = stringDate;
-    
+    */
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -43,7 +57,8 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", stringDate] dataUsingEncoding: NSUTF8StringEncoding]];
+//[postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", stringDate] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theAppDataObject2.dateString] dataUsingEncoding: NSUTF8StringEncoding]];    
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     
