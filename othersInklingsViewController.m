@@ -55,7 +55,7 @@
 - (void) updateInklings
 {
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    NSLog(@"The date in othersInklingsViewController updateInklings is: %@",theAppDataObject2.dateString);
+    //NSLog(@"The date in othersInklingsViewController updateInklings is: %@",theAppDataObject2.dateString);
     
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; //Update date button text to display new date
     
