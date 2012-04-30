@@ -27,6 +27,7 @@
 
 @synthesize inklingTable;
 @synthesize myInklingDate;
+@synthesize myInklingTable;
 
 //*****************CUSTOM FUNCTIONS********************//
 - (OthersInklingsDate *) theAppDataObject2
@@ -97,7 +98,14 @@
     //NSLog(@"before table reload");
     //Inklings *temp = [myInklings objectAtIndex:0];
     //NSLog(temp.location);
-    [inklingTable reloadData];
+    if (myInklingTable == nil) {
+        NSLog(@"Table is nil");
+    }
+    else {
+        NSLog(@"Table is not nil!");
+    }
+    [myInklingTable reloadData];
+    //[inklingTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     //[inklingTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     //NSLog(@"reloaded data");
 }
@@ -128,6 +136,7 @@
 - (void)viewDidUnload
 {
     [self setMyInklingDate:nil];
+    [self setMyInklingTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

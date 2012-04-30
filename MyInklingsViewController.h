@@ -16,5 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *inklingTable;
 @property (weak, nonatomic) IBOutlet UIButton *myInklingDate;
+@property (weak, nonatomic) IBOutlet UITableView *myInklingTable;
 
 @end

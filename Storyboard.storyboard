@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="Ie4-Ru-Tut">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-LQ-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
+        <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,11 +150,13 @@
                     <navigationItem key="navigationItem" title="My Inklings" id="fyR-Ul-T1J"/>
                     <connections>
                         <outlet property="myInklingDate" destination="UGq-FB-uhW" id="le3-Bq-3rL"/>
+                        <outlet property="myInklingTable" destination="0ck-ou-1oD" id="OqB-ZU-mjZ"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1465" y="498"/>
         </scene>
+        <!--Set My Inkling View Controller-->
         <scene sceneID="eiq-Uk-rpI">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4C9-tT-22R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,6 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2033" y="992"/>
         </scene>
+        <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,6 +198,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="350"/>
         </scene>
+        <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +318,7 @@
             </objects>
             <point key="canvasLocation" x="1465" y="-245"/>
         </scene>
+        <!--Blot Picker View Controller - Select Blot or Network-->
         <scene sceneID="bUP-oV-4A3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xH-TQ-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,6 +361,7 @@
             </objects>
             <point key="canvasLocation" x="2033" y="-803"/>
         </scene>
+        <!--Others Inklings Date View Controller - Select Date-->
         <scene sceneID="JjD-YF-DZF">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3h-43-oeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -368,6 +376,7 @@
             </objects>
             <point key="canvasLocation" x="2033" y="-245"/>
         </scene>
+        <!--Others Inklings Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7L-Tb-O0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,6 +393,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-245"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -403,6 +413,7 @@
             </objects>
             <point key="canvasLocation" x="441" y="-4"/>
         </scene>
+        <!--Invites View Controller - Invites-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -517,64 +528,6 @@
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
     </resources>
-    <classes>
-        <class className="InvitesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAccept:"/>
-                <relationship kind="action" name="btnDecline:"/>
-                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MyInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SetMyInklingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetMyInklingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myInklingWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="blotPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsDateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
-        </class>
-        <class className="othersInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
