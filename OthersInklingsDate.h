@@ -16,6 +16,7 @@
 
 @property (nonatomic, copy) NSString* dateString;
 @property (nonatomic, copy) NSDate *date;
+@property (nonatomic, copy) NSString* myInklingType;
 
 - (NSString *)stringFromDate:(NSDate *)date;
 

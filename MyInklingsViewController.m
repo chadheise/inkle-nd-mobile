@@ -13,6 +13,7 @@
 #import "OthersInklingsDate.h"
 #import "AppDelegateProtocol.h"
 #import "SingletonManager.h"
+#import "SetMyInklingViewController.h"
 
 @interface MyInklingsViewController ()
 
@@ -112,6 +113,11 @@
     return self;
 }
 
+- (void)pushAnotherView;
+{
+    SetMyInklingViewController *setMyInklings = [[SetMyInklingViewController alloc] init];
+    [self.navigationController pushViewController:setMyInklings animated:YES];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -204,13 +210,26 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     SingletonManager *sharedSingleton = [SingletonManager sharedInstance];
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2]; 
     if (indexPath.row == 0)
-        sharedSingleton.inklingType = @"dinner";
+    {
+        sharedSingleton.inklingType = @"dinner"; 
+        theAppDataObject2.myInklingType = @"dinner";
+    }
+    
     else if (indexPath.row == 1)
+    {
         sharedSingleton.inklingType = @"pregame";
+        theAppDataObject2.myInklingType = @"pregame";
+    }
     else if (indexPath.row == 2)
+    {
         sharedSingleton.inklingType = @"main_event";
+        theAppDataObject2.myInklingType = @"main_event";
+    }
     NSLog(@"in didSelectRowAtIndexPath inklingType is set to %@",sharedSingleton.inklingType);
+    NSLog(@"in didSelectRowAtIndexPath myInklingType is set to %@",theAppDataObject2.myInklingType);
+    [self pushAnotherView];
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...

@@ -11,6 +11,7 @@
 @implementation OthersInklingsDate
 @synthesize dateString;
 @synthesize date;
+@synthesize myInklingType;
 
 #pragma mark -
 #pragma mark -Memory management methods

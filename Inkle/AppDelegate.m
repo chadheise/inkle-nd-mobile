@@ -13,6 +13,7 @@
 #import "AppDelegateProtocol.h"
 #import "OthersInklingsDataObject.h"
 #import "OthersInklingsDate.h"
+#import "MyInklingsViewController.h"
 
 
 @implementation AppDelegate{
@@ -41,8 +42,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [window addSubview:navController.view];
-    [window makeKeyAndVisible];
+    
+    //UINavigationController *navController2 = [[UINavigationController alloc] init];
+    MyInklingsViewController *myInklingsView = [[MyInklingsViewController alloc] init];
+    [navController pushViewController:myInklingsView animated:NO];
+    [self.window addSubview:navController.view];
+    [self.window makeKeyAndVisible];
+    return YES;
     
     return YES;
     
