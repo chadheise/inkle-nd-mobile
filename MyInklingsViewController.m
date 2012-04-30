@@ -95,19 +95,8 @@
     main_eventInkling.locationType = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationType"]];
     main_eventInkling.locationID = [NSString stringWithFormat: @"%@", [main_eventXML child:@"locationID"]];
     [myInklings addObject:main_eventInkling];
-    //NSLog(@"before table reload");
-    //Inklings *temp = [myInklings objectAtIndex:0];
-    //NSLog(temp.location);
-    if (myInklingTable == nil) {
-        NSLog(@"Table is nil");
-    }
-    else {
-        NSLog(@"Table is not nil!");
-    }
+
     [myInklingTable reloadData];
-    //[inklingTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-    //[inklingTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-    //NSLog(@"reloaded data");
 }
 //**************************************************************//
 
@@ -127,10 +116,8 @@
     inklingTypes = [NSMutableArray arrayWithObjects:@"Dinner", @"Pregame", @"Main Event", nil];
     
     inklingDate = [NSDate date]; //Initialize date to today
-    //theDelegate.myInklingsDate = [NSDate date]; //Initialize date to today
-    //NSLog(@"viewDidLoad");
+
     [self updateMyInklings];
-    //NSLog(@" end viewDidLoad");
 }
 
 - (void)viewDidUnload
