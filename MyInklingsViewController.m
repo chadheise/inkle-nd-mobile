@@ -26,7 +26,6 @@
     NSMutableArray *inklingLocationIDs;
 }
 
-@synthesize inklingTable;
 @synthesize myInklingDate;
 @synthesize myInklingTable;
 
