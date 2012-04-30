@@ -109,11 +109,6 @@
     return self;
 }
 
-- (void)pushAnotherView;
-{
-    SetMyInklingViewController *setMyInklings = [[SetMyInklingViewController alloc] init];
-    [self.navigationController pushViewController:setMyInklings animated:YES];
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -204,27 +199,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    SingletonManager *sharedSingleton = [SingletonManager sharedInstance];
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2]; 
+    //Set the inkling type that will be sent to the setMyInkling webview
+    SingletonManager *myInklingSingleton = [SingletonManager sharedInstance];
+    
     if (indexPath.row == 0)
     {
-        sharedSingleton.inklingType = @"dinner"; 
-        theAppDataObject2.myInklingType = @"dinner";
+        myInklingSingleton.inklingType = @"dinner"; 
     }
     
     else if (indexPath.row == 1)
     {
-        sharedSingleton.inklingType = @"pregame";
-        theAppDataObject2.myInklingType = @"pregame";
+        myInklingSingleton.inklingType = @"pregame";
     }
     else if (indexPath.row == 2)
     {
-        sharedSingleton.inklingType = @"main_event";
-        theAppDataObject2.myInklingType = @"main_event";
+        myInklingSingleton.inklingType = @"main_event";
     }
-    NSLog(@"in didSelectRowAtIndexPath inklingType is set to %@",sharedSingleton.inklingType);
-    NSLog(@"in didSelectRowAtIndexPath myInklingType is set to %@",theAppDataObject2.myInklingType);
-    //[self pushAnotherView];
+
     [self performSegueWithIdentifier: @"setMyInklingSegue" sender: self];
 
     /*

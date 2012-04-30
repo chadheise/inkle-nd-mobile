@@ -45,9 +45,7 @@
     
     // Do any additional setup after loading the view.
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    SingletonManager* sharedSingleton = [SingletonManager sharedInstance];
-    NSLog(@"inklingType in viewDidLoad of SetMyInklingViewController is %@",sharedSingleton.inklingType);
-    NSLog(@"myInklingType in viewDidLoad of SetMyInklingViewController is %@",theAppDataObject2.myInklingType);
+    SingletonManager* myInklingSingleton = [SingletonManager sharedInstance];
     
     self.myInklingWebView.scalesPageToFit = NO;
     
@@ -60,7 +58,7 @@
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theAppDataObject2.dateString] dataUsingEncoding: NSUTF8StringEncoding]];
-    [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", theAppDataObject2.myInklingType] dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: [[NSString stringWithFormat: @"<inklingType>%@</inklingType>", myInklingSingleton.inklingType] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     
