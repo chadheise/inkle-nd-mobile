@@ -42,16 +42,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    //UINavigationController *navController2 = [[UINavigationController alloc] init];
-    MyInklingsViewController *myInklingsView = [[MyInklingsViewController alloc] init];
-    [navController pushViewController:myInklingsView animated:NO];
     [self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     return YES;
-    
-    return YES;
-    
 }
 
 #pragma mark -
