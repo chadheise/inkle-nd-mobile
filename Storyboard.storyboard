@@ -411,7 +411,7 @@
             </objects>
             <point key="canvasLocation" x="441" y="-4"/>
         </scene>
-        <!--Invites View Controller - Invites-->
+        <!--Invites View Controller - Invitations-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,7 +512,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Invites" id="e9Z-yv-rbm"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" id="e9Z-yv-rbm"/>
                     <connections>
                         <outlet property="invitesTable" destination="yJo-xQ-mFi" id="ABV-Qc-gUT"/>
                     </connections>
