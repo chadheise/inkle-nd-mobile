@@ -37,6 +37,12 @@
 {
     [super loadView];
     
+    [self.view addSubview:myInklingWebView];
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
     SingletonManager* sharedSingleton = [SingletonManager sharedInstance];
@@ -59,12 +65,6 @@
     [request setHTTPBody: postData];
     
     [self.myInklingWebView loadRequest:request];
-    
-    [self.view addSubview:myInklingWebView];
-}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];    
 
 }
 

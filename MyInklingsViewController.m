@@ -224,7 +224,9 @@
     }
     NSLog(@"in didSelectRowAtIndexPath inklingType is set to %@",sharedSingleton.inklingType);
     NSLog(@"in didSelectRowAtIndexPath myInklingType is set to %@",theAppDataObject2.myInklingType);
-    [self pushAnotherView];
+    //[self pushAnotherView];
+    [self performSegueWithIdentifier: @"setMyInklingSegue" sender: self];
+
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
