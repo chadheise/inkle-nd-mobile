@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  Inkle
 //
-//  Created by Chad Heise on 2/12/12.
+//  Created by Chad Heise and Julie Wamser on 2/12/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -43,11 +43,7 @@
 
 @property (nonatomic, retain) OthersInklingsDate *theAppDataObject2;
 
-
-
-
 /*-----------------------------------*/
-//@property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

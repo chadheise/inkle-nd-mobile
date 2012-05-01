@@ -27,12 +27,9 @@
 
 @synthesize inklings;
 @synthesize inklingTable;
-//@synthesize datePicker;
 @synthesize inklingTypeSegment;
 @synthesize dateButton;
 @synthesize navigationItem;
-//@synthesize submitButton;
-//@synthesize backButton;
 @synthesize peopleButton;
 @synthesize bNButton;
 
@@ -58,7 +55,6 @@
 {
 
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    //NSLog(@"The date in othersInklingsViewController updateInklings is: %@",theAppDataObject2.dateString);
     
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; //Update date button text to display new date
     
@@ -67,11 +63,9 @@
     bNSelection = @"None";
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     bNSelection = theDataObject.selection;
-    //NSLog(@"OthersInklings page: the selection is: %@", bNSelection);
     peopleType = theDataObject.type;
     peopleId = theDataObject.pid;
     [peopleButton setTitle:theDataObject.selection forState:UIControlStateNormal];
-    //NSLog(@"pid: %@ - type: %@", theDataObject.pid, theDataObject.type);
     
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
@@ -100,7 +94,6 @@
     othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
     
         [responseXML iterate:@"location" with: ^(RXMLElement *l) {
-            /*NSLog([NSString stringWithFormat: @"%@", [l child:@"count"]]);*/
             Inklings *inkling = [[Inklings alloc] init];
             inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
             inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
@@ -136,33 +129,6 @@
     bNSelection = theDataObject.selection;
     [self updateInklings];
 }
-
-/*- (IBAction)pickDate:(id)sender {
-    
-    [datePicker setHidden:NO];
-    [inklingTypeSegment setHidden:YES];
-    
-}
-
--(void) dateChanged:(UIDatePicker *)sender {
-
-}
-
-- (IBAction)pickerNavBack:(id)sender {
-    if (!datePicker.hidden) {
-        [datePicker setHidden:YES];
-        [datePicker setDate:inklingDate]; //Reset the date picker to the current date
-    }
-    [inklingTypeSegment setHidden:NO];
-}
-- (IBAction)pickerNavSubmit:(id)sender {
-    inklingDate = datePicker.date;
-    [self updateInklings];
-    if (!datePicker.hidden) {
-        [datePicker setHidden:YES];
-    }
-    [inklingTypeSegment setHidden:NO];
-}*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -211,23 +177,6 @@
     inklingType = @"all";
     [self updateInklings];
     
-    //Initialize datePicker and hide it
-    /*
-    datePicker = [[UIDatePicker alloc] init];
-    datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    datePicker.datePickerMode = UIDatePickerModeDate;
-    
-    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-    CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
-    datePicker.frame = CGRectMake(0.0, 195, pickerSize.width, 460);
-    datePicker.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:datePicker];
-    [datePicker setHidden:YES];
-    
-    [navigationItem setLeftBarButtonItem:backButton];
-    [navigationItem setRightBarButtonItem:submitButton];
-    */
-
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
 
 }
@@ -239,8 +188,6 @@
     [self setInklingTypeSegment:nil];
     [self setDateButton:nil];
     [self setNavigationItem:nil];
-    //[self setSubmitButton:nil];
-    //[self setBackButton:nil];
     [self setPeopleButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -280,8 +227,7 @@
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
-    //The next line uses the array from the AppDelegate
-    //Inklings *inkling = [self.inklings objectAtIndex:indexPath.row];
+
     Inklings *inkling = [othersInklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = inkling.location;
@@ -289,8 +235,7 @@
     nameLabel.text = inkling.address;
     UILabel *attendeesLabel = (UILabel *)[cell viewWithTag:102];
     attendeesLabel.text = inkling.attendees;
-    //  UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
-    //  ratingImageView.image = [self imageForRating:inkling.attendees];
+
     return cell;
     
 }

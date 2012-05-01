@@ -2,7 +2,7 @@
 //  OthersInklingsTableViewController.h
 //  Inkle
 //
-//  Created by mobiapps on 3/4/12.
+//  Created by Chad Heise and Julie Wamser on 3/4/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  SingletonManager.m
 //  Inkle
 //
-//  Created by mobiapps on 4/26/12.
+//  Created by Chad Heise and Julie Wamser on 4/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

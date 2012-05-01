@@ -2,7 +2,7 @@
 //  MyInklingsViewController.h
 //  Inkle
 //
-//  Created by Chad Heise on 4/10/12.
+//  Created by Chad Heise and Julie Wamser on 4/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
