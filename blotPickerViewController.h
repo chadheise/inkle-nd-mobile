@@ -22,7 +22,7 @@
 @property (nonatomic, strong) NSMutableArray *namesArr;
 @property (weak, nonatomic) IBOutlet UILabel *bNLabel;
 
--(IBAction) buttonPressed;
+//-(IBAction) buttonPressed;
 
 
 @end

@@ -27,7 +27,7 @@
 @synthesize categoryNames;//array of strings containing the words 'Blots' or 'Networks'
 @synthesize namesArr;//array of peopleGroups containing either blotNames or networkNames--it is modified depending on user selection
 @synthesize bNLabel;
-
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
@@ -36,7 +36,7 @@
     return theDataObject;
 }
 
--(IBAction) buttonPressed {
+/*-(IBAction) buttonPressed {
     NSInteger catRow = [picker selectedRowInComponent:leftComponent];
     NSInteger popRow = [picker selectedRowInComponent:rightComponent];
     
@@ -50,7 +50,7 @@
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-}
+}*/
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -65,6 +65,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIColor *green = UIColorFromRGB(0x0F7832);
+    [bNLabel setBackgroundColor:green];
     
     self.categoryNames = [[NSMutableArray alloc] initWithObjects: @"Blots",@"Networks",nil];
     
@@ -124,7 +126,12 @@
 {
     //Get previous selection
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
-    bNLabel.text = theDataObject.selection;
+    if (theDataObject.selection != NULL){
+        UIColor *white = UIColorFromRGB(0xFFFFFF);
+        [bNLabel setBackgroundColor:white];
+        bNLabel.text = theDataObject.selection;
+    }
+
     NSInteger count = 0;
     if (theDataObject.type == @"blot")
     {
@@ -159,8 +166,6 @@
         }
 
     }
-
-    NSLog(@"blotPicker page: the blot/network is: %@", theDataObject.type);
     
 }
 - (void)viewDidUnload
@@ -228,6 +233,9 @@ numberOfRowsInComponent:(NSInteger)component
     theDataObject.type = ppl.type;
     //Update Label Display
     bNLabel.text = ppl.name;
+    UIColor *white = UIColorFromRGB(0xFFFFFF);
+    [bNLabel setBackgroundColor:white];
+
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
