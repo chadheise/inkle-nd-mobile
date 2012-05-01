@@ -68,7 +68,6 @@
     [super viewDidLoad];
     
     //Initialize datePicker
-    datePicker = [[UIDatePicker alloc] init];
     datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     datePicker.datePickerMode = UIDatePickerModeDate;
     [datePicker addTarget:self 
@@ -95,6 +94,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDatePicker:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
