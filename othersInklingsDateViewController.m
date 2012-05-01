@@ -50,17 +50,13 @@
 }
 */
 
-
 - (void)dateChanged:(id)sender 
 {
     OthersInklingsDate* theDataObject = [self theAppDataObject2];
     theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
     theDataObject.date = datePicker.date;
-    NSLog(@"The dateString in othersInklingsDateViewController dateChanged is: %@",theDataObject.dateString);
-    NSLog(@"The date in othersInklingsDateViewController dateChanged is: %@",[theDataObject stringFromDate:theDataObject.date]);
 
 }
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -79,17 +75,17 @@
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
 
+    //set the date picker to the previously selected date; defaults to current date
+    
     OthersInklingsDate* theDataObject = [self theAppDataObject2];
-    theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
-    theDataObject.date = datePicker.date;
-    NSLog(@"The dateString in othersInklingsDateViewController viewDidLoad is: %@",theDataObject.dateString);
-    NSLog(@"The date in othersInklingsDateViewController viewDidLoad is: %@",[theDataObject stringFromDate:theDataObject.date]);
-}
--(void)viewDidAppear:(BOOL)animated
-{
-    OthersInklingsDate* theDataObject = [self theAppDataObject2];
-    NSLog(@"The dateString in othersInklingsDateViewController viewDidAppear is: %@",theDataObject.dateString);
-    NSLog(@"The date in othersInklingsDateViewController viewDidAppear is: %@",[theDataObject stringFromDate:theDataObject.date]);
+    
+    if (theDataObject.dateString == NULL)
+    {
+        theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
+        theDataObject.date = datePicker.date;
+    }
+    else
+        datePicker.date = theDataObject.date;
 }
 
 - (void)viewDidUnload
