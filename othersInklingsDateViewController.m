@@ -75,7 +75,7 @@
                 action:@selector(dateChanged:) 
                 forControlEvents:UIControlEventValueChanged];
     CGSize pickerSize = [datePicker sizeThatFits:CGSizeZero];
-    datePicker.frame = CGRectMake(0.0, 195, pickerSize.width, 460);
+    datePicker.frame = CGRectMake(0.0, 155, pickerSize.width, 460);
     datePicker.backgroundColor = [UIColor blackColor];
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
