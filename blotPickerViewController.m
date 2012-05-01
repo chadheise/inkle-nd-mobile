@@ -26,6 +26,7 @@
 @synthesize networkNames;//array of strings containing the user's networks
 @synthesize categoryNames;//array of strings containing the words 'Blots' or 'Networks'
 @synthesize namesArr;//array of peopleGroups containing either blotNames or networkNames--it is modified depending on user selection
+@synthesize bNLabel;
 
 - (OthersInklingsDataObject *) theAppDataObject
 {
@@ -77,8 +78,6 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(responseString);
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numBlotsString = [[responseXML child:@"blots"] attribute:@"number"];
@@ -87,7 +86,6 @@
     self.blotNames = [NSMutableArray arrayWithCapacity:numBlots];
     
     [responseXML iterate:@"blot" with:^(RXMLElement *b) {
-        //NSLog([NSString stringWithFormat: @"%@", [b child:@name"]]);
         peopleGroups *blot = [[peopleGroups alloc]init];
         blot.pid = [NSString stringWithFormat:@"%@", [b child:@"id"]];
         blot.name = [NSString stringWithFormat:@"%@", [b child:@"name"]];
@@ -103,8 +101,6 @@
     [request setValue:@"text/xml" forHTTPHeaderField:@"Content-Type"];
     
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(responseString);
     
     responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numNetworksString = [[responseXML child:@"networks"] attribute:@"number"];
@@ -113,7 +109,6 @@
     self.networkNames = [NSMutableArray arrayWithCapacity:numNetworks];
     
     [responseXML iterate:@"network" with:^(RXMLElement *n) {
-        //NSLog([NSString stringWithFormat: @"%@", [n child:@name"]]);
         peopleGroups *network = [[peopleGroups alloc]init];
         network.pid = [NSString stringWithFormat:@"%@", [n child:@"id"]];
         network.name = [NSString stringWithFormat:@"%@", [n child:@"name"]];
@@ -129,11 +124,13 @@
 {
     //Get previous selection
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    bNLabel.text = theDataObject.selection;
     NSInteger count = 0;
     if (theDataObject.type == @"blot")
     {
         [picker selectRow:0 inComponent:leftComponent animated:YES];
         self.namesArr = self.blotNames;
+        
         //Find the location of the current selection, update picker display
         for (peopleGroups *grp in namesArr)
         {
@@ -149,6 +146,7 @@
     {
         [picker selectRow:1 inComponent:leftComponent animated:YES];
         self.namesArr = self.networkNames;
+        
         //Find the location of the current selection, update picker display
         for (peopleGroups *grp in namesArr)
         {
@@ -172,6 +170,7 @@
     self.blotNames = nil;
     self.networkNames = nil;
     self.namesArr = nil;
+    [self setBNLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -195,14 +194,11 @@ numberOfRowsInComponent:(NSInteger)component
     if (component == leftComponent)
         return [self.categoryNames count];
     return [self.namesArr count];
- //   return [blotNames count];
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    //peopleGroups *blot = [blotNames objectAtIndex:row];
-    //return blot.name;
     if(component == leftComponent)
         return [self.categoryNames objectAtIndex:row];
     peopleGroups *group = [namesArr objectAtIndex:row];
@@ -228,13 +224,10 @@ numberOfRowsInComponent:(NSInteger)component
     OthersInklingsDataObject *theDataObject = [self theAppDataObject];
     peopleGroups *ppl = [self.namesArr objectAtIndex:row];
     theDataObject.selection = ppl.name;
-    //theDataObject.peopleGroup = ppl; this doesn't work
     theDataObject.pid = ppl.pid;
     theDataObject.type = ppl.type;
-    NSLog(@"pid: %@ -> type: %@", theDataObject.pid, theDataObject.type);
-    //NSLog(@"Picker page: the selection is: %@", theDataObject.selection);
-   // peopleGroups *blot = [blotNames objectAtIndex:row]; previous #2
-
+    //Update Label Display
+    bNLabel.text = ppl.name;
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{

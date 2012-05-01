@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *networkNames;
 @property (nonatomic, strong) NSMutableArray *categoryNames;
 @property (nonatomic, strong) NSMutableArray *namesArr;
+@property (weak, nonatomic) IBOutlet UILabel *bNLabel;
 
 -(IBAction) buttonPressed;
 

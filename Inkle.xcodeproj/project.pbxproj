@@ -40,7 +40,6 @@
 		DF750A3C14E8295400D9E0BA /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A3B14E8295400D9E0BA /* icon_retina.png */; };
 		DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A3E14E829DA00D9E0BA /* loginViewController.m */; };
 		DF750A4214E82B0700D9E0BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A4114E82B0700D9E0BA /* logo.png */; };
-		DF7DEEA0153A5FDB0001C0A1 /* myInklingsDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7DEE9F153A5FDB0001C0A1 /* myInklingsDateViewController.m */; };
 		DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */; };
 		DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289741504764B00C31446 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF92897A1504764B00C31446 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289761504764B00C31446 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -114,8 +113,6 @@
 		DF750A3D14E829DA00D9E0BA /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		DF750A3E14E829DA00D9E0BA /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		DF750A4114E82B0700D9E0BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		DF7DEE9E153A5FDB0001C0A1 /* myInklingsDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myInklingsDateViewController.h; sourceTree = "<group>"; };
-		DF7DEE9F153A5FDB0001C0A1 /* myInklingsDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myInklingsDateViewController.m; sourceTree = "<group>"; };
 		DF7DEEA2153A64E90001C0A1 /* SetMyInklingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMyInklingViewController.h; sourceTree = "<group>"; };
 		DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMyInklingViewController.m; sourceTree = "<group>"; };
 		DF9289731504764B00C31446 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
@@ -187,8 +184,6 @@
 				DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */,
 				DF7DEEA2153A64E90001C0A1 /* SetMyInklingViewController.h */,
 				DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */,
-				DF7DEE9E153A5FDB0001C0A1 /* myInklingsDateViewController.h */,
-				DF7DEE9F153A5FDB0001C0A1 /* myInklingsDateViewController.m */,
 				DFFB71E31534C12B00E74DF3 /* MyInklingsViewController.h */,
 				DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */,
 				804DBEB7152900C7000FFC1B /* othersInklingsNavigationController.h */,
@@ -439,7 +434,6 @@
 				804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */,
 				804DBEB9152900C7000FFC1B /* othersInklingsNavigationController.m in Sources */,
 				DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */,
-				DF7DEEA0153A5FDB0001C0A1 /* myInklingsDateViewController.m in Sources */,
 				DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */,
 				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
 				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,

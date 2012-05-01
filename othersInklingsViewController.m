@@ -56,9 +56,8 @@
 
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
     
-    [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; //Update date button text to display new date
-    
-    // need to have bNSelection set to a default (like University of Notre Dame network is the default on the site)
+    //Update date button text to display new date
+    [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; 
     
     bNSelection = @"None";
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
