@@ -179,12 +179,12 @@
             </objects>
             <point key="canvasLocation" x="2033" y="992"/>
         </scene>
-        <!--Navigation Controller - My Inklings-->
+        <!--Navigation Controller - Invitations-->
         <scene sceneID="rTf-ft-Eem">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="UlP-XX-2ou" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Inklings" id="jfo-sa-8JH"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="pointer.png" id="jfo-sa-8JH"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="IYD-Vb-Yjk">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -407,7 +407,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7L-Tb-O0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="NWj-Mx-mGy" customClass="othersInklingsNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Others' Inklings" id="wG4-UM-EwH"/>
+                    <tabBarItem key="tabBarItem" title="Others' Inklings" image="splatter.png" id="wG4-UM-EwH"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="y1o-XL-HCr">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -538,7 +538,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Invitations" id="e9Z-yv-rbm"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="mailbox.png" id="e9Z-yv-rbm"/>
                     <connections>
                         <outlet property="invitesTable" destination="yJo-xQ-mFi" id="ABV-Qc-gUT"/>
                     </connections>
@@ -551,6 +551,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="blotblue.png" width="150" height="150"/>
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
+        <image name="mailbox.png" width="60" height="60"/>
+        <image name="pointer.png" width="60" height="60"/>
+        <image name="splatter.png" width="60" height="60"/>
     </resources>
     <classes>
         <class className="InvitesViewController" superclassName="UIViewController">

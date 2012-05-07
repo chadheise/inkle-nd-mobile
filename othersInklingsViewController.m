@@ -85,6 +85,7 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
