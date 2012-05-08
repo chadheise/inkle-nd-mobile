@@ -98,6 +98,8 @@
             inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
             inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
             inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
+            inkling.locationID = [NSString stringWithFormat: @"%@", [l child:@"id"]];
+            inkling.locationType = [NSString stringWithFormat: @"%@", [l child:@"type"]];
             [othersInklings addObject:inkling];
         }];
         
@@ -286,7 +288,12 @@
     // Navigation logic may go here. Create and push another view controller.
     //Set the inkling type that will be sent to the setMyInkling webview
     
-    //Put XML data in an array and then access array element based on index row to get location ID
+    Inklings *inkling = [othersInklings objectAtIndex:indexPath.row]; //Get the current inkling object
+    
+    //Set the global location variable information
+    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    theDataObject.locationId = inkling.locationID; 
+    theDataObject.locationType = inkling.locationType;
     
     [self performSegueWithIdentifier: @"locationSegue" sender: self];
 

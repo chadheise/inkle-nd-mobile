@@ -412,17 +412,26 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfr-Nb-4W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="bbT-RE-HJX" customClass="LocationViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bqy-xn-9c0">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="bqy-xn-9c0">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationInklingCell" id="F0y-pg-h5v">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationInklingCell" rowHeight="70" id="F0y-pg-h5v">
+                                <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="300" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hF8-6K-B2u">
+                                            <rect key="frame" x="69" y="24" width="231" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -591,67 +600,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="pointer.png" width="60" height="60"/>
         <image name="splatter.png" width="60" height="60"/>
     </resources>
-    <classes>
-        <class className="InvitesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAccept:"/>
-                <relationship kind="action" name="btnDecline:"/>
-                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-        </class>
-        <class className="MyInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myInklingTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SetMyInklingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetMyInklingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myInklingWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="blotPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsDateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
-        </class>
-        <class className="othersInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

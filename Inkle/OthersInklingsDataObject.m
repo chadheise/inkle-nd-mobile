@@ -14,6 +14,9 @@
 @synthesize pid;
 @synthesize type;
 
+@synthesize locationId;
+@synthesize locationType;
+
 #pragma mark -
 #pragma mark -Memory management methods
 
@@ -24,6 +27,9 @@
     self.peopleGroup = nil;
     self.pid = nil;
     self.type = nil;
+    
+    self.locationId = nil;
+    self.locationType = nil;
 }
 
 @end
