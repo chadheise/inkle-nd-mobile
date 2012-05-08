@@ -12,6 +12,7 @@
 #import "OthersInklingsDate.h"
 #import "OthersInklingsDataObject.h"
 #import "Member.h"
+#import "asyncimageview.h"
 
 @interface LocationViewController ()
 
@@ -123,6 +124,8 @@
 {
     [super viewDidLoad];
 
+    self.navigationItem.title =@"Location Name";
+    
     [self updatePeople];
 }
 
@@ -133,6 +136,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self updatePeople];
+}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -183,7 +191,40 @@
     UILabel *memberLabel = (UILabel *)[cell viewWithTag:300];
     memberLabel.text = member.name;
 
+    //Get invite image
+    if (cell != nil) {
+        AsyncImageView* oldImage = (AsyncImageView*)
+        [cell.contentView viewWithTag:999];
+        [oldImage removeFromSuperview];
+    }
+    
+	CGRect frame;
+	frame.size.width=50; frame.size.height=50;
+	frame.origin.x=10; frame.origin.y=10;
+	AsyncImageView* asyncImage = [[AsyncImageView alloc]
+                                  initWithFrame:frame];
+	asyncImage.tag = 301;
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", member.memberID]];
+    [asyncImage loadImageFromURL:url];
+    
+	[cell.contentView addSubview:asyncImage];
+    //End image
+
+    
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+
+{
+    if(section == 0)
+        return @"Dinner";
+    else if (section == 1)
+        return @"Pregame";
+    else if (section == 2)
+        return @"Main Event";
+    return @"Section out of Range";
+    
 }
 
 /*
