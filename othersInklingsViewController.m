@@ -284,11 +284,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    //Set the inkling type that will be sent to the setMyInkling webview
+    
+    //Put XML data in an array and then access array element based on index row to get location ID
+    
+    [self performSegueWithIdentifier: @"locationSegue" sender: self];
+
 }
 @end

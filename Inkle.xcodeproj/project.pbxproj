@@ -17,6 +17,7 @@
 		8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8094C04A1549EC4700E65A20 /* SingletonManager.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
+		DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF46F594155991B000EFEF40 /* LocationViewController.m */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
 		DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA03915237D0B00FA679E /* blotPickerViewController.m */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
@@ -86,6 +87,8 @@
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
+		DF46F593155991B000EFEF40 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		DF46F594155991B000EFEF40 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsViewController.h; sourceTree = "<group>"; };
 		DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsViewController.m; sourceTree = "<group>"; };
 		DF5DA03815237D0B00FA679E /* blotPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blotPickerViewController.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DF46F593155991B000EFEF40 /* LocationViewController.h */,
+				DF46F594155991B000EFEF40 /* LocationViewController.m */,
 				8027460E153B7B1200CA792D /* othersInklingsDateViewController.h */,
 				8027460F153B7B1200CA792D /* othersInklingsDateViewController.m */,
 				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
@@ -450,6 +455,7 @@
 				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
 				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,
 				8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */,
+				DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
