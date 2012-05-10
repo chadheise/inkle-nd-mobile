@@ -83,6 +83,10 @@
         member.memberID = [NSString stringWithFormat: @"%@", [m child:@"id"]];
         [dinnerPeople addObject: member ];
     }];
+    //Add message indicating number of people attending the inkling who you are not following (you can't see names unless you are following them)
+    Member *messageMember = [[Member alloc] init];
+    messageMember.name = [NSString stringWithFormat: @"%@", [dinnerXML child:@"message"]];
+    [dinnerPeople addObject: messageMember];
     
     //Load the pregame people into their array
     RXMLElement *pregameXML = [responseXML child:@"pregame"];
@@ -95,6 +99,9 @@
         member.memberID = [NSString stringWithFormat: @"%@", [m child:@"id"]];
         [pregamePeople addObject: member ];
     }];
+    //Add message indicating number of people attending the inkling who you are not following (you can't see names unless you are following them)
+    messageMember.name = [NSString stringWithFormat: @"%@", [dinnerXML child:@"message"]];
+    [pregamePeople addObject: messageMember];
         
     //Load the main event people into their array
     RXMLElement *mainEventXML = [responseXML child:@"main_event"];
@@ -107,6 +114,9 @@
         member.memberID = [NSString stringWithFormat: @"%@", [m child:@"id"]];
         [mainEventPeople addObject: member ];
     }];
+    //Add message indicating number of people attending the inkling who you are not following (you can't see names unless you are following them)
+    messageMember.name = [NSString stringWithFormat: @"%@", [dinnerXML child:@"message"]];
+    [mainEventPeople addObject: messageMember];
         
     [[self tableView] reloadData];
 }
