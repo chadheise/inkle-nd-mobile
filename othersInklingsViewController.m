@@ -196,9 +196,9 @@
     //Initialize inklingDate to today
     inklingDate = [NSDate date]; 
     
-    peopleType = @"network";
-    peopleId = @"1";
-    inklingType = @"all";
+    //peopleType = @"network";
+    //peopleId = @"1";
+    //inklingType = @"all";
     [self updateInklings];
     
     //Update the date button

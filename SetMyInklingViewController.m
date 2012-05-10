@@ -26,25 +26,27 @@
     }
     return self;
 }
-- (InklingDate *) theAppDataObject2
+- (InklingDate *) getGlobalInklingDate
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     InklingDate *theDataObject2 = (InklingDate*) theDelegate.globalInklingDate;
     
     return theDataObject2;
 }
+
 - (void)loadView
 {
     [super loadView];
     
     [self.view addSubview:myInklingWebView];
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    InklingDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self getGlobalInklingDate];
     SingletonManager* myInklingSingleton = [SingletonManager sharedInstance];
     
     self.myInklingWebView.scalesPageToFit = NO;

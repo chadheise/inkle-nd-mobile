@@ -2,7 +2,7 @@
 //  LocationViewController.m
 //  Inkle
 //
-//  Created by Chad Heise on 5/8/12.
+//  Created by Chad Heise and Julie Wamser on 5/8/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -24,9 +24,8 @@
     NSMutableArray *mainEventPeople;
 }
 
-
 /*Custom helper functions*/
-- (OthersInklingsDataObject *) theAppDataObject
+- (OthersInklingsDataObject *) getGlobalOthersInklingsDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     OthersInklingsDataObject *theDataObject = (OthersInklingsDataObject*) theDelegate.globalOthersInklingsDataObject;
@@ -34,7 +33,7 @@
     return theDataObject;
 }
 
-- (InklingDate *) theAppDataObject2
+- (InklingDate *) getGlobalInklingDate
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     InklingDate *theDataObject2 = (InklingDate*) theDelegate.globalInklingDate;
@@ -44,9 +43,9 @@
 
 - (void) updatePeople
 {
-    InklingDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self getGlobalInklingDate];
     
-    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject* theDataObject = [self getGlobalOthersInklingsDataObject];
     
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/location/"];
@@ -135,7 +134,7 @@
 {
     [super viewDidLoad];
 
-    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    OthersInklingsDataObject* theDataObject = [self getGlobalOthersInklingsDataObject];
     self.navigationItem.title = theDataObject.locationName;
     
     [self updatePeople];
@@ -208,7 +207,7 @@
         memberLabel.text = member.name;
     
 
-        //Get invite image
+        //Get invite image (no image will display for the message indicating number of people)
         if (cell != nil) {
             AsyncImageView* oldImage = (AsyncImageView*)
             [cell.contentView viewWithTag:999];

@@ -30,7 +30,7 @@
 @synthesize myInklingTable;
 
 //*****************CUSTOM FUNCTIONS********************//
-- (InklingDate *) theAppDataObject2
+- (InklingDate *) getGlobalInklingDate
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     InklingDate *theDataObject2 = (InklingDate*) theDelegate.globalInklingDate;
@@ -41,7 +41,7 @@
 - (void) updateMyInklings
 {    
     //Update date button text to display new date
-    InklingDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self getGlobalInklingDate];
     [myInklingDate setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
     
     //Get inkling data
@@ -174,7 +174,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myInklingCell"];
     
     /* Only display detail discloser indicator if the date is today or in the future */
-    InklingDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self getGlobalInklingDate];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
     
@@ -239,7 +239,7 @@
 {
     /* Only perform the segue if the date is today or in the future */
     
-    InklingDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self getGlobalInklingDate];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
     
