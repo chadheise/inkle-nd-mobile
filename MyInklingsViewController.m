@@ -187,10 +187,12 @@
     NSDate *today = [calendar dateFromComponents:date2Components];
     
     if ([selectedDate compare:today] != NSOrderedAscending) {
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator]; //Display the detail indicator
+        [cell setSelectionStyle:UITableViewCellSelectionStyleGray]; //Set the selection style to gray
     }
     else {
         [cell setAccessoryType:UITableViewCellAccessoryNone]; //Do not display the detail indicator
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone]; //Disable row selection
     }
     /*---------------------------------------------------------------------------------- */
     
