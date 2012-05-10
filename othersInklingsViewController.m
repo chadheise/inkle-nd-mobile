@@ -192,20 +192,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-                      
-    inklingDate = [NSDate date]; //Initialize inklingDate to today
     
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    //Initialize inklingDate to today
+    inklingDate = [NSDate date]; 
     
     peopleType = @"network";
     peopleId = @"1";
     inklingType = @"all";
     [self updateInklings];
     
+    //Update the date button
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
 
 }
-
 
 - (void)viewDidUnload
 {

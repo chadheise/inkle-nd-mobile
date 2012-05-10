@@ -36,23 +36,6 @@
     return theDataObject;
 }
 
-/*-(IBAction) buttonPressed {
-    NSInteger catRow = [picker selectedRowInComponent:leftComponent];
-    NSInteger popRow = [picker selectedRowInComponent:rightComponent];
-    
-    NSString *cat = [self.categoryNames objectAtIndex:catRow];
-    
-    peopleGroups *group = [self.namesArr objectAtIndex:popRow];
-    NSString *pop = group.name;
-    
-    NSString *title = [[NSString alloc] initWithFormat:@"You selected %@.",pop];
-    NSString *message = [[NSString alloc] initWithFormat:@"%@ is in %@", pop, cat];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
-}*/
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

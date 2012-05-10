@@ -75,7 +75,7 @@
     [self.view addSubview:datePicker];
     [datePicker setHidden:NO];
 
-    //set the date picker to the previously selected date; defaults to current date
+    //Set the date picker to the previously selected date; defaults to current date
     
     OthersInklingsDate* theDataObject = [self theAppDataObject2];
     

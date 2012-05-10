@@ -22,7 +22,6 @@
 @property (nonatomic, strong) NSMutableArray *namesArr;
 @property (weak, nonatomic) IBOutlet UILabel *bNLabel;
 
-//-(IBAction) buttonPressed;
 
 
 @end
