@@ -61,11 +61,17 @@
     
     bNSelection = @"None";
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
-    bNSelection = theDataObject.selection;
-    peopleType = theDataObject.type;
-    peopleId = theDataObject.pid;
-    [peopleButton setTitle:theDataObject.selection forState:UIControlStateNormal];
-    
+    if (theDataObject.selection == nil)
+    {
+        [peopleButton setTitle:@"Select a Blot or Network" forState:UIControlStateNormal];
+    }
+    else
+    {
+        bNSelection = theDataObject.selection;
+        peopleType = theDataObject.type;
+        peopleId = theDataObject.pid;
+        [peopleButton setTitle:theDataObject.selection forState:UIControlStateNormal];
+    }
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/othersInklings/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
