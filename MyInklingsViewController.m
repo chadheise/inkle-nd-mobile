@@ -173,11 +173,26 @@
  
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myInklingCell"];
     
+    /* Only display detail discloser indicator if the date is today or in the future */
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    if([theAppDataObject2.date compare:[NSDate date]] == NSOrderedDescending) { // If the picked date is before today
-        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
+    
+    NSDateComponents *date1Components = [calendar components:comps 
+                                                    fromDate: theAppDataObject2.date];
+    NSDateComponents *date2Components = [calendar components:comps 
+                                                    fromDate: [NSDate date]];
+    
+    NSDate *selectedDate = [calendar dateFromComponents:date1Components];
+    NSDate *today = [calendar dateFromComponents:date2Components];
+    
+    if ([selectedDate compare:today] != NSOrderedAscending) {
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    else {
+        [cell setAccessoryType:UITableViewCellAccessoryNone]; //Do not display the detail indicator
+    }
+    /*---------------------------------------------------------------------------------- */
     
     UILabel *typeLabel = (UILabel *)[cell viewWithTag:200]; //Get the inkling type label 
     typeLabel.text = [inklingTypes objectAtIndex:indexPath.row]; //Set the label (dinner, pregame, or main event)
@@ -220,22 +235,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /* Only perform the segue if the date is today or in the future */
+    
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    if([theAppDataObject2.date compare:[NSDate date]] == NSOrderedAscending) { // If the picked date is earlier than
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
+    
+    NSDateComponents *date1Components = [calendar components:comps 
+                                                    fromDate: theAppDataObject2.date];
+    NSDateComponents *date2Components = [calendar components:comps 
+                                                    fromDate: [NSDate date]];
+    
+    NSDate *selectedDate = [calendar dateFromComponents:date1Components];
+    NSDate *today = [calendar dateFromComponents:date2Components];
+    
+    if ([selectedDate compare:today] != NSOrderedAscending) {
         //Set the inkling type that will be sent to the setMyInkling webview
         SingletonManager *myInklingSingleton = [SingletonManager sharedInstance];
-    
+            
         if (indexPath.row == 0) {
             myInklingSingleton.inklingType = @"dinner"; 
         }
-    
+            
         else if (indexPath.row == 1) {
             myInklingSingleton.inklingType = @"pregame";
         }
         else if (indexPath.row == 2) {
             myInklingSingleton.inklingType = @"main_event";
         }
-        
         [self performSegueWithIdentifier: @"setMyInklingSegue" sender: self];
     }
 }
