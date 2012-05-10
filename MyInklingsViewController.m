@@ -42,7 +42,7 @@
 {    
     //Update date button text to display new date
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    myInklingDate.titleLabel.text = theAppDataObject2.dateString;
+    [myInklingDate setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
     
     //Get inkling data
     NSURL *url = [NSURL URLWithString:@"http://www.inkleit.com/mobile/getMyInklings/"];
@@ -53,7 +53,6 @@
     
     NSMutableData *postData = [NSMutableData data];
     [postData appendData: [[NSString stringWithFormat: @"xml=<xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
-//[postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", stringDate] dataUsingEncoding: NSUTF8StringEncoding]];
     [postData appendData: [[NSString stringWithFormat: @"<date>%@</date>", theAppDataObject2.dateString] dataUsingEncoding: NSUTF8StringEncoding]];    
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
@@ -61,8 +60,6 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    //NSString *str = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    //NSLog(@"%@",str);
     
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
