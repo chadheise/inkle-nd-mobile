@@ -66,8 +66,8 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(responseString);
+    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    //NSLog(responseString);
     
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
