@@ -21,13 +21,13 @@
 
 @synthesize window = _window;
 @synthesize navController;
-@synthesize theAppDataObject;
+@synthesize globalOthersInklingsDataObject;
 @synthesize othersInklingsDate;
 @synthesize myInklingsDate;
 @synthesize theBlotPickerViewController;
 @synthesize theOthersInklingsDateViewController;
 
-@synthesize theAppDataObject2;
+@synthesize globalInklingDate;
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
@@ -45,13 +45,13 @@
 
 -(id) init
 {
-    self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
+    self.globalOthersInklingsDataObject = [[OthersInklingsDataObject alloc] init];
     
-    self.theAppDataObject2 = [[InklingDate alloc] init];
+    self.globalInklingDate = [[InklingDate alloc] init];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    theAppDataObject2.date = [NSDate date];
-    theAppDataObject2.dateString = [dateFormat stringFromDate:theAppDataObject2.date];
+    globalInklingDate.date = [NSDate date];
+    globalInklingDate.dateString = [dateFormat stringFromDate:globalInklingDate.date];
     
     return [super init];
     
@@ -59,7 +59,7 @@
 
 -(void) dealloc
 {
-    self.theAppDataObject = nil;
+    self.globalOthersInklingsDataObject = nil;
     self.othersInklingsDate = nil;
     self.theBlotPickerViewController = nil;
 }

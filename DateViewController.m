@@ -18,7 +18,7 @@
 - (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    InklingDate *theDataObject = (InklingDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject = (InklingDate*) theDelegate.globalInklingDate;
     
     return theDataObject;
 }

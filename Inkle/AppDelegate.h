@@ -22,13 +22,13 @@
 {
     UIWindow *window;
     UINavigationController *navController;
-    OthersInklingsDataObject *theAppDataObject;
+    OthersInklingsDataObject *globalOthersInklingsDataObject;
     IBOutlet BlotPickerViewController *theBlotPickerViewController;
     NSString *othersInklingsDate;
     IBOutlet DateViewController *theOthersInklingsDateViewController;
     NSDate *myInklingsDate;
     
-    InklingDate *theAppDataObject2;
+    InklingDate *globalInklingDate;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
@@ -38,10 +38,10 @@
 
 @property (nonatomic, retain) NSDate *myInklingsDate;
 
-@property (nonatomic, retain) OthersInklingsDataObject *theAppDataObject;
+@property (nonatomic, retain) OthersInklingsDataObject *globalOthersInklingsDataObject;
 @property (nonatomic, retain) IBOutlet BlotPickerViewController *theBlotPickerViewController;
 
-@property (nonatomic, retain) InklingDate *theAppDataObject2;
+@property (nonatomic, retain) InklingDate *globalInklingDate;
 
 /*-----------------------------------*/
 

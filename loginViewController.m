@@ -28,8 +28,6 @@
     [postData appendData: [[NSString stringWithFormat: @"</xml>"] dataUsingEncoding: NSUTF8StringEncoding]];
     [request setHTTPBody: postData];
     
-    //NSLog(@"postData: %@", postData);
-    
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
@@ -47,15 +45,6 @@
             _errorLabel.text = [NSString stringWithFormat: @"%@ \n %@", _errorLabel.text, error];
         }];
     }
-    
-    /*
-    if ( [responseString isEqualToString: [NSString stringWithFormat:@"True"]] ) {
-        [self performSegueWithIdentifier:@"loginSegue" sender:self];
-    }
-    else {
-        RXMLElement *rootXML = [RXMLElement elementFromXMLData:responseData];
-        _errorLabel.text = [NSString stringWithFormat:@"%@", [rootXML child:@"name"]];
-    }*/
     
 }
 
@@ -77,13 +66,6 @@
 }
 
 #pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

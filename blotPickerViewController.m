@@ -32,7 +32,7 @@
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     OthersInklingsDataObject *theDataObject;
-    theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
+    theDataObject = (OthersInklingsDataObject*) theDelegate.globalOthersInklingsDataObject;
     return theDataObject;
 }
 

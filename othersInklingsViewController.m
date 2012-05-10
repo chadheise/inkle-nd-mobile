@@ -18,11 +18,11 @@
 @implementation OthersInklingsViewController {
     NSMutableArray *othersInklings;
     
-    NSDate *inklingDate;//previous inklingDate
+    NSDate *inklingDate; //previous inklingDate
     NSString *inklingType;
     NSString *peopleType;
     NSString *peopleId;
-    NSString *bNSelection;//text of the blot/network selection i.e. "University of Notre Dame" or "Pizza Group"
+    NSString *bNSelection; //text of the blot/network selection i.e. "University of Notre Dame" or "Pizza Group"
 }
 
 @synthesize inklings;
@@ -39,14 +39,14 @@
 - (OthersInklingsDataObject *) theAppDataObject
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDataObject *theDataObject = (OthersInklingsDataObject*) theDelegate.theAppDataObject;
+    OthersInklingsDataObject *theDataObject = (OthersInklingsDataObject*) theDelegate.globalOthersInklingsDataObject;
     
     return theDataObject;
 }
 - (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    InklingDate *theDataObject2 = (InklingDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject2 = (InklingDate*) theDelegate.globalInklingDate;
     
     return theDataObject2;
 }

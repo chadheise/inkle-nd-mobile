@@ -260,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				DF750A0F14E8267F00D9E0BA /* AppDelegate.h */,
-				804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */,
 				DF750A1014E8267F00D9E0BA /* AppDelegate.m */,
+				804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */,
 				DF750A1214E8267F00D9E0BA /* Inkle.xcdatamodeld */,
 				DF750A0714E8267F00D9E0BA /* Supporting Files */,
 			);
