@@ -63,6 +63,16 @@
     [request setHTTPBody: postData];
     
     [self.myInklingWebView loadRequest:request];
+    
+    if ([myInklingSingleton.inklingType isEqualToString:@"dinner"]) {
+        self.navigationItem.title = @"Dinner";
+    }
+    else if ([myInklingSingleton.inklingType isEqualToString:@"pregame"]) {
+        self.navigationItem.title = @"Pregame";
+    }
+    else {
+        self.navigationItem.title = @"Main Event";
+    }
 
 }
 
