@@ -61,6 +61,24 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     
+    //Remove encoding for special characters
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    NSMutableString *mutableResponseString = [NSMutableString stringWithString:responseString];
+    
+    NSRange apostrophe = [mutableResponseString rangeOfString:@"&#39;"];
+    while (apostrophe.location != NSNotFound) {
+        [mutableResponseString replaceCharactersInRange:apostrophe withString:@"\'"];
+        apostrophe = [mutableResponseString rangeOfString:@"&#39;"];
+    }
+    
+    NSRange ampersand = [mutableResponseString rangeOfString:@"&amp;"];
+    while (ampersand.location != NSNotFound) {
+        [mutableResponseString replaceCharactersInRange:ampersand withString:@"&"];
+        ampersand = [mutableResponseString rangeOfString:@"&amp;"];
+    }
+    
+    responseData = [mutableResponseString dataUsingEncoding: NSASCIIStringEncoding];
+    //----------------------------------------
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     myInklings = [NSMutableArray arrayWithCapacity:3]; //Empty myInklings array to store new data
@@ -152,8 +170,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+ 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myInklingCell"];
+    
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    if([theAppDataObject2.date compare:[NSDate date]] == NSOrderedDescending) { // If the picked date is before today
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     UILabel *typeLabel = (UILabel *)[cell viewWithTag:200]; //Get the inkling type label 
     typeLabel.text = [inklingTypes objectAtIndex:indexPath.row]; //Set the label (dinner, pregame, or main event)
     
@@ -195,32 +220,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    //Set the inkling type that will be sent to the setMyInkling webview
-    SingletonManager *myInklingSingleton = [SingletonManager sharedInstance];
+    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    if([theAppDataObject2.date compare:[NSDate date]] == NSOrderedAscending) { // If the picked date is earlier than
+        //Set the inkling type that will be sent to the setMyInkling webview
+        SingletonManager *myInklingSingleton = [SingletonManager sharedInstance];
     
-    if (indexPath.row == 0)
-    {
-        myInklingSingleton.inklingType = @"dinner"; 
-    }
+        if (indexPath.row == 0) {
+            myInklingSingleton.inklingType = @"dinner"; 
+        }
     
-    else if (indexPath.row == 1)
-    {
-        myInklingSingleton.inklingType = @"pregame";
+        else if (indexPath.row == 1) {
+            myInklingSingleton.inklingType = @"pregame";
+        }
+        else if (indexPath.row == 2) {
+            myInklingSingleton.inklingType = @"main_event";
+        }
+        
+        [self performSegueWithIdentifier: @"setMyInklingSegue" sender: self];
     }
-    else if (indexPath.row == 2)
-    {
-        myInklingSingleton.inklingType = @"main_event";
-    }
-
-    [self performSegueWithIdentifier: @"setMyInklingSegue" sender: self];
-
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 

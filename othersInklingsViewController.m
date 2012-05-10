@@ -91,10 +91,9 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    //NSLog(responseString);
     
     //Remove encoding for special characters
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
     NSMutableString *mutableResponseString = [NSMutableString stringWithString:responseString];
     
     NSRange apostrophe = [mutableResponseString rangeOfString:@"&#39;"];
@@ -110,6 +109,7 @@
     }
     
     responseData = [mutableResponseString dataUsingEncoding: NSASCIIStringEncoding];
+    //----------------------------------------
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     NSString *numLocationsString = [[responseXML child:@"locations"] attribute:@"number"];
