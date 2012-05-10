@@ -17,6 +17,8 @@
 		8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8094C04A1549EC4700E65A20 /* SingletonManager.m */; };
 		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
+		DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF46F594155991B000EFEF40 /* LocationViewController.m */; };
+		DF46F59A1559BEC700EFEF40 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = DF46F5991559BEC700EFEF40 /* Member.m */; };
 		DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */; };
 		DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA03915237D0B00FA679E /* blotPickerViewController.m */; };
 		DF7509FF14E8267F00D9E0BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7509FE14E8267F00D9E0BA /* UIKit.framework */; };
@@ -41,6 +43,9 @@
 		DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF750A3E14E829DA00D9E0BA /* loginViewController.m */; };
 		DF750A4214E82B0700D9E0BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF750A4114E82B0700D9E0BA /* logo.png */; };
 		DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */; };
+		DF869C7F15586360005DD118 /* mailbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DF869C7E15586360005DD118 /* mailbox.png */; };
+		DF869C85155866E4005DD118 /* pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = DF869C84155866E4005DD118 /* pointer.png */; };
+		DF869C8715586861005DD118 /* splatter.png in Resources */ = {isa = PBXBuildFile; fileRef = DF869C8615586861005DD118 /* splatter.png */; };
 		DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289741504764B00C31446 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF92897A1504764B00C31446 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289761504764B00C31446 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF92897B1504764B00C31446 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9289781504764B00C31446 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -83,6 +88,10 @@
 		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
 		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
+		DF46F593155991B000EFEF40 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		DF46F594155991B000EFEF40 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		DF46F5981559BEC700EFEF40 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		DF46F5991559BEC700EFEF40 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		DF48FA8814F2D5C200F3F13E /* othersInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = othersInklingsViewController.h; sourceTree = "<group>"; };
 		DF48FA8914F2D5C200F3F13E /* othersInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = othersInklingsViewController.m; sourceTree = "<group>"; };
 		DF5DA03815237D0B00FA679E /* blotPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blotPickerViewController.h; sourceTree = "<group>"; };
@@ -115,6 +124,9 @@
 		DF750A4114E82B0700D9E0BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DF7DEEA2153A64E90001C0A1 /* SetMyInklingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMyInklingViewController.h; sourceTree = "<group>"; };
 		DF7DEEA3153A64E90001C0A1 /* SetMyInklingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMyInklingViewController.m; sourceTree = "<group>"; };
+		DF869C7E15586360005DD118 /* mailbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mailbox.png; sourceTree = "<group>"; };
+		DF869C84155866E4005DD118 /* pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointer.png; sourceTree = "<group>"; };
+		DF869C8615586861005DD118 /* splatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splatter.png; sourceTree = "<group>"; };
 		DF9289731504764B00C31446 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		DF9289741504764B00C31446 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		DF9289751504764B00C31446 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
@@ -176,6 +188,8 @@
 				DF20C46F14E8CD3D006EDE9F /* icon57px.png */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
+				DF46F593155991B000EFEF40 /* LocationViewController.h */,
+				DF46F594155991B000EFEF40 /* LocationViewController.m */,
 				8027460E153B7B1200CA792D /* othersInklingsDateViewController.h */,
 				8027460F153B7B1200CA792D /* othersInklingsDateViewController.m */,
 				DF5DA03815237D0B00FA679E /* blotPickerViewController.h */,
@@ -196,6 +210,8 @@
 				80556A981544F732002A7F2C /* OthersInklingsDate.m */,
 				8021925A1520B7E900C7D3D6 /* InvitesViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitesViewController.m */,
+				DF46F5981559BEC700EFEF40 /* Member.h */,
+				DF46F5991559BEC700EFEF40 /* Member.m */,
 				8007E68C15044700002D2F4D /* Inklings.m */,
 				8007E68B15044700002D2F4D /* Inklings.h */,
 				80EC990815235DC500F7CACA /* Invites.h */,
@@ -277,6 +293,9 @@
 		DF750A4014E82AEC00D9E0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF869C8615586861005DD118 /* splatter.png */,
+				DF869C84155866E4005DD118 /* pointer.png */,
+				DF869C7E15586360005DD118 /* mailbox.png */,
 				DFBC36401525454500137ABE /* location.jpg */,
 				DF750A3514E8294600D9E0BA /* Default.png */,
 				DF750A3714E8294A00D9E0BA /* Default@2x.png */,
@@ -381,6 +400,9 @@
 				DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */,
 				DFCA902314F05DF500E2C634 /* blotblue.png in Resources */,
 				DFBC36411525454500137ABE /* location.jpg in Resources */,
+				DF869C7F15586360005DD118 /* mailbox.png in Resources */,
+				DF869C85155866E4005DD118 /* pointer.png in Resources */,
+				DF869C8715586861005DD118 /* splatter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +460,8 @@
 				80274610153B7B1200CA792D /* othersInklingsDateViewController.m in Sources */,
 				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,
 				8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */,
+				DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */,
+				DF46F59A1559BEC700EFEF40 /* Member.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

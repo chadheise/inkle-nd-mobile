@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="P5y-ea-0L4">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
         <scene sceneID="Ie4-Ru-Tut">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-LQ-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -32,6 +33,7 @@
                                 <rect key="frame" x="70" y="126" width="180" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <color key="tintColor" red="0.43921568989753723" green="0.5058823823928833" blue="0.85882353782653809" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,6 +70,7 @@
             </objects>
             <point key="canvasLocation" x="-3" y="-4"/>
         </scene>
+        <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heE-Q9-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,8 +95,8 @@
                                                     <rect key="frame" x="15" y="0.0" width="159" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                                    <color key="textColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="deviceRGB"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="location.jpg" id="RKD-wn-d0n">
                                                     <rect key="frame" x="15" y="30" width="70" height="70"/>
@@ -104,14 +107,14 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                                     <color key="textColor" red="0.15686275064945221" green="0.55294120311737061" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="202" contentMode="left" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" id="dZm-mE-usL">
                                                     <rect key="frame" x="95" y="60" width="185" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -127,6 +130,7 @@
                                 <rect key="frame" x="55" y="5" width="211" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="tintColor" red="0.43921568989999998" green="0.50588238240000005" blue="0.85882353779999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Select Date">
                                     <color key="titleColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,6 +156,7 @@
             </objects>
             <point key="canvasLocation" x="1465" y="498"/>
         </scene>
+        <!--Set My Inkling View Controller-->
         <scene sceneID="eiq-Uk-rpI">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4C9-tT-22R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,11 +181,12 @@
             </objects>
             <point key="canvasLocation" x="2033" y="992"/>
         </scene>
+        <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-po-eLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="UlP-XX-2ou" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Inklings" id="jfo-sa-8JH"/>
+                    <tabBarItem key="tabBarItem" title="My Inklings" image="pointer.png" id="jfo-sa-8JH"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="IYD-Vb-Yjk">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,6 +198,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="350"/>
         </scene>
+        <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsQ-xe-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,6 +211,7 @@
                                 <rect key="frame" x="12" y="8" width="193" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="tintColor" red="0.43921568989753723" green="0.5058823823928833" blue="0.85882353782653809" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="University of Notre Dame">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,6 +228,7 @@
                                 <rect key="frame" x="213" y="8" width="99" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="tintColor" red="0.43921568989753723" green="0.5058823823928833" blue="0.85882353782653809" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Specify Date">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,11 +245,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InklingCell" rowHeight="79" id="LCs-7L-EzO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InklingCell" rowHeight="79" id="LCs-7L-EzO">
                                         <rect key="frame" x="0.0" y="22" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blotblue.png" id="Pps-BO-Vsx">
@@ -306,11 +315,13 @@
                         <outlet property="inklingTypeSegment" destination="ULI-A5-LOh" id="TGq-Lk-iiG"/>
                         <outlet property="navigationItem" destination="whM-7z-Zfw" id="b3X-ro-XVk"/>
                         <outlet property="peopleButton" destination="7eC-Hv-BYF" id="4UJ-S0-0fs"/>
+                        <segue destination="bbT-RE-HJX" kind="push" identifier="locationSegue" id="gfd-ZL-wnw"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1465" y="-245"/>
+            <point key="canvasLocation" x="1465" y="-228"/>
         </scene>
+        <!--Blot Picker View Controller - Select Blot or Network-->
         <scene sceneID="bUP-oV-4A3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xH-TQ-TcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,6 +358,7 @@
             </objects>
             <point key="canvasLocation" x="2033" y="-803"/>
         </scene>
+        <!--Others Inklings Date View Controller - Select Date-->
         <scene sceneID="JjD-YF-DZF">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3h-43-oeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,11 +371,11 @@
                                 <rect key="frame" x="0.0" y="159" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="357591675.46110803">
-                                    <!--2012-05-01 15:01:15 -0400-->
+                                    <!--2012-05-01 19:01:15 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -381,7 +393,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                         </subviews>
@@ -393,13 +405,54 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2033" y="-245"/>
+            <point key="canvasLocation" x="2033" y="360"/>
         </scene>
+        <!--Location View Controller-->
+        <scene sceneID="qJT-oC-ip0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfr-Nb-4W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="bbT-RE-HJX" customClass="LocationViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="bqy-xn-9c0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationInklingCell" rowHeight="71" id="F0y-pg-h5v">
+                                <rect key="frame" x="0.0" y="22" width="320" height="71"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="300" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hF8-6K-B2u">
+                                            <rect key="frame" x="69" y="24" width="231" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="bbT-RE-HJX" id="gQ1-vf-jfh"/>
+                            <outlet property="delegate" destination="bbT-RE-HJX" id="ZYH-GJ-6pM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qN2-gI-a3T"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2033" y="-228"/>
+        </scene>
+        <!--Others Inklings Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7L-Tb-O0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="NWj-Mx-mGy" customClass="othersInklingsNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Others' Inklings" id="wG4-UM-EwH"/>
+                    <tabBarItem key="tabBarItem" title="Others' Inklings" image="splatter.png" id="wG4-UM-EwH"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="y1o-XL-HCr">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.10588235410000001" green="0.34509804840000002" blue="0.59607845540000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -411,6 +464,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1035" y="-245"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIX-6v-Ptm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -430,6 +484,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="441" y="-4"/>
         </scene>
+        <!--Invites View Controller - Invitations-->
         <scene sceneID="bTz-9p-V90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWT-cE-ep5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,8 +496,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="yJo-xQ-mFi">
                                 <rect key="frame" x="0.0" y="44" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.41568627949999998" green="0.73333334920000004" blue="0.41568627949999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.10588235408067703" green="0.34509804844856262" blue="0.59607845544815063" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InviteCell" rowHeight="124" id="b3H-je-8Rz">
                                         <rect key="frame" x="0.0" y="22" width="320" height="124"/>
@@ -455,7 +508,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <rect key="frame" x="88" y="6" width="160" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.17254902422428131" blue="0.27058824896812439" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="0.15686275059999999" green="0.55294120309999995" blue="0.2588235438" alpha="1" colorSpace="deviceRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Invite Info (who, what, when)" lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="13" id="O8Y-mf-hNV">
@@ -511,7 +564,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.41568627949999998" green="0.73333334920000004" blue="0.41568627949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -530,7 +583,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Invitations" id="e9Z-yv-rbm"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="mailbox.png" id="e9Z-yv-rbm"/>
                     <connections>
                         <outlet property="invitesTable" destination="yJo-xQ-mFi" id="ABV-Qc-gUT"/>
                     </connections>
@@ -543,71 +596,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="blotblue.png" width="150" height="150"/>
         <image name="location.jpg" width="250" height="250"/>
         <image name="logo.png" width="175" height="50"/>
+        <image name="mailbox.png" width="60" height="60"/>
+        <image name="pointer.png" width="60" height="60"/>
+        <image name="splatter.png" width="60" height="60"/>
     </resources>
-    <classes>
-        <class className="InvitesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InvitesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAccept:"/>
-                <relationship kind="action" name="btnDecline:"/>
-                <relationship kind="outlet" name="invitesTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MyInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myInklingDate" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myInklingTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SetMyInklingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetMyInklingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myInklingWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="blotPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/blotPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="loginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsDateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
-        <class className="othersInklingsNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsNavigationController.h"/>
-        </class>
-        <class className="othersInklingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/othersInklingsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bNButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inklingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="inklingTypeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="navigationItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="peopleButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UZZ-DA-0Ao"/>
+        <segue reference="Ybp-Ai-DPV"/>
     </inferredMetricsTieBreakers>
 </document>

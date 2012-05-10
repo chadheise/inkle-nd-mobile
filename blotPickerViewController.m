@@ -65,7 +65,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIColor *green = UIColorFromRGB(0x0F7832);
+    UIColor *green = UIColorFromRGB(0x288D42);
+    [[self view] setBackgroundColor:green];
     [bNLabel setBackgroundColor:green];
     
     self.categoryNames = [[NSMutableArray alloc] initWithObjects: @"Blots",@"Networks",nil];

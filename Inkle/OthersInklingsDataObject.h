@@ -16,11 +16,17 @@
     NSString *pid;
     NSString *type;
     
+    NSString *locationId;
+    NSString *locationType;
+    
 }
 
 @property (nonatomic, copy) NSString* selection;
 @property (nonatomic, copy) peopleGroups *peopleGroup;
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, copy) NSString *type;
+
+@property (nonatomic, copy) NSString *locationId;
+@property (nonatomic, copy) NSString *locationType;
 
 @end
