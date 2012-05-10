@@ -178,7 +178,6 @@
     inklingDate = [NSDate date]; //Initialize inklingDate to today
     
     OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
-    NSLog(@"The date in othersInklingsViewController viewDidLoad is: %@",theAppDataObject2.dateString);
     
     peopleType = @"network";
     peopleId = @"1";

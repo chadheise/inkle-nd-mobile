@@ -34,12 +34,6 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-/*-(void) pushSecondView
-{
-    [navController pushViewController:theBlotPickerViewController animated:TRUE];
-    [navController pushViewController:theOthersInklingsDateViewController animated:TRUE];
-}*/
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self.window addSubview:navController.view];
@@ -59,16 +53,6 @@
     [dateFormat setDateFormat:@"MM/dd/yyyy"];
     theAppDataObject2.date = [NSDate date];
     theAppDataObject2.dateString = [dateFormat stringFromDate:theAppDataObject2.date];
-    NSLog(@"The date in init is: %@",theAppDataObject2.dateString);
-    
-    /*
-     NSDate *othersDate = [[NSDate alloc]init];
-    othersDate = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy"];
-    self.othersInklingsDate = [dateFormat stringFromDate:othersDate];
-    NSLog(@"The date in init is: %@",othersInklingsDate);
-     */
     
     return [super init];
     
