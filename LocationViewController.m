@@ -138,7 +138,8 @@
 {
     [super viewDidLoad];
 
-    self.navigationItem.title =@"Location Name";
+    OthersInklingsDataObject* theDataObject = [self theAppDataObject];
+    self.navigationItem.title = theDataObject.locationName;
     
     [self updatePeople];
 }

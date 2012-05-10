@@ -15,6 +15,7 @@
 @synthesize type;
 
 @synthesize locationId;
+@synthesize locationName;
 @synthesize locationType;
 
 #pragma mark -
@@ -29,6 +30,7 @@
     self.type = nil;
     
     self.locationId = nil;
+    self.locationName = nil;
     self.locationType = nil;
 }
 
