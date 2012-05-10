@@ -201,16 +201,20 @@
 		DF07E2F9155C445800143867 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
-				80EC990815235DC500F7CACA /* Invitation.h */,
-				80EC990915235DC500F7CACA /* Invitation.m */,
-				8007E68B15044700002D2F4D /* Inkling.h */,
-				8007E68C15044700002D2F4D /* Inkling.m */,
-				DF46F5981559BEC700EFEF40 /* Member.h */,
-				DF46F5991559BEC700EFEF40 /* Member.m */,
-				80556A971544F732002A7F2C /* InklingDate.h */,
-				80556A981544F732002A7F2C /* InklingDate.m */,
+				8094C0491549EC4700E65A20 /* SingletonManager.h */,
+				8094C04A1549EC4700E65A20 /* SingletonManager.m */,
 				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
 				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
+				8007E68B15044700002D2F4D /* Inkling.h */,
+				8007E68C15044700002D2F4D /* Inkling.m */,
+				802ABEB61524F15B0012B18C /* peopleGroups.h */,
+				802ABEB71524F15B0012B18C /* peopleGroups.m */,
+				80556A971544F732002A7F2C /* InklingDate.h */,
+				80556A981544F732002A7F2C /* InklingDate.m */,
+				DF46F5981559BEC700EFEF40 /* Member.h */,
+				DF46F5991559BEC700EFEF40 /* Member.m */,
+				80EC990815235DC500F7CACA /* Invitation.h */,
+				80EC990915235DC500F7CACA /* Invitation.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -218,16 +222,12 @@
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
-				802ABEB61524F15B0012B18C /* peopleGroups.h */,
-				802ABEB71524F15B0012B18C /* peopleGroups.m */,
+				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
 				DF07E2F8155C441B00143867 /* Open Source */,
-				DFC7D12015043EC1000717D5 /* libz.dylib */,
 				DF07E2F6155C3CCC00143867 /* View Controllers */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
-				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
-				8094C0491549EC4700E65A20 /* SingletonManager.h */,
-				8094C04A1549EC4700E65A20 /* SingletonManager.m */,
 				DF07E2F9155C445800143867 /* Data Objects */,
+				DFC7D12015043EC1000717D5 /* libz.dylib */,
 				DF750A0614E8267F00D9E0BA /* Inkle */,
 				DF750A2214E8267F00D9E0BA /* InkleTests */,
 				DF7509FD14E8267F00D9E0BA /* Frameworks */,

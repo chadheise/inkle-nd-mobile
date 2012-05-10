@@ -68,7 +68,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3" y="-4"/>
+            <point key="canvasLocation" x="-443" y="228"/>
         </scene>
         <!--My Inklings View Controller - My Inklings-->
         <scene sceneID="QmH-kT-spV">
@@ -154,7 +154,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1465" y="498"/>
+            <point key="canvasLocation" x="1277" y="228"/>
         </scene>
         <!--Set My Inkling View Controller-->
         <scene sceneID="eiq-Uk-rpI">
@@ -179,7 +179,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2033" y="992"/>
+            <point key="canvasLocation" x="1935" y="851"/>
         </scene>
         <!--Navigation Controller - My Inklings-->
         <scene sceneID="rTf-ft-Eem">
@@ -196,7 +196,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1035" y="350"/>
+            <point key="canvasLocation" x="639" y="228"/>
         </scene>
         <!--Others Inklings View Controller - Others' Inklings-->
         <scene sceneID="LTL-an-Wbs">
@@ -319,7 +319,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1465" y="-228"/>
+            <point key="canvasLocation" x="1277" y="-383"/>
         </scene>
         <!--Blot Picker View Controller - Select Blot or Network-->
         <scene sceneID="bUP-oV-4A3">
@@ -356,7 +356,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2033" y="-803"/>
+            <point key="canvasLocation" x="1935" y="-1007"/>
         </scene>
         <!--Date View Controller - Select Date-->
         <scene sceneID="JjD-YF-DZF">
@@ -405,7 +405,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2033" y="360"/>
+            <point key="canvasLocation" x="1935" y="228"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="qJT-oC-ip0">
@@ -445,7 +445,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="qN2-gI-a3T"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="2033" y="-228"/>
+            <point key="canvasLocation" x="1935" y="-383"/>
         </scene>
         <!--Navigation Controller - Others' Inklings-->
         <scene sceneID="MwJ-Ve-yWH">
@@ -462,7 +462,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1035" y="-245"/>
+            <point key="canvasLocation" x="639" y="-383"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RfG-xo-HOb">
@@ -482,7 +482,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="441" y="-4"/>
+            <point key="canvasLocation" x="1" y="228"/>
         </scene>
         <!--Invitation View Controller - Invitations-->
         <scene sceneID="bTz-9p-V90">
@@ -589,7 +589,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1035" y="969"/>
+            <point key="canvasLocation" x="639" y="851"/>
         </scene>
     </scenes>
     <resources>
@@ -664,6 +664,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ybp-Ai-DPV"/>
+        <segue reference="UZZ-DA-0Ao"/>
     </inferredMetricsTieBreakers>
 </document>
