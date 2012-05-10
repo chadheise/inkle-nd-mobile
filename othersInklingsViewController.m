@@ -7,12 +7,12 @@
 //
 
 #import "OthersInklingsViewController.h"
-#import "Inklings.h"
+#import "Inkling.h"
 #import "RXMLElement.h"
 #import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 #import "peopleGroups.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 
 
 @implementation OthersInklingsViewController {
@@ -43,10 +43,10 @@
     
     return theDataObject;
 }
-- (OthersInklingsDate *) theAppDataObject2
+- (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject2 = (InklingDate*) theDelegate.theAppDataObject2;
     
     return theDataObject2;
 }
@@ -54,7 +54,7 @@
 - (void) updateInklings
 {
 
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     
     //Update date button text to display new date
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal]; 
@@ -118,7 +118,7 @@
     othersInklings = [NSMutableArray arrayWithCapacity:numLocations];
     
         [responseXML iterate:@"location" with: ^(RXMLElement *l) {
-            Inklings *inkling = [[Inklings alloc] init];
+            Inkling *inkling = [[Inkling alloc] init];
             inkling.address = [NSString stringWithFormat: @"%@\n%@", [l child:@"street"], [l child:@"citystate"]];
             inkling.location = [NSString stringWithFormat: @"%@", [l child:@"name"]];
             inkling.attendees = [NSString stringWithFormat: @"%@", [l child:@"count"]];
@@ -202,7 +202,7 @@
     [self updateInklings];
     
     //Update the date button
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     [dateButton setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
 
 }
@@ -253,7 +253,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InklingCell"];
 
-    Inklings *inkling = [othersInklings objectAtIndex:indexPath.row];
+    Inkling *inkling = [othersInklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = inkling.location;
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
@@ -272,7 +272,7 @@
     // Navigation logic may go here. Create and push another view controller.
     //Set the inkling type that will be sent to the setMyInkling webview
     
-    Inklings *inkling = [othersInklings objectAtIndex:indexPath.row]; //Get the current inkling object
+    Inkling *inkling = [othersInklings objectAtIndex:indexPath.row]; //Get the current inkling object
     
     //Set the global location variable information
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];

@@ -8,17 +8,17 @@
 
 #import "DateViewController.h"
 #import "AppDelegateProtocol.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 
 @implementation DateViewController
 
 @synthesize datePicker;
 
 /*--------CUSTOM FUNCTION--------*/
-- (OthersInklingsDate *) theAppDataObject2
+- (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDate *theDataObject = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject = (InklingDate*) theDelegate.theAppDataObject2;
     
     return theDataObject;
 }
@@ -52,7 +52,7 @@
 
 - (void)dateChanged:(id)sender 
 {
-    OthersInklingsDate* theDataObject = [self theAppDataObject2];
+    InklingDate* theDataObject = [self theAppDataObject2];
     theDataObject.dateString = [theDataObject stringFromDate:datePicker.date];
     theDataObject.date = datePicker.date;
 
@@ -77,7 +77,7 @@
 
     //Set the date picker to the previously selected date; defaults to current date
     
-    OthersInklingsDate* theDataObject = [self theAppDataObject2];
+    InklingDate* theDataObject = [self theAppDataObject2];
     
     if (theDataObject.dateString == NULL)
     {

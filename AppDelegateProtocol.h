@@ -10,12 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @class OthersInklingsDataObject;
-@class OthersInklingsDate;
+@class InklingDate;
 
 @protocol AppDelegateProtocol
 
 - (OthersInklingsDataObject *) theAppDataObject;
-- (OthersInklingsDate *) theAppDataObject2;
+- (InklingDate *) theAppDataObject2;
 - (NSString *) othersInklingsDate;
 
 @end

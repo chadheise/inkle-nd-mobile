@@ -15,7 +15,7 @@
 
 
 @class OthersInklingsDataObject;
-@class OthersInklingsDate;
+@class InklingDate;
 
 //@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @interface AppDelegate : NSObject <UIApplicationDelegate, AppDelegateProtocol>
@@ -28,7 +28,7 @@
     IBOutlet DateViewController *theOthersInklingsDateViewController;
     NSDate *myInklingsDate;
     
-    OthersInklingsDate *theAppDataObject2;
+    InklingDate *theAppDataObject2;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
@@ -41,7 +41,7 @@
 @property (nonatomic, retain) OthersInklingsDataObject *theAppDataObject;
 @property (nonatomic, retain) IBOutlet BlotPickerViewController *theBlotPickerViewController;
 
-@property (nonatomic, retain) OthersInklingsDate *theAppDataObject2;
+@property (nonatomic, retain) InklingDate *theAppDataObject2;
 
 /*-----------------------------------*/
 

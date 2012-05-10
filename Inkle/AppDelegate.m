@@ -7,12 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "Inklings.h"
-#import "OthersInklingsTableViewController.h"
+#import "Inkling.h"
 #import "othersInklingsViewController.h"
 #import "AppDelegateProtocol.h"
 #import "OthersInklingsDataObject.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 #import "MyInklingsViewController.h"
 
 
@@ -48,7 +47,7 @@
 {
     self.theAppDataObject = [[OthersInklingsDataObject alloc] init];
     
-    self.theAppDataObject2 = [[OthersInklingsDate alloc] init];
+    self.theAppDataObject2 = [[InklingDate alloc] init];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM/dd/yyyy"];
     theAppDataObject2.date = [NSDate date];

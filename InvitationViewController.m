@@ -7,7 +7,7 @@
 //
 
 #import "InvitationViewController.h"
-#import "Invites.h"
+#import "Invitation.h"
 #import "RXMLElement.h"
 #import "asyncimageview.h"
 
@@ -59,8 +59,8 @@
     
     [responseXML iterate:@"invitation" with:^(RXMLElement *i) {
         //NSLog([NSString stringWithFormat: @"%@", [i child:@"from"]]);
-        Invites *invite = [[Invites alloc] init];
-        invite = [[Invites alloc] init];
+        Invitation *invite = [[Invitation alloc] init];
+        invite = [[Invitation alloc] init];
         invite.inviteID = [NSString stringWithFormat:@"%@", [i child:@"id"]];
         invite.locationType = [NSString stringWithFormat:@"%@", [i child:@"locationType"]];
         invite.location = [NSString stringWithFormat:@"%@", [i child:@"location"]];
@@ -135,7 +135,7 @@
     //Get the rowIndex of the table
     NSIndexPath *indexPath =[self.invitesTable indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
     NSUInteger row = indexPath.row;
-    Invites *invite = [invites objectAtIndex:row];
+    Invitation *invite = [invites objectAtIndex:row];
     //NSString *inviteIndex = [NSString stringWithFormat:@"%d", row];
     //NSLog(invite.inviteID);
     
@@ -180,7 +180,7 @@
     //Get the rowIndex of the table
     NSIndexPath *indexPath =[self.invitesTable indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
     NSUInteger row = indexPath.row;
-    Invites *invite = [invites objectAtIndex:row];
+    Invitation *invite = [invites objectAtIndex:row];
     //NSString *inviteIndex = [NSString stringWithFormat:@"%d", row];
     //NSLog(invite.inviteID);
     
@@ -240,7 +240,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InviteCell"];
-    Invites *invite = [invites objectAtIndex:indexPath.row];
+    Invitation *invite = [invites objectAtIndex:indexPath.row];
     
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:100];
     locationLabel.text = invite.location;

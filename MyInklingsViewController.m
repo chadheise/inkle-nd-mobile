@@ -7,10 +7,10 @@
 //
 
 #import "MyInklingsViewController.h"
-#import "Inklings.h"
+#import "Inkling.h"
 #import "RXMLElement.h"
 #import "asyncimageview.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 #import "AppDelegateProtocol.h"
 #import "SingletonManager.h"
 #import "SetMyInklingViewController.h"
@@ -30,10 +30,10 @@
 @synthesize myInklingTable;
 
 //*****************CUSTOM FUNCTIONS********************//
-- (OthersInklingsDate *) theAppDataObject2
+- (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject2 = (InklingDate*) theDelegate.theAppDataObject2;
     
     return theDataObject2;
 }
@@ -41,7 +41,7 @@
 - (void) updateMyInklings
 {    
     //Update date button text to display new date
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     [myInklingDate setTitle:theAppDataObject2.dateString forState:UIControlStateNormal];
     
     //Get inkling data
@@ -85,7 +85,7 @@
     inklingLocationIDs = [NSMutableArray arrayWithCapacity:3]; //Empty array of location IDs
     
     RXMLElement *dinnerXML = [responseXML child:@"dinner"];
-    Inklings *dinnerInkling = [[Inklings alloc] init];
+    Inkling *dinnerInkling = [[Inkling alloc] init];
     dinnerInkling.address = [NSString stringWithFormat: @"%@\n%@", [dinnerXML child:@"address1"], [dinnerXML child:@"address2"]];
     dinnerInkling.location = [NSString stringWithFormat: @"%@", [dinnerXML child:@"location"]];
     dinnerInkling.attendees = [NSString stringWithFormat: @""];
@@ -94,7 +94,7 @@
     [myInklings addObject:dinnerInkling];
     
     RXMLElement *pregameXML = [responseXML child:@"pregame"];
-    Inklings *pregameInkling = [[Inklings alloc] init];
+    Inkling *pregameInkling = [[Inkling alloc] init];
     pregameInkling.address = [NSString stringWithFormat: @"%@\n%@", [pregameXML child:@"address1"], [pregameXML child:@"address2"]];
     pregameInkling.location = [NSString stringWithFormat: @"%@", [pregameXML child:@"location"]];
     pregameInkling.attendees = [NSString stringWithFormat: @""];
@@ -103,7 +103,7 @@
     [myInklings addObject:pregameInkling];
     
     RXMLElement *main_eventXML = [responseXML child:@"main_event"];
-    Inklings *main_eventInkling = [[Inklings alloc] init];
+    Inkling *main_eventInkling = [[Inkling alloc] init];
     main_eventInkling.address = [NSString stringWithFormat: @"%@\n%@", [main_eventXML child:@"address1"], [main_eventXML child:@"address2"]];
     main_eventInkling.location = [NSString stringWithFormat: @"%@", [main_eventXML child:@"location"]];
     main_eventInkling.attendees = [NSString stringWithFormat: @""];
@@ -174,7 +174,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myInklingCell"];
     
     /* Only display detail discloser indicator if the date is today or in the future */
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
     
@@ -199,7 +199,7 @@
     UILabel *typeLabel = (UILabel *)[cell viewWithTag:200]; //Get the inkling type label 
     typeLabel.text = [inklingTypes objectAtIndex:indexPath.row]; //Set the label (dinner, pregame, or main event)
     
-    Inklings *inkling = [myInklings objectAtIndex:indexPath.row];
+    Inkling *inkling = [myInklings objectAtIndex:indexPath.row];
     UILabel *locationLabel = (UILabel *)[cell viewWithTag:201];
     locationLabel.text = inkling.location;
     UILabel *addressLabel = (UILabel *)[cell viewWithTag:202];
@@ -239,7 +239,7 @@
 {
     /* Only perform the segue if the date is today or in the future */
     
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger comps = (NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit);
     

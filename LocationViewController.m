@@ -9,7 +9,7 @@
 #import "LocationViewController.h"
 #import "RXMLElement.h"
 #import "AppDelegateProtocol.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 #import "OthersInklingsDataObject.h"
 #import "Member.h"
 #import "asyncimageview.h"
@@ -34,17 +34,17 @@
     return theDataObject;
 }
 
-- (OthersInklingsDate *) theAppDataObject2
+- (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject2 = (InklingDate*) theDelegate.theAppDataObject2;
     
     return theDataObject2;
 }
 
 - (void) updatePeople
 {
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     

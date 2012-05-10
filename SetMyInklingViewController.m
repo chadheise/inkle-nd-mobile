@@ -8,7 +8,7 @@
 
 #import "SetMyInklingViewController.h"
 #import "AppDelegateProtocol.h"
-#import "OthersInklingsDate.h"
+#import "InklingDate.h"
 #import "SingletonManager.h"
 
 @interface SetMyInklingViewController ()
@@ -26,10 +26,10 @@
     }
     return self;
 }
-- (OthersInklingsDate *) theAppDataObject2
+- (InklingDate *) theAppDataObject2
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    OthersInklingsDate *theDataObject2 = (OthersInklingsDate*) theDelegate.theAppDataObject2;
+    InklingDate *theDataObject2 = (InklingDate*) theDelegate.theAppDataObject2;
     
     return theDataObject2;
 }
@@ -44,7 +44,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    OthersInklingsDate *theAppDataObject2 = [self theAppDataObject2];
+    InklingDate *theAppDataObject2 = [self theAppDataObject2];
     SingletonManager* myInklingSingleton = [SingletonManager sharedInstance];
     
     self.myInklingWebView.scalesPageToFit = NO;

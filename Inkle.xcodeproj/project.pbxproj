@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8007E68D15044700002D2F4D /* Inklings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inklings.m */; };
+		8007E68D15044700002D2F4D /* Inkling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8007E68C15044700002D2F4D /* Inkling.m */; };
 		8021925C1520B7E900C7D3D6 /* InvitationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8021925B1520B7E900C7D3D6 /* InvitationViewController.m */; };
 		80274610153B7B1200CA792D /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027460F153B7B1200CA792D /* DateViewController.m */; };
 		802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 802ABEB71524F15B0012B18C /* peopleGroups.m */; };
 		804DBEB61528E516000FFC1B /* OthersInklingsDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */; };
-		80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80556A981544F732002A7F2C /* OthersInklingsDate.m */; };
+		80556A991544F733002A7F2C /* InklingDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80556A981544F732002A7F2C /* InklingDate.m */; };
 		8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8094C04A1549EC4700E65A20 /* SingletonManager.m */; };
-		80EC990A15235DC500F7CACA /* Invites.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invites.m */; };
+		80EC990A15235DC500F7CACA /* Invitation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EC990915235DC500F7CACA /* Invitation.m */; };
 		DF20C47014E8CD3D006EDE9F /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = DF20C46F14E8CD3D006EDE9F /* icon57px.png */; };
 		DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF46F594155991B000EFEF40 /* LocationViewController.m */; };
 		DF46F59A1559BEC700EFEF40 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = DF46F5991559BEC700EFEF40 /* Member.m */; };
@@ -52,7 +52,6 @@
 		DFBC3645152557EA00137ABE /* asyncimageview.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBC3644152557EA00137ABE /* asyncimageview.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DFC7D12115043EC1000717D5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC7D12015043EC1000717D5 /* libz.dylib */; };
 		DFCA902314F05DF500E2C634 /* blotblue.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCA902214F05DF500E2C634 /* blotblue.png */; };
-		DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */; };
 		DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8007E68B15044700002D2F4D /* Inklings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inklings.h; sourceTree = "<group>"; };
-		8007E68C15044700002D2F4D /* Inklings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inklings.m; sourceTree = "<group>"; };
+		8007E68B15044700002D2F4D /* Inkling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inkling.h; sourceTree = "<group>"; };
+		8007E68C15044700002D2F4D /* Inkling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inkling.m; sourceTree = "<group>"; };
 		8021925A1520B7E900C7D3D6 /* InvitationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationViewController.h; sourceTree = "<group>"; };
 		8021925B1520B7E900C7D3D6 /* InvitationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationViewController.m; sourceTree = "<group>"; };
 		8027460E153B7B1200CA792D /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
@@ -77,12 +76,12 @@
 		802ABEB71524F15B0012B18C /* peopleGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleGroups.m; sourceTree = "<group>"; };
 		804DBEB31528E47E000FFC1B /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateProtocol.h; path = ../AppDelegateProtocol.h; sourceTree = "<group>"; };
 		804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OthersInklingsDataObject.m; path = Inkle/OthersInklingsDataObject.m; sourceTree = "<group>"; };
-		80556A971544F732002A7F2C /* OthersInklingsDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsDate.h; sourceTree = "<group>"; };
-		80556A981544F732002A7F2C /* OthersInklingsDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsDate.m; sourceTree = "<group>"; };
+		80556A971544F732002A7F2C /* InklingDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InklingDate.h; sourceTree = "<group>"; };
+		80556A981544F732002A7F2C /* InklingDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InklingDate.m; sourceTree = "<group>"; };
 		8094C0491549EC4700E65A20 /* SingletonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonManager.h; sourceTree = "<group>"; };
 		8094C04A1549EC4700E65A20 /* SingletonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonManager.m; sourceTree = "<group>"; };
-		80EC990815235DC500F7CACA /* Invites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invites.h; sourceTree = "<group>"; };
-		80EC990915235DC500F7CACA /* Invites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invites.m; sourceTree = "<group>"; };
+		80EC990815235DC500F7CACA /* Invitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invitation.h; sourceTree = "<group>"; };
+		80EC990915235DC500F7CACA /* Invitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invitation.m; sourceTree = "<group>"; };
 		DF20C46F14E8CD3D006EDE9F /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		DF46F593155991B000EFEF40 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		DF46F594155991B000EFEF40 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
@@ -134,8 +133,6 @@
 		DFBC3644152557EA00137ABE /* asyncimageview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = asyncimageview.m; sourceTree = "<group>"; };
 		DFC7D12015043EC1000717D5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		DFCA902214F05DF500E2C634 /* blotblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blotblue.png; sourceTree = "<group>"; };
-		DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OthersInklingsTableViewController.h; sourceTree = "<group>"; };
-		DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OthersInklingsTableViewController.m; sourceTree = "<group>"; };
 		DFFB71E31534C12B00E74DF3 /* MyInklingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInklingsViewController.h; sourceTree = "<group>"; };
 		DFFB71E41534C12B00E74DF3 /* MyInklingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInklingsViewController.m; sourceTree = "<group>"; };
 		DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OthersInklingsDataObject.h; path = Inkle/OthersInklingsDataObject.h; sourceTree = "<group>"; };
@@ -168,7 +165,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DF07E2F6155C3CCC00143867 /* Main View Controllers */ = {
+		DF07E2F6155C3CCC00143867 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DF750A3D14E829DA00D9E0BA /* loginViewController.h */,
@@ -188,43 +185,49 @@
 				8021925A1520B7E900C7D3D6 /* InvitationViewController.h */,
 				8021925B1520B7E900C7D3D6 /* InvitationViewController.m */,
 			);
-			name = "Main View Controllers";
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		DF07E2F7155C436400143867 /* Subview Controllers */ = {
+		DF07E2F8155C441B00143867 /* Open Source */ = {
 			isa = PBXGroup;
 			children = (
-				DFD6D8FA151C59E600B8B118 /* OthersInklingsTableViewController.h */,
-				DFD6D8FB151C59E600B8B118 /* OthersInklingsTableViewController.m */,
+				DFBC3643152557EA00137ABE /* asyncimageview.h */,
+				DFBC3644152557EA00137ABE /* asyncimageview.m */,
+				DF9289691504760200C31446 /* RaptureXML */,
 			);
-			name = "Subview Controllers";
+			name = "Open Source";
+			sourceTree = "<group>";
+		};
+		DF07E2F9155C445800143867 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				80EC990815235DC500F7CACA /* Invitation.h */,
+				80EC990915235DC500F7CACA /* Invitation.m */,
+				8007E68B15044700002D2F4D /* Inkling.h */,
+				8007E68C15044700002D2F4D /* Inkling.m */,
+				DF46F5981559BEC700EFEF40 /* Member.h */,
+				DF46F5991559BEC700EFEF40 /* Member.m */,
+				80556A971544F732002A7F2C /* InklingDate.h */,
+				80556A981544F732002A7F2C /* InklingDate.m */,
+				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
+				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
+			);
+			name = "Data Objects";
 			sourceTree = "<group>";
 		};
 		DF7509EF14E8267E00D9E0BA = {
 			isa = PBXGroup;
 			children = (
-				DFBC3643152557EA00137ABE /* asyncimageview.h */,
-				DFBC3644152557EA00137ABE /* asyncimageview.m */,
 				802ABEB61524F15B0012B18C /* peopleGroups.h */,
 				802ABEB71524F15B0012B18C /* peopleGroups.m */,
-				DF07E2F7155C436400143867 /* Subview Controllers */,
+				DF07E2F8155C441B00143867 /* Open Source */,
 				DFC7D12015043EC1000717D5 /* libz.dylib */,
-				DF07E2F6155C3CCC00143867 /* Main View Controllers */,
-				DF9289691504760200C31446 /* RaptureXML */,
+				DF07E2F6155C3CCC00143867 /* View Controllers */,
 				DF750A4014E82AEC00D9E0BA /* Images */,
 				DF750A3314E8291100D9E0BA /* Storyboard.storyboard */,
 				8094C0491549EC4700E65A20 /* SingletonManager.h */,
 				8094C04A1549EC4700E65A20 /* SingletonManager.m */,
-				80EC990815235DC500F7CACA /* Invites.h */,
-				80EC990915235DC500F7CACA /* Invites.m */,
-				DFFDBE1D152BBE3100932F05 /* OthersInklingsDataObject.h */,
-				804DBEB51528E516000FFC1B /* OthersInklingsDataObject.m */,
-				80556A971544F732002A7F2C /* OthersInklingsDate.h */,
-				80556A981544F732002A7F2C /* OthersInklingsDate.m */,
-				DF46F5981559BEC700EFEF40 /* Member.h */,
-				DF46F5991559BEC700EFEF40 /* Member.m */,
-				8007E68C15044700002D2F4D /* Inklings.m */,
-				8007E68B15044700002D2F4D /* Inklings.h */,
+				DF07E2F9155C445800143867 /* Data Objects */,
 				DF750A0614E8267F00D9E0BA /* Inkle */,
 				DF750A2214E8267F00D9E0BA /* InkleTests */,
 				DF7509FD14E8267F00D9E0BA /* Frameworks */,
@@ -448,13 +451,12 @@
 				DF750A1414E8267F00D9E0BA /* Inkle.xcdatamodeld in Sources */,
 				DF750A3F14E829DA00D9E0BA /* loginViewController.m in Sources */,
 				DF48FA8A14F2D5C200F3F13E /* othersInklingsViewController.m in Sources */,
-				8007E68D15044700002D2F4D /* Inklings.m in Sources */,
+				8007E68D15044700002D2F4D /* Inkling.m in Sources */,
 				DF9289791504764B00C31446 /* NSDataAdditions.m in Sources */,
 				DF92897A1504764B00C31446 /* RXMLElement.m in Sources */,
 				DF92897B1504764B00C31446 /* TBXML.m in Sources */,
-				DFD6D8FC151C59E600B8B118 /* OthersInklingsTableViewController.m in Sources */,
 				8021925C1520B7E900C7D3D6 /* InvitationViewController.m in Sources */,
-				80EC990A15235DC500F7CACA /* Invites.m in Sources */,
+				80EC990A15235DC500F7CACA /* Invitation.m in Sources */,
 				DF5DA03A15237D0B00FA679E /* blotPickerViewController.m in Sources */,
 				802ABEB81524F15B0012B18C /* peopleGroups.m in Sources */,
 				DFBC3645152557EA00137ABE /* asyncimageview.m in Sources */,
@@ -462,7 +464,7 @@
 				DFFB71E51534C12B00E74DF3 /* MyInklingsViewController.m in Sources */,
 				DF7DEEA4153A64E90001C0A1 /* SetMyInklingViewController.m in Sources */,
 				80274610153B7B1200CA792D /* DateViewController.m in Sources */,
-				80556A991544F733002A7F2C /* OthersInklingsDate.m in Sources */,
+				80556A991544F733002A7F2C /* InklingDate.m in Sources */,
 				8094C04B1549EC4800E65A20 /* SingletonManager.m in Sources */,
 				DF46F595155991B000EFEF40 /* LocationViewController.m in Sources */,
 				DF46F59A1559BEC700EFEF40 /* Member.m in Sources */,
