@@ -67,6 +67,8 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+    //NSLog(responseString);
+    
     
     RXMLElement *responseXML = [RXMLElement elementFromXMLData:responseData];
     
@@ -180,36 +182,41 @@
     static NSString *CellIdentifier = @"locationInklingCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Member *member = [dinnerPeople objectAtIndex:indexPath.row]; // The first section is for dinner inklings
-    if (indexPath.section == 1) { // The second section is for pregame inklings
-        member = [dinnerPeople objectAtIndex:indexPath.row];
+    Member *member = nil;
+    if (indexPath.section == 0 && dinnerPeople != nil) {
+        member = [dinnerPeople objectAtIndex:indexPath.row]; // The first section is for dinner inklings
     }
-    else if (indexPath.section == 2) { // The third section is for main event inklings
+    else if (indexPath.section == 1 && pregamePeople != nil) { // The second section is for pregame inklings
+        member = [pregamePeople objectAtIndex:indexPath.row];
+    }
+    else if (indexPath.section == 2 && mainEventPeople != nil) { // The third section is for main event inklings
         member = [mainEventPeople objectAtIndex:indexPath.row];
     }
     
-    UILabel *memberLabel = (UILabel *)[cell viewWithTag:300];
-    memberLabel.text = member.name;
-
-    //Get invite image
-    if (cell != nil) {
-        AsyncImageView* oldImage = (AsyncImageView*)
-        [cell.contentView viewWithTag:999];
-        [oldImage removeFromSuperview];
-    }
+    if (member != nil) {
+        UILabel *memberLabel = (UILabel *)[cell viewWithTag:300];
+        memberLabel.text = member.name;
     
-	CGRect frame;
-	frame.size.width=50; frame.size.height=50;
-	frame.origin.x=10; frame.origin.y=10;
-	AsyncImageView* asyncImage = [[AsyncImageView alloc]
+
+        //Get invite image
+        if (cell != nil) {
+            AsyncImageView* oldImage = (AsyncImageView*)
+            [cell.contentView viewWithTag:999];
+            [oldImage removeFromSuperview];
+        }
+    
+        CGRect frame;
+        frame.size.width=50; frame.size.height=50;
+        frame.origin.x=10; frame.origin.y=10;
+        AsyncImageView* asyncImage = [[AsyncImageView alloc]
                                   initWithFrame:frame];
-	asyncImage.tag = 301;
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", member.memberID]];
-    [asyncImage loadImageFromURL:url];
+        asyncImage.tag = 301;
+        NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"http://www.inkleit.com/static/media/images/members/%@.jpg", member.memberID]];
+        [asyncImage loadImageFromURL:url];
     
-	[cell.contentView addSubview:asyncImage];
-    //End image
-
+        [cell.contentView addSubview:asyncImage];
+        //End image
+    }
     
     return cell;
 }
