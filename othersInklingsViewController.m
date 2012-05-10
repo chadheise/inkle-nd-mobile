@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "othersInklingsViewController.h"
+#import "OthersInklingsViewController.h"
 #import "Inklings.h"
 #import "RXMLElement.h"
 #import "OthersInklingsDataObject.h"
@@ -15,7 +15,7 @@
 #import "OthersInklingsDate.h"
 
 
-@implementation othersInklingsViewController {
+@implementation OthersInklingsViewController {
     NSMutableArray *othersInklings;
     
     NSDate *inklingDate;//previous inklingDate

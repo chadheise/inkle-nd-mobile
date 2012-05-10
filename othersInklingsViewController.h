@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface othersInklingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface OthersInklingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     
 }

@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "blotPickerViewController.h"
+#import "BlotPickerViewController.h"
 #import "peopleGroups.h"
 #import "RXMLElement.h"
 #import "OthersInklingsDataObject.h"
 #import "AppDelegateProtocol.h"
 
-@implementation blotPickerViewController {
+@implementation BlotPickerViewController {
     NSMutableArray *blotNames;
     NSMutableArray *networkNames;
     NSMutableArray *categoryNames;

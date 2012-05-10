@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "loginViewController.h"
+#import "LoginViewController.h"
 #import "RXMLElement.h"
 
-@implementation loginViewController
+@implementation LoginViewController
 @synthesize email = _email;
 @synthesize password = _password;
 @synthesize errorLabel = _errorLabel;

@@ -10,7 +10,7 @@
 #define leftComponent 0
 #define rightComponent 1
 
-@interface blotPickerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface BlotPickerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 {
     __weak UIPickerView *picker;
 }
