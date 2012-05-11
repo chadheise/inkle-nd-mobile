@@ -63,7 +63,10 @@
     OthersInklingsDataObject* theDataObject = [self theAppDataObject];
     if (theDataObject.selection == nil)
     {
-        [peopleButton setTitle:@"Select a Blot or Network" forState:UIControlStateNormal];
+        bNSelection = nil;
+        peopleType = nil;
+        peopleId = nil;
+        [peopleButton setTitle:@"Select Blot or Network" forState:UIControlStateNormal];
     }
     else
     {
